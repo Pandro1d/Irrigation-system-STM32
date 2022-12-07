@@ -1,0 +1,142 @@
+\hypertarget{usart_8h}{}\doxysection{Core/\+Inc/usart.h File Reference}
+\label{usart_8h}\index{Core/Inc/usart.h@{Core/Inc/usart.h}}
+
+
+This file contains all the function prototypes for the \mbox{\hyperlink{usart_8c}{usart.\+c}} file.  
+
+
+{\ttfamily \#include \char`\"{}main.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}flower\+\_\+data.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}LCD\+\_\+\+HD44780.\+h\char`\"{}}\newline
+{\ttfamily \#include $<$string.\+h$>$}\newline
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+\doxysubsection*{Data Structures}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structuart__struct}{uart\+\_\+struct}}
+\begin{DoxyCompactList}\small\item\em Struct which contains data for UART instances. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{usart_8h_a8e80938568fb5084719239654fa26ae1}{RECEIVE\+\_\+\+BUFFOR\+\_\+\+SIZE}}~30
+\begin{DoxyCompactList}\small\item\em Defines max UART buffor size. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{usart_8h_a052088fe5bb3f807a4b2502e664fd4fd}{MX\+\_\+\+USART2\+\_\+\+UART\+\_\+\+Init}} (void)
+\item 
+void \mbox{\hyperlink{usart_8h_a2c3c71c0b3761d905840430448bcb71e}{MX\+\_\+\+USART4\+\_\+\+UART\+\_\+\+Init}} (void)
+\item 
+void \mbox{\hyperlink{usart_8h_a4b46e2e6b871d0b0f138e61760b10fa2}{init\+USART}} ()
+\begin{DoxyCompactList}\small\item\em UART struct initialization (with default values). \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{usart_8h_a50195686e0f229a99671532f41cf3a90}{send\+\_\+data\+\_\+to\+\_\+uart}} (UART\+\_\+\+Handle\+Type\+Def $\ast$)
+\begin{DoxyCompactList}\small\item\em Function to send data to UART instance. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+UART\+\_\+\+Handle\+Type\+Def \mbox{\hyperlink{usart_8h_aa9479c261d65eecedd3d9582f7f0f89c}{huart2}}
+\begin{DoxyCompactList}\small\item\em External definition of instance of UART (used for PC connection). \end{DoxyCompactList}\item 
+UART\+\_\+\+Handle\+Type\+Def \mbox{\hyperlink{usart_8h_ae273feb3e0dc44e38892650faa58fced}{huart4}}
+\begin{DoxyCompactList}\small\item\em External definition of instance of UART (used for BT connection). \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{structuart__struct}{uart\+\_\+struct}} \mbox{\hyperlink{usart_8h_a762a796aee75efa549d8a0d3d1118500}{uart\+BT}}
+\begin{DoxyCompactList}\small\item\em External definition of instance of UART struct (used for PC connection). \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{structuart__struct}{uart\+\_\+struct}} \mbox{\hyperlink{usart_8h_a04b40ac79578a64a67d9d80780bee751}{uart\+PC}}
+\begin{DoxyCompactList}\small\item\em External definition of instance of UART struct (used for BT connection). \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+This file contains all the function prototypes for the \mbox{\hyperlink{usart_8c}{usart.\+c}} file. 
+
+Copyright (c) 2021 STMicroelectronics. All rights reserved.
+
+This software is licensed under terms that can be found in the LICENSE file in the root directory of this software component. If no LICENSE file comes with this software, it is provided AS-\/\+IS. 
+
+\doxysubsection{Macro Definition Documentation}
+\mbox{\Hypertarget{usart_8h_a8e80938568fb5084719239654fa26ae1}\label{usart_8h_a8e80938568fb5084719239654fa26ae1}} 
+\index{usart.h@{usart.h}!RECEIVE\_BUFFOR\_SIZE@{RECEIVE\_BUFFOR\_SIZE}}
+\index{RECEIVE\_BUFFOR\_SIZE@{RECEIVE\_BUFFOR\_SIZE}!usart.h@{usart.h}}
+\doxysubsubsection{\texorpdfstring{RECEIVE\_BUFFOR\_SIZE}{RECEIVE\_BUFFOR\_SIZE}}
+{\footnotesize\ttfamily \#define RECEIVE\+\_\+\+BUFFOR\+\_\+\+SIZE~30}
+
+
+
+Defines max UART buffor size. 
+
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{usart_8h_a4b46e2e6b871d0b0f138e61760b10fa2}\label{usart_8h_a4b46e2e6b871d0b0f138e61760b10fa2}} 
+\index{usart.h@{usart.h}!initUSART@{initUSART}}
+\index{initUSART@{initUSART}!usart.h@{usart.h}}
+\doxysubsubsection{\texorpdfstring{initUSART()}{initUSART()}}
+{\footnotesize\ttfamily void init\+USART (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+UART struct initialization (with default values). 
+
+\mbox{\Hypertarget{usart_8h_a052088fe5bb3f807a4b2502e664fd4fd}\label{usart_8h_a052088fe5bb3f807a4b2502e664fd4fd}} 
+\index{usart.h@{usart.h}!MX\_USART2\_UART\_Init@{MX\_USART2\_UART\_Init}}
+\index{MX\_USART2\_UART\_Init@{MX\_USART2\_UART\_Init}!usart.h@{usart.h}}
+\doxysubsubsection{\texorpdfstring{MX\_USART2\_UART\_Init()}{MX\_USART2\_UART\_Init()}}
+{\footnotesize\ttfamily void MX\+\_\+\+USART2\+\_\+\+UART\+\_\+\+Init (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{usart_8h_a2c3c71c0b3761d905840430448bcb71e}\label{usart_8h_a2c3c71c0b3761d905840430448bcb71e}} 
+\index{usart.h@{usart.h}!MX\_USART4\_UART\_Init@{MX\_USART4\_UART\_Init}}
+\index{MX\_USART4\_UART\_Init@{MX\_USART4\_UART\_Init}!usart.h@{usart.h}}
+\doxysubsubsection{\texorpdfstring{MX\_USART4\_UART\_Init()}{MX\_USART4\_UART\_Init()}}
+{\footnotesize\ttfamily void MX\+\_\+\+USART4\+\_\+\+UART\+\_\+\+Init (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{usart_8h_a50195686e0f229a99671532f41cf3a90}\label{usart_8h_a50195686e0f229a99671532f41cf3a90}} 
+\index{usart.h@{usart.h}!send\_data\_to\_uart@{send\_data\_to\_uart}}
+\index{send\_data\_to\_uart@{send\_data\_to\_uart}!usart.h@{usart.h}}
+\doxysubsubsection{\texorpdfstring{send\_data\_to\_uart()}{send\_data\_to\_uart()}}
+{\footnotesize\ttfamily void send\+\_\+data\+\_\+to\+\_\+uart (\begin{DoxyParamCaption}\item[{UART\+\_\+\+Handle\+Type\+Def $\ast$}]{huart }\end{DoxyParamCaption})}
+
+
+
+Function to send data to UART instance. 
+
+
+
+\doxysubsection{Variable Documentation}
+\mbox{\Hypertarget{usart_8h_aa9479c261d65eecedd3d9582f7f0f89c}\label{usart_8h_aa9479c261d65eecedd3d9582f7f0f89c}} 
+\index{usart.h@{usart.h}!huart2@{huart2}}
+\index{huart2@{huart2}!usart.h@{usart.h}}
+\doxysubsubsection{\texorpdfstring{huart2}{huart2}}
+{\footnotesize\ttfamily UART\+\_\+\+Handle\+Type\+Def huart2\hspace{0.3cm}{\ttfamily [extern]}}
+
+
+
+External definition of instance of UART (used for PC connection). 
+
+\mbox{\Hypertarget{usart_8h_ae273feb3e0dc44e38892650faa58fced}\label{usart_8h_ae273feb3e0dc44e38892650faa58fced}} 
+\index{usart.h@{usart.h}!huart4@{huart4}}
+\index{huart4@{huart4}!usart.h@{usart.h}}
+\doxysubsubsection{\texorpdfstring{huart4}{huart4}}
+{\footnotesize\ttfamily UART\+\_\+\+Handle\+Type\+Def huart4\hspace{0.3cm}{\ttfamily [extern]}}
+
+
+
+External definition of instance of UART (used for BT connection). 
+
+\mbox{\Hypertarget{usart_8h_a762a796aee75efa549d8a0d3d1118500}\label{usart_8h_a762a796aee75efa549d8a0d3d1118500}} 
+\index{usart.h@{usart.h}!uartBT@{uartBT}}
+\index{uartBT@{uartBT}!usart.h@{usart.h}}
+\doxysubsubsection{\texorpdfstring{uartBT}{uartBT}}
+{\footnotesize\ttfamily struct \mbox{\hyperlink{structuart__struct}{uart\+\_\+struct}} uart\+BT\hspace{0.3cm}{\ttfamily [extern]}}
+
+
+
+External definition of instance of UART struct (used for PC connection). 
+
+\mbox{\Hypertarget{usart_8h_a04b40ac79578a64a67d9d80780bee751}\label{usart_8h_a04b40ac79578a64a67d9d80780bee751}} 
+\index{usart.h@{usart.h}!uartPC@{uartPC}}
+\index{uartPC@{uartPC}!usart.h@{usart.h}}
+\doxysubsubsection{\texorpdfstring{uartPC}{uartPC}}
+{\footnotesize\ttfamily struct \mbox{\hyperlink{structuart__struct}{uart\+\_\+struct}} uart\+PC\hspace{0.3cm}{\ttfamily [extern]}}
+
+
+
+External definition of instance of UART struct (used for BT connection). 
+

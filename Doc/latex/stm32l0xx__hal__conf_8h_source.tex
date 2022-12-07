@@ -1,0 +1,256 @@
+\hypertarget{stm32l0xx__hal__conf_8h_source}{}\doxysection{stm32l0xx\+\_\+hal\+\_\+conf.\+h}
+\label{stm32l0xx__hal__conf_8h_source}\index{Core/Inc/stm32l0xx\_hal\_conf.h@{Core/Inc/stm32l0xx\_hal\_conf.h}}
+\mbox{\hyperlink{stm32l0xx__hal__conf_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{comment}{/* USER CODE BEGIN Header */}}
+\DoxyCodeLine{21 \textcolor{comment}{/* USER CODE END Header */}}
+\DoxyCodeLine{22 }
+\DoxyCodeLine{23 \textcolor{comment}{/* Define to prevent recursive inclusion -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{24 \textcolor{preprocessor}{\#ifndef \_\_STM32L0xx\_HAL\_CONF\_H}}
+\DoxyCodeLine{25 \textcolor{preprocessor}{\#define \_\_STM32L0xx\_HAL\_CONF\_H}}
+\DoxyCodeLine{26 }
+\DoxyCodeLine{27 \textcolor{preprocessor}{\#ifdef \_\_cplusplus}}
+\DoxyCodeLine{28  \textcolor{keyword}{extern} \textcolor{stringliteral}{"{}C"{}} \{}
+\DoxyCodeLine{29 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{30 }
+\DoxyCodeLine{31 \textcolor{comment}{/* Exported types -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{32 \textcolor{comment}{/* Exported constants -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{33 }
+\DoxyCodeLine{34 \textcolor{comment}{/* \#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\# Module Selection \#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\# */}}
+\DoxyCodeLine{39 \textcolor{preprocessor}{\#define HAL\_MODULE\_ENABLED}}
+\DoxyCodeLine{40 \textcolor{preprocessor}{  \#define HAL\_ADC\_MODULE\_ENABLED}}
+\DoxyCodeLine{41 \textcolor{comment}{/*\#define HAL\_CRYP\_MODULE\_ENABLED   */}}
+\DoxyCodeLine{42 \textcolor{comment}{/*\#define HAL\_COMP\_MODULE\_ENABLED   */}}
+\DoxyCodeLine{43 \textcolor{comment}{/*\#define HAL\_CRC\_MODULE\_ENABLED   */}}
+\DoxyCodeLine{44 \textcolor{comment}{/*\#define HAL\_CRYP\_MODULE\_ENABLED   */}}
+\DoxyCodeLine{45 \textcolor{comment}{/*\#define HAL\_DAC\_MODULE\_ENABLED   */}}
+\DoxyCodeLine{46 \textcolor{comment}{/*\#define HAL\_FIREWALL\_MODULE\_ENABLED   */}}
+\DoxyCodeLine{47 \textcolor{comment}{/*\#define HAL\_I2S\_MODULE\_ENABLED   */}}
+\DoxyCodeLine{48 \textcolor{comment}{/*\#define HAL\_IWDG\_MODULE\_ENABLED   */}}
+\DoxyCodeLine{49 \textcolor{comment}{/*\#define HAL\_LCD\_MODULE\_ENABLED   */}}
+\DoxyCodeLine{50 \textcolor{comment}{/*\#define HAL\_LPTIM\_MODULE\_ENABLED   */}}
+\DoxyCodeLine{51 \textcolor{comment}{/*\#define HAL\_RNG\_MODULE\_ENABLED   */}}
+\DoxyCodeLine{52 \textcolor{preprocessor}{\#define HAL\_RTC\_MODULE\_ENABLED}}
+\DoxyCodeLine{53 \textcolor{comment}{/*\#define HAL\_SPI\_MODULE\_ENABLED   */}}
+\DoxyCodeLine{54 \textcolor{preprocessor}{\#define HAL\_TIM\_MODULE\_ENABLED}}
+\DoxyCodeLine{55 \textcolor{comment}{/*\#define HAL\_TSC\_MODULE\_ENABLED   */}}
+\DoxyCodeLine{56 \textcolor{preprocessor}{\#define HAL\_UART\_MODULE\_ENABLED}}
+\DoxyCodeLine{57 \textcolor{comment}{/*\#define HAL\_USART\_MODULE\_ENABLED   */}}
+\DoxyCodeLine{58 \textcolor{comment}{/*\#define HAL\_IRDA\_MODULE\_ENABLED   */}}
+\DoxyCodeLine{59 \textcolor{comment}{/*\#define HAL\_SMARTCARD\_MODULE\_ENABLED   */}}
+\DoxyCodeLine{60 \textcolor{comment}{/*\#define HAL\_SMBUS\_MODULE\_ENABLED   */}}
+\DoxyCodeLine{61 \textcolor{comment}{/*\#define HAL\_WWDG\_MODULE\_ENABLED   */}}
+\DoxyCodeLine{62 \textcolor{comment}{/*\#define HAL\_PCD\_MODULE\_ENABLED   */}}
+\DoxyCodeLine{63 \textcolor{preprocessor}{\#define HAL\_GPIO\_MODULE\_ENABLED}}
+\DoxyCodeLine{64 \textcolor{preprocessor}{\#define HAL\_EXTI\_MODULE\_ENABLED}}
+\DoxyCodeLine{65 \textcolor{preprocessor}{\#define HAL\_DMA\_MODULE\_ENABLED}}
+\DoxyCodeLine{66 \textcolor{preprocessor}{\#define HAL\_I2C\_MODULE\_ENABLED}}
+\DoxyCodeLine{67 \textcolor{preprocessor}{\#define HAL\_RCC\_MODULE\_ENABLED}}
+\DoxyCodeLine{68 \textcolor{preprocessor}{\#define HAL\_FLASH\_MODULE\_ENABLED}}
+\DoxyCodeLine{69 \textcolor{preprocessor}{\#define HAL\_PWR\_MODULE\_ENABLED}}
+\DoxyCodeLine{70 \textcolor{preprocessor}{\#define HAL\_CORTEX\_MODULE\_ENABLED}}
+\DoxyCodeLine{71 }
+\DoxyCodeLine{72 \textcolor{comment}{/* \#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\# Oscillator Values adaptation \#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#*/}}
+\DoxyCodeLine{78 \textcolor{preprocessor}{\#if !defined  (HSE\_VALUE)}}
+\DoxyCodeLine{79 \textcolor{preprocessor}{  \#define HSE\_VALUE    ((uint32\_t)8000000U) }}
+\DoxyCodeLine{80 \textcolor{preprocessor}{\#endif }\textcolor{comment}{/* HSE\_VALUE */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{81 }
+\DoxyCodeLine{82 \textcolor{preprocessor}{\#if !defined  (HSE\_STARTUP\_TIMEOUT)}}
+\DoxyCodeLine{83 \textcolor{preprocessor}{  \#define HSE\_STARTUP\_TIMEOUT    ((uint32\_t)100U)   }}
+\DoxyCodeLine{84 \textcolor{preprocessor}{\#endif }\textcolor{comment}{/* HSE\_STARTUP\_TIMEOUT */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{85 }
+\DoxyCodeLine{90 \textcolor{preprocessor}{\#if !defined  (MSI\_VALUE)}}
+\DoxyCodeLine{91 \textcolor{preprocessor}{  \#define MSI\_VALUE    ((uint32\_t)2097000U) }}
+\DoxyCodeLine{92 \textcolor{preprocessor}{\#endif }\textcolor{comment}{/* MSI\_VALUE */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{93 }
+\DoxyCodeLine{99 \textcolor{preprocessor}{\#if !defined  (HSI\_VALUE)}}
+\DoxyCodeLine{100 \textcolor{preprocessor}{  \#define HSI\_VALUE    ((uint32\_t)16000000U) }}
+\DoxyCodeLine{101 \textcolor{preprocessor}{\#endif }\textcolor{comment}{/* HSI\_VALUE */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{102 }
+\DoxyCodeLine{106 \textcolor{preprocessor}{\#if !defined  (HSI48\_VALUE)}}
+\DoxyCodeLine{107 \textcolor{preprocessor}{\#define HSI48\_VALUE ((uint32\_t)48000000U) }}
+\DoxyCodeLine{110 \textcolor{preprocessor}{\#endif }\textcolor{comment}{/* HSI48\_VALUE */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{111 }
+\DoxyCodeLine{115 \textcolor{preprocessor}{\#if !defined  (LSI\_VALUE)}}
+\DoxyCodeLine{116 \textcolor{preprocessor}{ \#define LSI\_VALUE  ((uint32\_t)37000U)       }}
+\DoxyCodeLine{117 \textcolor{preprocessor}{\#endif }\textcolor{comment}{/* LSI\_VALUE */}\textcolor{preprocessor}{                      }}
+\DoxyCodeLine{124 \textcolor{preprocessor}{\#if !defined  (LSE\_VALUE)}}
+\DoxyCodeLine{125 \textcolor{preprocessor}{  \#define LSE\_VALUE    ((uint32\_t)32768U) }}
+\DoxyCodeLine{126 \textcolor{preprocessor}{\#endif }\textcolor{comment}{/* LSE\_VALUE */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{127 }
+\DoxyCodeLine{128 \textcolor{preprocessor}{\#if !defined  (LSE\_STARTUP\_TIMEOUT)}}
+\DoxyCodeLine{129 \textcolor{preprocessor}{  \#define LSE\_STARTUP\_TIMEOUT  ((uint32\_t)5000U)   }}
+\DoxyCodeLine{130 \textcolor{preprocessor}{\#endif }\textcolor{comment}{/* LSE\_STARTUP\_TIMEOUT */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{131 }
+\DoxyCodeLine{132 \textcolor{comment}{/* Tip: To avoid modifying this file each time you need to use different HSE,}}
+\DoxyCodeLine{133 \textcolor{comment}{   ===  you can define the HSE value in your toolchain compiler preprocessor. */}}
+\DoxyCodeLine{134 }
+\DoxyCodeLine{135 \textcolor{comment}{/* \#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\# System Configuration \#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\# */}}
+\DoxyCodeLine{139 \textcolor{preprocessor}{\#define  VDD\_VALUE                    ((uint32\_t)3300U) }}
+\DoxyCodeLine{140 \textcolor{preprocessor}{\#define  TICK\_INT\_PRIORITY            ((uint32\_t)2U)    }}
+\DoxyCodeLine{141 \textcolor{preprocessor}{\#define  USE\_RTOS                     0U}}
+\DoxyCodeLine{142 \textcolor{preprocessor}{\#define  PREFETCH\_ENABLE              0U}}
+\DoxyCodeLine{143 \textcolor{preprocessor}{\#define  PREREAD\_ENABLE               1U}}
+\DoxyCodeLine{144 \textcolor{preprocessor}{\#define  BUFFER\_CACHE\_DISABLE         0U}}
+\DoxyCodeLine{145 }
+\DoxyCodeLine{146 \textcolor{comment}{/* \#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\# Assert Selection \#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\# */}}
+\DoxyCodeLine{151 \textcolor{comment}{/* \#define USE\_FULL\_ASSERT    1U */}}
+\DoxyCodeLine{152 }
+\DoxyCodeLine{153 \textcolor{comment}{/* \#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\# Register callback feature configuration \#\#\#\#\#\#\#\#\#\#\#\#\#\#\# */}}
+\DoxyCodeLine{163 \textcolor{preprocessor}{\#define USE\_HAL\_ADC\_REGISTER\_CALLBACKS        0U}}
+\DoxyCodeLine{164 \textcolor{preprocessor}{\#define USE\_HAL\_COMP\_REGISTER\_CALLBACKS       0U}}
+\DoxyCodeLine{165 \textcolor{preprocessor}{\#define USE\_HAL\_DAC\_REGISTER\_CALLBACKS        0U}}
+\DoxyCodeLine{166 \textcolor{preprocessor}{\#define USE\_HAL\_I2C\_REGISTER\_CALLBACKS        0U}}
+\DoxyCodeLine{167 \textcolor{preprocessor}{\#define USE\_HAL\_I2S\_REGISTER\_CALLBACKS        0U}}
+\DoxyCodeLine{168 \textcolor{preprocessor}{\#define USE\_HAL\_IRDA\_REGISTER\_CALLBACKS       0U}}
+\DoxyCodeLine{169 \textcolor{preprocessor}{\#define USE\_HAL\_LPTIM\_REGISTER\_CALLBACKS      0U}}
+\DoxyCodeLine{170 \textcolor{preprocessor}{\#define USE\_HAL\_PCD\_REGISTER\_CALLBACKS        0U}}
+\DoxyCodeLine{171 \textcolor{preprocessor}{\#define USE\_HAL\_RNG\_REGISTER\_CALLBACKS        0U}}
+\DoxyCodeLine{172 \textcolor{preprocessor}{\#define USE\_HAL\_RTC\_REGISTER\_CALLBACKS        0U}}
+\DoxyCodeLine{173 \textcolor{preprocessor}{\#define USE\_HAL\_SMARTCARD\_REGISTER\_CALLBACKS  0U}}
+\DoxyCodeLine{174 \textcolor{preprocessor}{\#define USE\_HAL\_SMBUS\_REGISTER\_CALLBACKS      0U}}
+\DoxyCodeLine{175 \textcolor{preprocessor}{\#define USE\_HAL\_SPI\_REGISTER\_CALLBACKS        0U}}
+\DoxyCodeLine{176 \textcolor{preprocessor}{\#define USE\_HAL\_TIM\_REGISTER\_CALLBACKS        0U}}
+\DoxyCodeLine{177 \textcolor{preprocessor}{\#define USE\_HAL\_TSC\_REGISTER\_CALLBACKS        0U}}
+\DoxyCodeLine{178 \textcolor{preprocessor}{\#define USE\_HAL\_UART\_REGISTER\_CALLBACKS       0U}}
+\DoxyCodeLine{179 \textcolor{preprocessor}{\#define USE\_HAL\_USART\_REGISTER\_CALLBACKS      0U}}
+\DoxyCodeLine{180 \textcolor{preprocessor}{\#define USE\_HAL\_WWDG\_REGISTER\_CALLBACKS       0U}}
+\DoxyCodeLine{181 }
+\DoxyCodeLine{182 \textcolor{comment}{/* Includes -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{187 \textcolor{preprocessor}{\#ifdef HAL\_RCC\_MODULE\_ENABLED}}
+\DoxyCodeLine{188 \textcolor{preprocessor}{  \#include "{}stm32l0xx\_hal\_rcc.h"{}}}
+\DoxyCodeLine{189 \textcolor{preprocessor}{\#endif }\textcolor{comment}{/* HAL\_RCC\_MODULE\_ENABLED */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{190 }
+\DoxyCodeLine{191 \textcolor{preprocessor}{\#ifdef HAL\_EXTI\_MODULE\_ENABLED}}
+\DoxyCodeLine{192 \textcolor{preprocessor}{  \#include "{}stm32l0xx\_hal\_exti.h"{}}}
+\DoxyCodeLine{193 \textcolor{preprocessor}{\#endif }\textcolor{comment}{/* HAL\_EXTI\_MODULE\_ENABLED */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{194 }
+\DoxyCodeLine{195 \textcolor{preprocessor}{\#ifdef HAL\_GPIO\_MODULE\_ENABLED}}
+\DoxyCodeLine{196 \textcolor{preprocessor}{  \#include "{}stm32l0xx\_hal\_gpio.h"{}}}
+\DoxyCodeLine{197 \textcolor{preprocessor}{\#endif }\textcolor{comment}{/* HAL\_GPIO\_MODULE\_ENABLED */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{198 }
+\DoxyCodeLine{199 \textcolor{preprocessor}{\#ifdef HAL\_DMA\_MODULE\_ENABLED}}
+\DoxyCodeLine{200 \textcolor{preprocessor}{  \#include "{}stm32l0xx\_hal\_dma.h"{}}}
+\DoxyCodeLine{201 \textcolor{preprocessor}{\#endif }\textcolor{comment}{/* HAL\_DMA\_MODULE\_ENABLED */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{202 }
+\DoxyCodeLine{203 \textcolor{preprocessor}{\#ifdef HAL\_CORTEX\_MODULE\_ENABLED}}
+\DoxyCodeLine{204 \textcolor{preprocessor}{  \#include "{}stm32l0xx\_hal\_cortex.h"{}}}
+\DoxyCodeLine{205 \textcolor{preprocessor}{\#endif }\textcolor{comment}{/* HAL\_CORTEX\_MODULE\_ENABLED */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{206 }
+\DoxyCodeLine{207 \textcolor{preprocessor}{\#ifdef HAL\_ADC\_MODULE\_ENABLED}}
+\DoxyCodeLine{208 \textcolor{preprocessor}{  \#include "{}stm32l0xx\_hal\_adc.h"{}}}
+\DoxyCodeLine{209 \textcolor{preprocessor}{\#endif }\textcolor{comment}{/* HAL\_ADC\_MODULE\_ENABLED */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{210 }
+\DoxyCodeLine{211 \textcolor{preprocessor}{\#ifdef HAL\_COMP\_MODULE\_ENABLED}}
+\DoxyCodeLine{212 \textcolor{preprocessor}{  \#include "{}stm32l0xx\_hal\_comp.h"{}}}
+\DoxyCodeLine{213 \textcolor{preprocessor}{\#endif }\textcolor{comment}{/* HAL\_COMP\_MODULE\_ENABLED */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{214 }
+\DoxyCodeLine{215 \textcolor{preprocessor}{\#ifdef HAL\_CRC\_MODULE\_ENABLED}}
+\DoxyCodeLine{216 \textcolor{preprocessor}{  \#include "{}stm32l0xx\_hal\_crc.h"{}}}
+\DoxyCodeLine{217 \textcolor{preprocessor}{\#endif }\textcolor{comment}{/* HAL\_CRC\_MODULE\_ENABLED */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{218 }
+\DoxyCodeLine{219 \textcolor{preprocessor}{\#ifdef HAL\_CRYP\_MODULE\_ENABLED}}
+\DoxyCodeLine{220 \textcolor{preprocessor}{  \#include "{}stm32l0xx\_hal\_cryp.h"{}}}
+\DoxyCodeLine{221 \textcolor{preprocessor}{\#endif }\textcolor{comment}{/* HAL\_CRYP\_MODULE\_ENABLED */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{222 }
+\DoxyCodeLine{223 \textcolor{preprocessor}{\#ifdef HAL\_DAC\_MODULE\_ENABLED}}
+\DoxyCodeLine{224 \textcolor{preprocessor}{  \#include "{}stm32l0xx\_hal\_dac.h"{}}}
+\DoxyCodeLine{225 \textcolor{preprocessor}{\#endif }\textcolor{comment}{/* HAL\_DAC\_MODULE\_ENABLED */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{226 }
+\DoxyCodeLine{227 \textcolor{preprocessor}{\#ifdef HAL\_FIREWALL\_MODULE\_ENABLED}}
+\DoxyCodeLine{228 \textcolor{preprocessor}{  \#include "{}stm32l0xx\_hal\_firewall.h"{}}}
+\DoxyCodeLine{229 \textcolor{preprocessor}{\#endif }\textcolor{comment}{/* HAL\_FIREWALL\_MODULE\_ENABLED */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{230 }
+\DoxyCodeLine{231 \textcolor{preprocessor}{\#ifdef HAL\_FLASH\_MODULE\_ENABLED}}
+\DoxyCodeLine{232 \textcolor{preprocessor}{  \#include "{}stm32l0xx\_hal\_flash.h"{}}}
+\DoxyCodeLine{233 \textcolor{preprocessor}{\#endif }\textcolor{comment}{/* HAL\_FLASH\_MODULE\_ENABLED */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{234 }
+\DoxyCodeLine{235 \textcolor{preprocessor}{\#ifdef HAL\_I2C\_MODULE\_ENABLED}}
+\DoxyCodeLine{236 \textcolor{preprocessor}{ \#include "{}stm32l0xx\_hal\_i2c.h"{}}}
+\DoxyCodeLine{237 \textcolor{preprocessor}{\#endif }\textcolor{comment}{/* HAL\_I2C\_MODULE\_ENABLED */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{238 }
+\DoxyCodeLine{239 \textcolor{preprocessor}{\#ifdef HAL\_I2S\_MODULE\_ENABLED}}
+\DoxyCodeLine{240 \textcolor{preprocessor}{ \#include "{}stm32l0xx\_hal\_i2s.h"{}}}
+\DoxyCodeLine{241 \textcolor{preprocessor}{\#endif }\textcolor{comment}{/* HAL\_I2S\_MODULE\_ENABLED */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{242 }
+\DoxyCodeLine{243 \textcolor{preprocessor}{\#ifdef HAL\_IWDG\_MODULE\_ENABLED}}
+\DoxyCodeLine{244 \textcolor{preprocessor}{ \#include "{}stm32l0xx\_hal\_iwdg.h"{}}}
+\DoxyCodeLine{245 \textcolor{preprocessor}{\#endif }\textcolor{comment}{/* HAL\_IWDG\_MODULE\_ENABLED */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{246 }
+\DoxyCodeLine{247 \textcolor{preprocessor}{\#ifdef HAL\_LCD\_MODULE\_ENABLED}}
+\DoxyCodeLine{248 \textcolor{preprocessor}{ \#include "{}stm32l0xx\_hal\_lcd.h"{}}}
+\DoxyCodeLine{249 \textcolor{preprocessor}{\#endif }\textcolor{comment}{/* HAL\_LCD\_MODULE\_ENABLED */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{250 }
+\DoxyCodeLine{251 \textcolor{preprocessor}{\#ifdef HAL\_LPTIM\_MODULE\_ENABLED}}
+\DoxyCodeLine{252 \textcolor{preprocessor}{\#include "{}stm32l0xx\_hal\_lptim.h"{}}}
+\DoxyCodeLine{253 \textcolor{preprocessor}{\#endif }\textcolor{comment}{/* HAL\_LPTIM\_MODULE\_ENABLED */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{254 }
+\DoxyCodeLine{255 \textcolor{preprocessor}{\#ifdef HAL\_PWR\_MODULE\_ENABLED}}
+\DoxyCodeLine{256 \textcolor{preprocessor}{ \#include "{}stm32l0xx\_hal\_pwr.h"{}}}
+\DoxyCodeLine{257 \textcolor{preprocessor}{\#endif }\textcolor{comment}{/* HAL\_PWR\_MODULE\_ENABLED */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{258 }
+\DoxyCodeLine{259 \textcolor{preprocessor}{\#ifdef HAL\_RNG\_MODULE\_ENABLED}}
+\DoxyCodeLine{260 \textcolor{preprocessor}{ \#include "{}stm32l0xx\_hal\_rng.h"{}}}
+\DoxyCodeLine{261 \textcolor{preprocessor}{\#endif }\textcolor{comment}{/* HAL\_RNG\_MODULE\_ENABLED */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{262 }
+\DoxyCodeLine{263 \textcolor{preprocessor}{\#ifdef HAL\_RTC\_MODULE\_ENABLED}}
+\DoxyCodeLine{264 \textcolor{preprocessor}{ \#include "{}stm32l0xx\_hal\_rtc.h"{}}}
+\DoxyCodeLine{265 }
+\DoxyCodeLine{266 \textcolor{preprocessor}{\#endif }\textcolor{comment}{/* HAL\_RTC\_MODULE\_ENABLED */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{267 }
+\DoxyCodeLine{268 \textcolor{preprocessor}{\#ifdef HAL\_SPI\_MODULE\_ENABLED}}
+\DoxyCodeLine{269 \textcolor{preprocessor}{ \#include "{}stm32l0xx\_hal\_spi.h"{}}}
+\DoxyCodeLine{270 \textcolor{preprocessor}{\#endif }\textcolor{comment}{/* HAL\_SPI\_MODULE\_ENABLED */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{271 }
+\DoxyCodeLine{272 \textcolor{preprocessor}{\#ifdef HAL\_TIM\_MODULE\_ENABLED}}
+\DoxyCodeLine{273 \textcolor{preprocessor}{ \#include "{}stm32l0xx\_hal\_tim.h"{}}}
+\DoxyCodeLine{274 \textcolor{preprocessor}{\#endif }\textcolor{comment}{/* HAL\_TIM\_MODULE\_ENABLED */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{275 }
+\DoxyCodeLine{276 \textcolor{preprocessor}{\#ifdef HAL\_TSC\_MODULE\_ENABLED}}
+\DoxyCodeLine{277 \textcolor{preprocessor}{ \#include "{}stm32l0xx\_hal\_tsc.h"{}}}
+\DoxyCodeLine{278 \textcolor{preprocessor}{\#endif }\textcolor{comment}{/* HAL\_TSC\_MODULE\_ENABLED */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{279 }
+\DoxyCodeLine{280 \textcolor{preprocessor}{\#ifdef HAL\_UART\_MODULE\_ENABLED}}
+\DoxyCodeLine{281 \textcolor{preprocessor}{ \#include "{}stm32l0xx\_hal\_uart.h"{}}}
+\DoxyCodeLine{282 \textcolor{preprocessor}{\#endif }\textcolor{comment}{/* HAL\_UART\_MODULE\_ENABLED */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{283 }
+\DoxyCodeLine{284 \textcolor{preprocessor}{\#ifdef HAL\_USART\_MODULE\_ENABLED}}
+\DoxyCodeLine{285 \textcolor{preprocessor}{ \#include "{}stm32l0xx\_hal\_usart.h"{}}}
+\DoxyCodeLine{286 \textcolor{preprocessor}{\#endif }\textcolor{comment}{/* HAL\_USART\_MODULE\_ENABLED */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{287 }
+\DoxyCodeLine{288 \textcolor{preprocessor}{\#ifdef HAL\_IRDA\_MODULE\_ENABLED}}
+\DoxyCodeLine{289 \textcolor{preprocessor}{ \#include "{}stm32l0xx\_hal\_irda.h"{}}}
+\DoxyCodeLine{290 \textcolor{preprocessor}{\#endif }\textcolor{comment}{/* HAL\_IRDA\_MODULE\_ENABLED */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{291 }
+\DoxyCodeLine{292 \textcolor{preprocessor}{\#ifdef HAL\_SMARTCARD\_MODULE\_ENABLED}}
+\DoxyCodeLine{293 \textcolor{preprocessor}{ \#include "{}stm32l0xx\_hal\_smartcard.h"{}}}
+\DoxyCodeLine{294 \textcolor{preprocessor}{\#endif }\textcolor{comment}{/* HAL\_SMARTCARD\_MODULE\_ENABLED */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{295 }
+\DoxyCodeLine{296 \textcolor{preprocessor}{\#ifdef HAL\_SMBUS\_MODULE\_ENABLED}}
+\DoxyCodeLine{297 \textcolor{preprocessor}{ \#include "{}stm32l0xx\_hal\_smbus.h"{}}}
+\DoxyCodeLine{298 \textcolor{preprocessor}{\#endif }\textcolor{comment}{/* HAL\_SMBUS\_MODULE\_ENABLED */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{299 }
+\DoxyCodeLine{300 \textcolor{preprocessor}{\#ifdef HAL\_WWDG\_MODULE\_ENABLED}}
+\DoxyCodeLine{301 \textcolor{preprocessor}{ \#include "{}stm32l0xx\_hal\_wwdg.h"{}}}
+\DoxyCodeLine{302 \textcolor{preprocessor}{\#endif }\textcolor{comment}{/* HAL\_WWDG\_MODULE\_ENABLED */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{303 }
+\DoxyCodeLine{304 \textcolor{preprocessor}{\#ifdef HAL\_PCD\_MODULE\_ENABLED}}
+\DoxyCodeLine{305 \textcolor{preprocessor}{ \#include "{}stm32l0xx\_hal\_pcd.h"{}}}
+\DoxyCodeLine{306 \textcolor{preprocessor}{\#endif }\textcolor{comment}{/* HAL\_PCD\_MODULE\_ENABLED */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{307 }
+\DoxyCodeLine{308 \textcolor{comment}{/* Exported macro -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{309 \textcolor{preprocessor}{\#ifdef  USE\_FULL\_ASSERT}}
+\DoxyCodeLine{318 \textcolor{preprocessor}{  \#define assert\_param(expr) ((expr) ? (void)0U : assert\_failed((uint8\_t *)\_\_FILE\_\_, \_\_LINE\_\_))}}
+\DoxyCodeLine{319 \textcolor{comment}{/* Exported functions -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/ */}}
+\DoxyCodeLine{320   \textcolor{keywordtype}{void} \mbox{\hyperlink{main_8c_a2532ff72b1a2ff82f65e8c2a5a4dde00}{assert\_failed}}(uint8\_t* file, uint32\_t line);}
+\DoxyCodeLine{321 \textcolor{preprocessor}{\#else}}
+\DoxyCodeLine{322 \textcolor{preprocessor}{  \#define assert\_param(expr) ((void)0U)}}
+\DoxyCodeLine{323 \textcolor{preprocessor}{\#endif }\textcolor{comment}{/* USE\_FULL\_ASSERT */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{324 }
+\DoxyCodeLine{325 \textcolor{preprocessor}{\#ifdef \_\_cplusplus}}
+\DoxyCodeLine{326 \}}
+\DoxyCodeLine{327 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{328 }
+\DoxyCodeLine{329 \textcolor{preprocessor}{\#endif }\textcolor{comment}{/* \_\_STM32L0xx\_HAL\_CONF\_H */}\textcolor{preprocessor}{}}
+
+\end{DoxyCode}

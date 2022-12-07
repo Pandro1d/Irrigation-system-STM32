@@ -1,0 +1,44 @@
+\hypertarget{_u_a_r_t__message__parser_8c}{}\doxysection{Core/\+Src/\+UART\+\_\+message\+\_\+parser.c File Reference}
+\label{_u_a_r_t__message__parser_8c}\index{Core/Src/UART\_message\_parser.c@{Core/Src/UART\_message\_parser.c}}
+
+
+This file provides code for UART parser functions.  
+
+
+{\ttfamily \#include \char`\"{}UART\+\_\+message\+\_\+parser.\+h\char`\"{}}\newline
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+uint8\+\_\+t \mbox{\hyperlink{_u_a_r_t__message__parser_8c_a27c26e0874c94364cbfc0453e5610819}{parse\+Data}} (struct \mbox{\hyperlink{structuart__struct}{uart\+\_\+struct}} $\ast$uart\+\_\+str)
+\begin{DoxyCompactList}\small\item\em Function parses data from UART instance and calling another function suitable for each command. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+This file provides code for UART parser functions. 
+
+Copyright (c) 2021 STMicroelectronics. All rights reserved.
+
+This software is licensed under terms that can be found in the LICENSE file in the root directory of this software component. If no LICENSE file comes with this software, it is provided AS-\/\+IS. 
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{_u_a_r_t__message__parser_8c_a27c26e0874c94364cbfc0453e5610819}\label{_u_a_r_t__message__parser_8c_a27c26e0874c94364cbfc0453e5610819}} 
+\index{UART\_message\_parser.c@{UART\_message\_parser.c}!parseData@{parseData}}
+\index{parseData@{parseData}!UART\_message\_parser.c@{UART\_message\_parser.c}}
+\doxysubsubsection{\texorpdfstring{parseData()}{parseData()}}
+{\footnotesize\ttfamily uint8\+\_\+t parse\+Data (\begin{DoxyParamCaption}\item[{struct \mbox{\hyperlink{structuart__struct}{uart\+\_\+struct}} $\ast$}]{uart\+\_\+str }\end{DoxyParamCaption})}
+
+
+
+Function parses data from UART instance and calling another function suitable for each command. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em struct} & \mbox{\hyperlink{structuart__struct}{uart\+\_\+struct}} $\ast$ Pointer to instance of UART struct \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+1 if parse succeed 0 if there is no suitable command.
+\end{DoxyReturn}
+Available commands\+:
+
+!set\+Curr\+Time 12\+:30\+:05/ $\vert$ !set\+Wat\+Time 1 12\+:24\+:10/ $\vert$ !set\+Dur\+Time 1 4/ $\vert$ !start\+Wat 1/ $\vert$ !info/ $\vert$ 

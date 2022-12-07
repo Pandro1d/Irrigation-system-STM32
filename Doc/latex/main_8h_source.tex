@@ -1,0 +1,94 @@
+\hypertarget{main_8h_source}{}\doxysection{main.\+h}
+\label{main_8h_source}\index{Core/Inc/main.h@{Core/Inc/main.h}}
+\mbox{\hyperlink{main_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{comment}{/* USER CODE BEGIN Header */}}
+\DoxyCodeLine{20 \textcolor{comment}{/* USER CODE END Header */}}
+\DoxyCodeLine{21 }
+\DoxyCodeLine{22 \textcolor{comment}{/* Define to prevent recursive inclusion -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{23 \textcolor{preprocessor}{\#ifndef \_\_MAIN\_H}}
+\DoxyCodeLine{24 \textcolor{preprocessor}{\#define \_\_MAIN\_H}}
+\DoxyCodeLine{25 }
+\DoxyCodeLine{26 \textcolor{preprocessor}{\#ifdef \_\_cplusplus}}
+\DoxyCodeLine{27 \textcolor{keyword}{extern} \textcolor{stringliteral}{"{}C"{}} \{}
+\DoxyCodeLine{28 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{29 }
+\DoxyCodeLine{30 \textcolor{comment}{/* Includes -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{31 \textcolor{preprocessor}{\#include "{}stm32l0xx\_hal.h"{}}}
+\DoxyCodeLine{32 }
+\DoxyCodeLine{33 \textcolor{comment}{/* Private includes -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{34 \textcolor{comment}{/* USER CODE BEGIN Includes */}}
+\DoxyCodeLine{35 }
+\DoxyCodeLine{36 \textcolor{comment}{/* USER CODE END Includes */}}
+\DoxyCodeLine{37 }
+\DoxyCodeLine{38 \textcolor{comment}{/* Exported types -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{39 \textcolor{comment}{/* USER CODE BEGIN ET */}}
+\DoxyCodeLine{40 }
+\DoxyCodeLine{41 \textcolor{comment}{/* USER CODE END ET */}}
+\DoxyCodeLine{42 }
+\DoxyCodeLine{43 \textcolor{comment}{/* Exported constants -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{44 \textcolor{comment}{/* USER CODE BEGIN EC */}}
+\DoxyCodeLine{45 }
+\DoxyCodeLine{46 \textcolor{comment}{/* USER CODE END EC */}}
+\DoxyCodeLine{47 }
+\DoxyCodeLine{48 \textcolor{comment}{/* Exported macro -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{49 \textcolor{comment}{/* USER CODE BEGIN EM */}}
+\DoxyCodeLine{50 }
+\DoxyCodeLine{51 \textcolor{comment}{/* USER CODE END EM */}}
+\DoxyCodeLine{52 }
+\DoxyCodeLine{53 \textcolor{comment}{/* Exported functions prototypes -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{54 \textcolor{keywordtype}{void} \mbox{\hyperlink{main_8h_a1730ffe1e560465665eb47d9264826f9}{Error\_Handler}}(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{55 }
+\DoxyCodeLine{56 \textcolor{comment}{/* USER CODE BEGIN EFP */}}
+\DoxyCodeLine{57 }
+\DoxyCodeLine{58 \textcolor{comment}{/* USER CODE END EFP */}}
+\DoxyCodeLine{59 }
+\DoxyCodeLine{60 \textcolor{comment}{/* Private defines -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{61 \textcolor{preprocessor}{\#define BLUE\_BUTTON\_Pin GPIO\_PIN\_13}}
+\DoxyCodeLine{62 \textcolor{preprocessor}{\#define BLUE\_BUTTON\_GPIO\_Port GPIOC}}
+\DoxyCodeLine{63 \textcolor{preprocessor}{\#define BLUE\_BUTTON\_EXTI\_IRQn EXTI4\_15\_IRQn}}
+\DoxyCodeLine{64 \textcolor{preprocessor}{\#define LCD\_E\_Pin GPIO\_PIN\_0}}
+\DoxyCodeLine{65 \textcolor{preprocessor}{\#define LCD\_E\_GPIO\_Port GPIOC}}
+\DoxyCodeLine{66 \textcolor{preprocessor}{\#define LCD\_RS\_Pin GPIO\_PIN\_1}}
+\DoxyCodeLine{67 \textcolor{preprocessor}{\#define LCD\_RS\_GPIO\_Port GPIOC}}
+\DoxyCodeLine{68 \textcolor{preprocessor}{\#define LCD\_RW\_Pin GPIO\_PIN\_3}}
+\DoxyCodeLine{69 \textcolor{preprocessor}{\#define LCD\_RW\_GPIO\_Port GPIOC}}
+\DoxyCodeLine{70 \textcolor{preprocessor}{\#define MoistureSensor1\_Pin GPIO\_PIN\_0}}
+\DoxyCodeLine{71 \textcolor{preprocessor}{\#define MoistureSensor1\_GPIO\_Port GPIOA}}
+\DoxyCodeLine{72 \textcolor{preprocessor}{\#define MoistureSensor2\_Pin GPIO\_PIN\_1}}
+\DoxyCodeLine{73 \textcolor{preprocessor}{\#define MoistureSensor2\_GPIO\_Port GPIOA}}
+\DoxyCodeLine{74 \textcolor{preprocessor}{\#define LD2\_Pin GPIO\_PIN\_5}}
+\DoxyCodeLine{75 \textcolor{preprocessor}{\#define LD2\_GPIO\_Port GPIOA}}
+\DoxyCodeLine{76 \textcolor{preprocessor}{\#define PUMP2DC\_Pin GPIO\_PIN\_13}}
+\DoxyCodeLine{77 \textcolor{preprocessor}{\#define PUMP2DC\_GPIO\_Port GPIOB}}
+\DoxyCodeLine{78 \textcolor{preprocessor}{\#define PUMP1DC\_Pin GPIO\_PIN\_14}}
+\DoxyCodeLine{79 \textcolor{preprocessor}{\#define PUMP1DC\_GPIO\_Port GPIOB}}
+\DoxyCodeLine{80 \textcolor{preprocessor}{\#define LCD\_Button2\_Pin GPIO\_PIN\_6}}
+\DoxyCodeLine{81 \textcolor{preprocessor}{\#define LCD\_Button2\_GPIO\_Port GPIOC}}
+\DoxyCodeLine{82 \textcolor{preprocessor}{\#define LCD\_Button2\_EXTI\_IRQn EXTI4\_15\_IRQn}}
+\DoxyCodeLine{83 \textcolor{preprocessor}{\#define LCD\_Button1\_Pin GPIO\_PIN\_8}}
+\DoxyCodeLine{84 \textcolor{preprocessor}{\#define LCD\_Button1\_GPIO\_Port GPIOC}}
+\DoxyCodeLine{85 \textcolor{preprocessor}{\#define LCD\_Button1\_EXTI\_IRQn EXTI4\_15\_IRQn}}
+\DoxyCodeLine{86 \textcolor{preprocessor}{\#define PUMP2\_Pin GPIO\_PIN\_8}}
+\DoxyCodeLine{87 \textcolor{preprocessor}{\#define PUMP2\_GPIO\_Port GPIOA}}
+\DoxyCodeLine{88 \textcolor{preprocessor}{\#define PUMP1\_Pin GPIO\_PIN\_9}}
+\DoxyCodeLine{89 \textcolor{preprocessor}{\#define PUMP1\_GPIO\_Port GPIOA}}
+\DoxyCodeLine{90 \textcolor{preprocessor}{\#define LCD\_D4\_Pin GPIO\_PIN\_4}}
+\DoxyCodeLine{91 \textcolor{preprocessor}{\#define LCD\_D4\_GPIO\_Port GPIOB}}
+\DoxyCodeLine{92 \textcolor{preprocessor}{\#define LCD\_D5\_Pin GPIO\_PIN\_5}}
+\DoxyCodeLine{93 \textcolor{preprocessor}{\#define LCD\_D5\_GPIO\_Port GPIOB}}
+\DoxyCodeLine{94 \textcolor{preprocessor}{\#define LCD\_D6\_Pin GPIO\_PIN\_6}}
+\DoxyCodeLine{95 \textcolor{preprocessor}{\#define LCD\_D6\_GPIO\_Port GPIOB}}
+\DoxyCodeLine{96 \textcolor{preprocessor}{\#define LCD\_D7\_Pin GPIO\_PIN\_7}}
+\DoxyCodeLine{97 \textcolor{preprocessor}{\#define LCD\_D7\_GPIO\_Port GPIOB}}
+\DoxyCodeLine{98 \textcolor{comment}{/* USER CODE BEGIN Private defines */}}
+\DoxyCodeLine{99 }
+\DoxyCodeLine{100 \textcolor{comment}{/* USER CODE END Private defines */}}
+\DoxyCodeLine{101 }
+\DoxyCodeLine{102 \textcolor{preprocessor}{\#ifdef \_\_cplusplus}}
+\DoxyCodeLine{103 \}}
+\DoxyCodeLine{104 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{105 }
+\DoxyCodeLine{106 \textcolor{preprocessor}{\#endif }\textcolor{comment}{/* \_\_MAIN\_H */}\textcolor{preprocessor}{}}
+
+\end{DoxyCode}

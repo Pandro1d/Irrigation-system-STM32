@@ -1,0 +1,54 @@
+\hypertarget{flower__data_8h_source}{}\doxysection{flower\+\_\+data.\+h}
+\label{flower__data_8h_source}\index{Core/Inc/flower\_data.h@{Core/Inc/flower\_data.h}}
+\mbox{\hyperlink{flower__data_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{comment}{/*}}
+\DoxyCodeLine{2 \textcolor{comment}{ * Flower\_Data.h}}
+\DoxyCodeLine{3 \textcolor{comment}{ *}}
+\DoxyCodeLine{4 \textcolor{comment}{ *  Created on: Jan 6, 2022}}
+\DoxyCodeLine{5 \textcolor{comment}{ *      Author: jozwi}}
+\DoxyCodeLine{6 \textcolor{comment}{ */}}
+\DoxyCodeLine{24 \textcolor{preprocessor}{\#ifndef INC\_FLOWER\_DATA\_H\_}}
+\DoxyCodeLine{25 \textcolor{preprocessor}{\#define INC\_FLOWER\_DATA\_H\_}}
+\DoxyCodeLine{26 }
+\DoxyCodeLine{27 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{main_8h}{main.h}}"{}}}
+\DoxyCodeLine{28 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{tim_8h}{tim.h}}"{}}}
+\DoxyCodeLine{29 \textcolor{preprocessor}{\#include <string.h>}}
+\DoxyCodeLine{30 }
+\DoxyCodeLine{33 \textcolor{preprocessor}{\#define MAX\_WATERING\_TIMES 2}}
+\DoxyCodeLine{36 \textcolor{preprocessor}{\#define NUMBER\_OF\_FLOWERS 2}}
+\DoxyCodeLine{37 }
+\DoxyCodeLine{40 \textcolor{keyword}{struct }\mbox{\hyperlink{structflower__data}{flower\_data}} \{}
+\DoxyCodeLine{43     uint8\_t \mbox{\hyperlink{structflower__data_adcbd81ae40ea28bd61434f4bc5e145e3}{flower\_id}};}
+\DoxyCodeLine{46     uint8\_t \mbox{\hyperlink{structflower__data_a66b28b63ce3c66addcffbb692b106fcd}{was\_watered\_flag}};}
+\DoxyCodeLine{49     uint8\_t \mbox{\hyperlink{structflower__data_a73a8e374cba47dc981ed8db63ce67e3e}{watering\_itter}};}
+\DoxyCodeLine{50 }
+\DoxyCodeLine{53     uint8\_t \mbox{\hyperlink{structflower__data_a7a5326edf9294dbd5659d166293fd4ec}{watering\_flag}};}
+\DoxyCodeLine{54 }
+\DoxyCodeLine{57     uint16\_t *\mbox{\hyperlink{structflower__data_acbf331243cd664da65f9f6d9a1e3b320}{sensor\_data}};}
+\DoxyCodeLine{58 }
+\DoxyCodeLine{61     uint16\_t \mbox{\hyperlink{structflower__data_a594f3db7590fb1d0856885ffbb324c1a}{max\_sensor\_data}};}
+\DoxyCodeLine{64     uint16\_t \mbox{\hyperlink{structflower__data_a5339085da48765f5d01a22a8cdea5152}{min\_sensor\_data}};}
+\DoxyCodeLine{65 }
+\DoxyCodeLine{68     uint8\_t \mbox{\hyperlink{structflower__data_aebf882942b05d71eb0fb89a62c896f7c}{moisture}};}
+\DoxyCodeLine{69 }
+\DoxyCodeLine{72     TIM\_HandleTypeDef *\mbox{\hyperlink{structflower__data_a1dce143b63ef24972230de022c95c3c1}{PWMtimer}};}
+\DoxyCodeLine{75     uint32\_t \mbox{\hyperlink{structflower__data_a1272fa40314188986cba95038d8f43b3}{PWMchannel}};}
+\DoxyCodeLine{76 }
+\DoxyCodeLine{79     uint16\_t \mbox{\hyperlink{structflower__data_ac6644703c73d58de463f3b09424391f7}{Pump\_GPIO\_Pin}};}
+\DoxyCodeLine{82     GPIO\_TypeDef *\mbox{\hyperlink{structflower__data_a3fc3f48e8f74e7255a17fbddb99aa512}{Pump\_GPIO\_PORT}};}
+\DoxyCodeLine{85     uint16\_t \mbox{\hyperlink{structflower__data_ae8265fd9860a71cf4ba8a47f463ec88e}{watering\_duration}};}
+\DoxyCodeLine{86 }
+\DoxyCodeLine{89     RTC\_TimeTypeDef \mbox{\hyperlink{structflower__data_a7e7ba23a0fc369f34e2648d42c7afcb8}{watering\_time}}[\mbox{\hyperlink{flower__data_8h_ac28012d5045654538e25c8e263ab43f5}{MAX\_WATERING\_TIMES}}];}
+\DoxyCodeLine{92     RTC\_TimeTypeDef \mbox{\hyperlink{structflower__data_aa87746fb058d2524a8e6d653d14c4de2}{last\_watering\_time}};}
+\DoxyCodeLine{93 \};}
+\DoxyCodeLine{96 \textcolor{keyword}{extern} \textcolor{keyword}{struct }\mbox{\hyperlink{structflower__data}{flower\_data}} \mbox{\hyperlink{flower__data_8h_afa89be2861e5ca8bbe483e3b9388b0f4}{flowers}}[\mbox{\hyperlink{flower__data_8h_a9b08f0cec46c0c7d0ececeadb067798b}{NUMBER\_OF\_FLOWERS}}];}
+\DoxyCodeLine{99 \textcolor{keywordtype}{void} \mbox{\hyperlink{flower__data_8h_a722c84931a4685bade7be5a3f025108b}{recalibrateSensorData}}(\textcolor{keyword}{struct} \mbox{\hyperlink{structflower__data}{flower\_data}}*);}
+\DoxyCodeLine{103 \textcolor{keywordtype}{void} \mbox{\hyperlink{flower__data_8h_a6b6b4564ab67d89f12aad5d587d920d6}{rescaleSensorData}}(\textcolor{keyword}{struct} \mbox{\hyperlink{structflower__data}{flower\_data}}*);}
+\DoxyCodeLine{104 }
+\DoxyCodeLine{108 \textcolor{keywordtype}{void} \mbox{\hyperlink{flower__data_8h_ab6863de2cbb24b5b5c0d6a5433aaa37d}{flowersInit}}(\textcolor{keyword}{struct} \mbox{\hyperlink{structflower__data}{flower\_data}} []);}
+\DoxyCodeLine{109 }
+\DoxyCodeLine{114 uint8\_t \mbox{\hyperlink{flower__data_8h_a40684a9a5d07f405c5669d8fcf77102d}{checkForWateringTime}}(\textcolor{keyword}{struct} \mbox{\hyperlink{structflower__data}{flower\_data}} *,RTC\_TimeTypeDef *);}
+\DoxyCodeLine{115 \textcolor{preprocessor}{\#endif }\textcolor{comment}{/* INC\_FLOWER\_DATA\_H\_ */}\textcolor{preprocessor}{}}
+
+\end{DoxyCode}

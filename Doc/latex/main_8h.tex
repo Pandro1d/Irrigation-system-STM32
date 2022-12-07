@@ -1,0 +1,345 @@
+\hypertarget{main_8h}{}\doxysection{Core/\+Inc/main.h File Reference}
+\label{main_8h}\index{Core/Inc/main.h@{Core/Inc/main.h}}
+
+
+\+: Header for \mbox{\hyperlink{main_8c}{main.\+c}} file.  
+
+
+{\ttfamily \#include \char`\"{}stm32l0xx\+\_\+hal.\+h\char`\"{}}\newline
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{main_8h_a3648a53840444167620ed7137739fe9d}{BLUE\+\_\+\+BUTTON\+\_\+\+Pin}}~GPIO\+\_\+\+PIN\+\_\+13
+\item 
+\#define \mbox{\hyperlink{main_8h_a9e0da26386d75d26d69f5b009a2ae935}{BLUE\+\_\+\+BUTTON\+\_\+\+GPIO\+\_\+\+Port}}~GPIOC
+\item 
+\#define \mbox{\hyperlink{main_8h_a715e4ab7c0dea590d17218ee4e187e62}{BLUE\+\_\+\+BUTTON\+\_\+\+EXTI\+\_\+\+IRQn}}~EXTI4\+\_\+15\+\_\+\+IRQn
+\item 
+\#define \mbox{\hyperlink{main_8h_a8a4056daf7b9ead00ef1320ab049bfa7}{LCD\+\_\+\+E\+\_\+\+Pin}}~GPIO\+\_\+\+PIN\+\_\+0
+\item 
+\#define \mbox{\hyperlink{main_8h_aafd4440032d23f5d8df5b2c906c8db40}{LCD\+\_\+\+E\+\_\+\+GPIO\+\_\+\+Port}}~GPIOC
+\item 
+\#define \mbox{\hyperlink{main_8h_a84cf65c2b017bc8fe002c811705bc846}{LCD\+\_\+\+RS\+\_\+\+Pin}}~GPIO\+\_\+\+PIN\+\_\+1
+\item 
+\#define \mbox{\hyperlink{main_8h_a7a7bf8fda04f0139622a654cc9ca5530}{LCD\+\_\+\+RS\+\_\+\+GPIO\+\_\+\+Port}}~GPIOC
+\item 
+\#define \mbox{\hyperlink{main_8h_ad4e900ebcc316a242287b4de1cc541ab}{LCD\+\_\+\+RW\+\_\+\+Pin}}~GPIO\+\_\+\+PIN\+\_\+3
+\item 
+\#define \mbox{\hyperlink{main_8h_ad7aa549ab9cdb985db6f23a573d57108}{LCD\+\_\+\+RW\+\_\+\+GPIO\+\_\+\+Port}}~GPIOC
+\item 
+\#define \mbox{\hyperlink{main_8h_a7482af9d02db9138ec02a46ae3a87ffe}{Moisture\+Sensor1\+\_\+\+Pin}}~GPIO\+\_\+\+PIN\+\_\+0
+\item 
+\#define \mbox{\hyperlink{main_8h_aad75d731bf412ae099fca6dc526f38a2}{Moisture\+Sensor1\+\_\+\+GPIO\+\_\+\+Port}}~GPIOA
+\item 
+\#define \mbox{\hyperlink{main_8h_a68c18ec84ed5c9c2a117a476cc41cb3b}{Moisture\+Sensor2\+\_\+\+Pin}}~GPIO\+\_\+\+PIN\+\_\+1
+\item 
+\#define \mbox{\hyperlink{main_8h_a4a9fe830d0ee83442212c99b6e6c1e88}{Moisture\+Sensor2\+\_\+\+GPIO\+\_\+\+Port}}~GPIOA
+\item 
+\#define \mbox{\hyperlink{main_8h_af17a94dd613cff35c699b06c7c6a2820}{LD2\+\_\+\+Pin}}~GPIO\+\_\+\+PIN\+\_\+5
+\item 
+\#define \mbox{\hyperlink{main_8h_a5aff6ddf7fe557e53b048115ad322aa0}{LD2\+\_\+\+GPIO\+\_\+\+Port}}~GPIOA
+\item 
+\#define \mbox{\hyperlink{main_8h_a292f5dcf1f964087cde437cb33224f13}{PUMP2\+DC\+\_\+\+Pin}}~GPIO\+\_\+\+PIN\+\_\+13
+\item 
+\#define \mbox{\hyperlink{main_8h_a459cf561efb4804b2900def2c1d72692}{PUMP2\+DC\+\_\+\+GPIO\+\_\+\+Port}}~GPIOB
+\item 
+\#define \mbox{\hyperlink{main_8h_a5640ff1548e70ee39a7e3227b0540bd2}{PUMP1\+DC\+\_\+\+Pin}}~GPIO\+\_\+\+PIN\+\_\+14
+\item 
+\#define \mbox{\hyperlink{main_8h_a1120540077d062f0524a8df47faefb46}{PUMP1\+DC\+\_\+\+GPIO\+\_\+\+Port}}~GPIOB
+\item 
+\#define \mbox{\hyperlink{main_8h_a73f852e9748b4b2030048caedde83ca3}{LCD\+\_\+\+Button2\+\_\+\+Pin}}~GPIO\+\_\+\+PIN\+\_\+6
+\item 
+\#define \mbox{\hyperlink{main_8h_a4a5aaf8220c2b2ababaeb398c784a733}{LCD\+\_\+\+Button2\+\_\+\+GPIO\+\_\+\+Port}}~GPIOC
+\item 
+\#define \mbox{\hyperlink{main_8h_a8a09882127c564dc08927ac887dafda5}{LCD\+\_\+\+Button2\+\_\+\+EXTI\+\_\+\+IRQn}}~EXTI4\+\_\+15\+\_\+\+IRQn
+\item 
+\#define \mbox{\hyperlink{main_8h_a9ee7af9da8057f449efb3cecbe82ef78}{LCD\+\_\+\+Button1\+\_\+\+Pin}}~GPIO\+\_\+\+PIN\+\_\+8
+\item 
+\#define \mbox{\hyperlink{main_8h_a08ea566a8211517a58189ae182f76f86}{LCD\+\_\+\+Button1\+\_\+\+GPIO\+\_\+\+Port}}~GPIOC
+\item 
+\#define \mbox{\hyperlink{main_8h_af3864f47de7b19f4270d282cb47a6eca}{LCD\+\_\+\+Button1\+\_\+\+EXTI\+\_\+\+IRQn}}~EXTI4\+\_\+15\+\_\+\+IRQn
+\item 
+\#define \mbox{\hyperlink{main_8h_a2565782e4af15add2a8fc80082c0d55a}{PUMP2\+\_\+\+Pin}}~GPIO\+\_\+\+PIN\+\_\+8
+\item 
+\#define \mbox{\hyperlink{main_8h_a72014fc4c188f03d6c76bed273564fd5}{PUMP2\+\_\+\+GPIO\+\_\+\+Port}}~GPIOA
+\item 
+\#define \mbox{\hyperlink{main_8h_a4a57f6f9c38baa71f14d5bf6f1bdf7da}{PUMP1\+\_\+\+Pin}}~GPIO\+\_\+\+PIN\+\_\+9
+\item 
+\#define \mbox{\hyperlink{main_8h_a23db1612b93806bcb436d30e755f79f7}{PUMP1\+\_\+\+GPIO\+\_\+\+Port}}~GPIOA
+\item 
+\#define \mbox{\hyperlink{main_8h_abb2684e750191210c0e4e3929babcb0a}{LCD\+\_\+\+D4\+\_\+\+Pin}}~GPIO\+\_\+\+PIN\+\_\+4
+\item 
+\#define \mbox{\hyperlink{main_8h_aa05fd750a9a62de2bdb8568cfdb09076}{LCD\+\_\+\+D4\+\_\+\+GPIO\+\_\+\+Port}}~GPIOB
+\item 
+\#define \mbox{\hyperlink{main_8h_ac87b3cda0ef2f915a686c40923b87348}{LCD\+\_\+\+D5\+\_\+\+Pin}}~GPIO\+\_\+\+PIN\+\_\+5
+\item 
+\#define \mbox{\hyperlink{main_8h_a93df360fe1d36333db0665f3fa0bcf65}{LCD\+\_\+\+D5\+\_\+\+GPIO\+\_\+\+Port}}~GPIOB
+\item 
+\#define \mbox{\hyperlink{main_8h_adca1e6ee0f52cd22f8ca3b84d0800f98}{LCD\+\_\+\+D6\+\_\+\+Pin}}~GPIO\+\_\+\+PIN\+\_\+6
+\item 
+\#define \mbox{\hyperlink{main_8h_aaabeecb0506ef73983dfb5b142285d93}{LCD\+\_\+\+D6\+\_\+\+GPIO\+\_\+\+Port}}~GPIOB
+\item 
+\#define \mbox{\hyperlink{main_8h_af9a02c31a2dc1c28e86cfdf505732029}{LCD\+\_\+\+D7\+\_\+\+Pin}}~GPIO\+\_\+\+PIN\+\_\+7
+\item 
+\#define \mbox{\hyperlink{main_8h_ac297f9c095004eafd7756ca2b891d03a}{LCD\+\_\+\+D7\+\_\+\+GPIO\+\_\+\+Port}}~GPIOB
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{main_8h_a1730ffe1e560465665eb47d9264826f9}{Error\+\_\+\+Handler}} (void)
+\begin{DoxyCompactList}\small\item\em This function is executed in case of error occurrence. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\+: Header for \mbox{\hyperlink{main_8c}{main.\+c}} file. 
+
+This file contains the common defines of the application.
+
+\begin{DoxyAttention}{Attention}
+
+\end{DoxyAttention}
+\doxysubsubsection*{\begin{center}\copyright{} Copyright (c) 2021 STMicroelectronics. All rights reserved.\end{center} }
+
+This software component is licensed by ST under BSD 3-\/Clause license, the \char`\"{}\+License\char`\"{}; You may not use this file except in compliance with the License. You may obtain a copy of the License at\+: opensource.\+org/licenses/\+BSD-\/3-\/\+Clause 
+
+\doxysubsection{Macro Definition Documentation}
+\mbox{\Hypertarget{main_8h_a715e4ab7c0dea590d17218ee4e187e62}\label{main_8h_a715e4ab7c0dea590d17218ee4e187e62}} 
+\index{main.h@{main.h}!BLUE\_BUTTON\_EXTI\_IRQn@{BLUE\_BUTTON\_EXTI\_IRQn}}
+\index{BLUE\_BUTTON\_EXTI\_IRQn@{BLUE\_BUTTON\_EXTI\_IRQn}!main.h@{main.h}}
+\doxysubsubsection{\texorpdfstring{BLUE\_BUTTON\_EXTI\_IRQn}{BLUE\_BUTTON\_EXTI\_IRQn}}
+{\footnotesize\ttfamily \#define BLUE\+\_\+\+BUTTON\+\_\+\+EXTI\+\_\+\+IRQn~EXTI4\+\_\+15\+\_\+\+IRQn}
+
+\mbox{\Hypertarget{main_8h_a9e0da26386d75d26d69f5b009a2ae935}\label{main_8h_a9e0da26386d75d26d69f5b009a2ae935}} 
+\index{main.h@{main.h}!BLUE\_BUTTON\_GPIO\_Port@{BLUE\_BUTTON\_GPIO\_Port}}
+\index{BLUE\_BUTTON\_GPIO\_Port@{BLUE\_BUTTON\_GPIO\_Port}!main.h@{main.h}}
+\doxysubsubsection{\texorpdfstring{BLUE\_BUTTON\_GPIO\_Port}{BLUE\_BUTTON\_GPIO\_Port}}
+{\footnotesize\ttfamily \#define BLUE\+\_\+\+BUTTON\+\_\+\+GPIO\+\_\+\+Port~GPIOC}
+
+\mbox{\Hypertarget{main_8h_a3648a53840444167620ed7137739fe9d}\label{main_8h_a3648a53840444167620ed7137739fe9d}} 
+\index{main.h@{main.h}!BLUE\_BUTTON\_Pin@{BLUE\_BUTTON\_Pin}}
+\index{BLUE\_BUTTON\_Pin@{BLUE\_BUTTON\_Pin}!main.h@{main.h}}
+\doxysubsubsection{\texorpdfstring{BLUE\_BUTTON\_Pin}{BLUE\_BUTTON\_Pin}}
+{\footnotesize\ttfamily \#define BLUE\+\_\+\+BUTTON\+\_\+\+Pin~GPIO\+\_\+\+PIN\+\_\+13}
+
+\mbox{\Hypertarget{main_8h_af3864f47de7b19f4270d282cb47a6eca}\label{main_8h_af3864f47de7b19f4270d282cb47a6eca}} 
+\index{main.h@{main.h}!LCD\_Button1\_EXTI\_IRQn@{LCD\_Button1\_EXTI\_IRQn}}
+\index{LCD\_Button1\_EXTI\_IRQn@{LCD\_Button1\_EXTI\_IRQn}!main.h@{main.h}}
+\doxysubsubsection{\texorpdfstring{LCD\_Button1\_EXTI\_IRQn}{LCD\_Button1\_EXTI\_IRQn}}
+{\footnotesize\ttfamily \#define LCD\+\_\+\+Button1\+\_\+\+EXTI\+\_\+\+IRQn~EXTI4\+\_\+15\+\_\+\+IRQn}
+
+\mbox{\Hypertarget{main_8h_a08ea566a8211517a58189ae182f76f86}\label{main_8h_a08ea566a8211517a58189ae182f76f86}} 
+\index{main.h@{main.h}!LCD\_Button1\_GPIO\_Port@{LCD\_Button1\_GPIO\_Port}}
+\index{LCD\_Button1\_GPIO\_Port@{LCD\_Button1\_GPIO\_Port}!main.h@{main.h}}
+\doxysubsubsection{\texorpdfstring{LCD\_Button1\_GPIO\_Port}{LCD\_Button1\_GPIO\_Port}}
+{\footnotesize\ttfamily \#define LCD\+\_\+\+Button1\+\_\+\+GPIO\+\_\+\+Port~GPIOC}
+
+\mbox{\Hypertarget{main_8h_a9ee7af9da8057f449efb3cecbe82ef78}\label{main_8h_a9ee7af9da8057f449efb3cecbe82ef78}} 
+\index{main.h@{main.h}!LCD\_Button1\_Pin@{LCD\_Button1\_Pin}}
+\index{LCD\_Button1\_Pin@{LCD\_Button1\_Pin}!main.h@{main.h}}
+\doxysubsubsection{\texorpdfstring{LCD\_Button1\_Pin}{LCD\_Button1\_Pin}}
+{\footnotesize\ttfamily \#define LCD\+\_\+\+Button1\+\_\+\+Pin~GPIO\+\_\+\+PIN\+\_\+8}
+
+\mbox{\Hypertarget{main_8h_a8a09882127c564dc08927ac887dafda5}\label{main_8h_a8a09882127c564dc08927ac887dafda5}} 
+\index{main.h@{main.h}!LCD\_Button2\_EXTI\_IRQn@{LCD\_Button2\_EXTI\_IRQn}}
+\index{LCD\_Button2\_EXTI\_IRQn@{LCD\_Button2\_EXTI\_IRQn}!main.h@{main.h}}
+\doxysubsubsection{\texorpdfstring{LCD\_Button2\_EXTI\_IRQn}{LCD\_Button2\_EXTI\_IRQn}}
+{\footnotesize\ttfamily \#define LCD\+\_\+\+Button2\+\_\+\+EXTI\+\_\+\+IRQn~EXTI4\+\_\+15\+\_\+\+IRQn}
+
+\mbox{\Hypertarget{main_8h_a4a5aaf8220c2b2ababaeb398c784a733}\label{main_8h_a4a5aaf8220c2b2ababaeb398c784a733}} 
+\index{main.h@{main.h}!LCD\_Button2\_GPIO\_Port@{LCD\_Button2\_GPIO\_Port}}
+\index{LCD\_Button2\_GPIO\_Port@{LCD\_Button2\_GPIO\_Port}!main.h@{main.h}}
+\doxysubsubsection{\texorpdfstring{LCD\_Button2\_GPIO\_Port}{LCD\_Button2\_GPIO\_Port}}
+{\footnotesize\ttfamily \#define LCD\+\_\+\+Button2\+\_\+\+GPIO\+\_\+\+Port~GPIOC}
+
+\mbox{\Hypertarget{main_8h_a73f852e9748b4b2030048caedde83ca3}\label{main_8h_a73f852e9748b4b2030048caedde83ca3}} 
+\index{main.h@{main.h}!LCD\_Button2\_Pin@{LCD\_Button2\_Pin}}
+\index{LCD\_Button2\_Pin@{LCD\_Button2\_Pin}!main.h@{main.h}}
+\doxysubsubsection{\texorpdfstring{LCD\_Button2\_Pin}{LCD\_Button2\_Pin}}
+{\footnotesize\ttfamily \#define LCD\+\_\+\+Button2\+\_\+\+Pin~GPIO\+\_\+\+PIN\+\_\+6}
+
+\mbox{\Hypertarget{main_8h_aa05fd750a9a62de2bdb8568cfdb09076}\label{main_8h_aa05fd750a9a62de2bdb8568cfdb09076}} 
+\index{main.h@{main.h}!LCD\_D4\_GPIO\_Port@{LCD\_D4\_GPIO\_Port}}
+\index{LCD\_D4\_GPIO\_Port@{LCD\_D4\_GPIO\_Port}!main.h@{main.h}}
+\doxysubsubsection{\texorpdfstring{LCD\_D4\_GPIO\_Port}{LCD\_D4\_GPIO\_Port}}
+{\footnotesize\ttfamily \#define LCD\+\_\+\+D4\+\_\+\+GPIO\+\_\+\+Port~GPIOB}
+
+\mbox{\Hypertarget{main_8h_abb2684e750191210c0e4e3929babcb0a}\label{main_8h_abb2684e750191210c0e4e3929babcb0a}} 
+\index{main.h@{main.h}!LCD\_D4\_Pin@{LCD\_D4\_Pin}}
+\index{LCD\_D4\_Pin@{LCD\_D4\_Pin}!main.h@{main.h}}
+\doxysubsubsection{\texorpdfstring{LCD\_D4\_Pin}{LCD\_D4\_Pin}}
+{\footnotesize\ttfamily \#define LCD\+\_\+\+D4\+\_\+\+Pin~GPIO\+\_\+\+PIN\+\_\+4}
+
+\mbox{\Hypertarget{main_8h_a93df360fe1d36333db0665f3fa0bcf65}\label{main_8h_a93df360fe1d36333db0665f3fa0bcf65}} 
+\index{main.h@{main.h}!LCD\_D5\_GPIO\_Port@{LCD\_D5\_GPIO\_Port}}
+\index{LCD\_D5\_GPIO\_Port@{LCD\_D5\_GPIO\_Port}!main.h@{main.h}}
+\doxysubsubsection{\texorpdfstring{LCD\_D5\_GPIO\_Port}{LCD\_D5\_GPIO\_Port}}
+{\footnotesize\ttfamily \#define LCD\+\_\+\+D5\+\_\+\+GPIO\+\_\+\+Port~GPIOB}
+
+\mbox{\Hypertarget{main_8h_ac87b3cda0ef2f915a686c40923b87348}\label{main_8h_ac87b3cda0ef2f915a686c40923b87348}} 
+\index{main.h@{main.h}!LCD\_D5\_Pin@{LCD\_D5\_Pin}}
+\index{LCD\_D5\_Pin@{LCD\_D5\_Pin}!main.h@{main.h}}
+\doxysubsubsection{\texorpdfstring{LCD\_D5\_Pin}{LCD\_D5\_Pin}}
+{\footnotesize\ttfamily \#define LCD\+\_\+\+D5\+\_\+\+Pin~GPIO\+\_\+\+PIN\+\_\+5}
+
+\mbox{\Hypertarget{main_8h_aaabeecb0506ef73983dfb5b142285d93}\label{main_8h_aaabeecb0506ef73983dfb5b142285d93}} 
+\index{main.h@{main.h}!LCD\_D6\_GPIO\_Port@{LCD\_D6\_GPIO\_Port}}
+\index{LCD\_D6\_GPIO\_Port@{LCD\_D6\_GPIO\_Port}!main.h@{main.h}}
+\doxysubsubsection{\texorpdfstring{LCD\_D6\_GPIO\_Port}{LCD\_D6\_GPIO\_Port}}
+{\footnotesize\ttfamily \#define LCD\+\_\+\+D6\+\_\+\+GPIO\+\_\+\+Port~GPIOB}
+
+\mbox{\Hypertarget{main_8h_adca1e6ee0f52cd22f8ca3b84d0800f98}\label{main_8h_adca1e6ee0f52cd22f8ca3b84d0800f98}} 
+\index{main.h@{main.h}!LCD\_D6\_Pin@{LCD\_D6\_Pin}}
+\index{LCD\_D6\_Pin@{LCD\_D6\_Pin}!main.h@{main.h}}
+\doxysubsubsection{\texorpdfstring{LCD\_D6\_Pin}{LCD\_D6\_Pin}}
+{\footnotesize\ttfamily \#define LCD\+\_\+\+D6\+\_\+\+Pin~GPIO\+\_\+\+PIN\+\_\+6}
+
+\mbox{\Hypertarget{main_8h_ac297f9c095004eafd7756ca2b891d03a}\label{main_8h_ac297f9c095004eafd7756ca2b891d03a}} 
+\index{main.h@{main.h}!LCD\_D7\_GPIO\_Port@{LCD\_D7\_GPIO\_Port}}
+\index{LCD\_D7\_GPIO\_Port@{LCD\_D7\_GPIO\_Port}!main.h@{main.h}}
+\doxysubsubsection{\texorpdfstring{LCD\_D7\_GPIO\_Port}{LCD\_D7\_GPIO\_Port}}
+{\footnotesize\ttfamily \#define LCD\+\_\+\+D7\+\_\+\+GPIO\+\_\+\+Port~GPIOB}
+
+\mbox{\Hypertarget{main_8h_af9a02c31a2dc1c28e86cfdf505732029}\label{main_8h_af9a02c31a2dc1c28e86cfdf505732029}} 
+\index{main.h@{main.h}!LCD\_D7\_Pin@{LCD\_D7\_Pin}}
+\index{LCD\_D7\_Pin@{LCD\_D7\_Pin}!main.h@{main.h}}
+\doxysubsubsection{\texorpdfstring{LCD\_D7\_Pin}{LCD\_D7\_Pin}}
+{\footnotesize\ttfamily \#define LCD\+\_\+\+D7\+\_\+\+Pin~GPIO\+\_\+\+PIN\+\_\+7}
+
+\mbox{\Hypertarget{main_8h_aafd4440032d23f5d8df5b2c906c8db40}\label{main_8h_aafd4440032d23f5d8df5b2c906c8db40}} 
+\index{main.h@{main.h}!LCD\_E\_GPIO\_Port@{LCD\_E\_GPIO\_Port}}
+\index{LCD\_E\_GPIO\_Port@{LCD\_E\_GPIO\_Port}!main.h@{main.h}}
+\doxysubsubsection{\texorpdfstring{LCD\_E\_GPIO\_Port}{LCD\_E\_GPIO\_Port}}
+{\footnotesize\ttfamily \#define LCD\+\_\+\+E\+\_\+\+GPIO\+\_\+\+Port~GPIOC}
+
+\mbox{\Hypertarget{main_8h_a8a4056daf7b9ead00ef1320ab049bfa7}\label{main_8h_a8a4056daf7b9ead00ef1320ab049bfa7}} 
+\index{main.h@{main.h}!LCD\_E\_Pin@{LCD\_E\_Pin}}
+\index{LCD\_E\_Pin@{LCD\_E\_Pin}!main.h@{main.h}}
+\doxysubsubsection{\texorpdfstring{LCD\_E\_Pin}{LCD\_E\_Pin}}
+{\footnotesize\ttfamily \#define LCD\+\_\+\+E\+\_\+\+Pin~GPIO\+\_\+\+PIN\+\_\+0}
+
+\mbox{\Hypertarget{main_8h_a7a7bf8fda04f0139622a654cc9ca5530}\label{main_8h_a7a7bf8fda04f0139622a654cc9ca5530}} 
+\index{main.h@{main.h}!LCD\_RS\_GPIO\_Port@{LCD\_RS\_GPIO\_Port}}
+\index{LCD\_RS\_GPIO\_Port@{LCD\_RS\_GPIO\_Port}!main.h@{main.h}}
+\doxysubsubsection{\texorpdfstring{LCD\_RS\_GPIO\_Port}{LCD\_RS\_GPIO\_Port}}
+{\footnotesize\ttfamily \#define LCD\+\_\+\+RS\+\_\+\+GPIO\+\_\+\+Port~GPIOC}
+
+\mbox{\Hypertarget{main_8h_a84cf65c2b017bc8fe002c811705bc846}\label{main_8h_a84cf65c2b017bc8fe002c811705bc846}} 
+\index{main.h@{main.h}!LCD\_RS\_Pin@{LCD\_RS\_Pin}}
+\index{LCD\_RS\_Pin@{LCD\_RS\_Pin}!main.h@{main.h}}
+\doxysubsubsection{\texorpdfstring{LCD\_RS\_Pin}{LCD\_RS\_Pin}}
+{\footnotesize\ttfamily \#define LCD\+\_\+\+RS\+\_\+\+Pin~GPIO\+\_\+\+PIN\+\_\+1}
+
+\mbox{\Hypertarget{main_8h_ad7aa549ab9cdb985db6f23a573d57108}\label{main_8h_ad7aa549ab9cdb985db6f23a573d57108}} 
+\index{main.h@{main.h}!LCD\_RW\_GPIO\_Port@{LCD\_RW\_GPIO\_Port}}
+\index{LCD\_RW\_GPIO\_Port@{LCD\_RW\_GPIO\_Port}!main.h@{main.h}}
+\doxysubsubsection{\texorpdfstring{LCD\_RW\_GPIO\_Port}{LCD\_RW\_GPIO\_Port}}
+{\footnotesize\ttfamily \#define LCD\+\_\+\+RW\+\_\+\+GPIO\+\_\+\+Port~GPIOC}
+
+\mbox{\Hypertarget{main_8h_ad4e900ebcc316a242287b4de1cc541ab}\label{main_8h_ad4e900ebcc316a242287b4de1cc541ab}} 
+\index{main.h@{main.h}!LCD\_RW\_Pin@{LCD\_RW\_Pin}}
+\index{LCD\_RW\_Pin@{LCD\_RW\_Pin}!main.h@{main.h}}
+\doxysubsubsection{\texorpdfstring{LCD\_RW\_Pin}{LCD\_RW\_Pin}}
+{\footnotesize\ttfamily \#define LCD\+\_\+\+RW\+\_\+\+Pin~GPIO\+\_\+\+PIN\+\_\+3}
+
+\mbox{\Hypertarget{main_8h_a5aff6ddf7fe557e53b048115ad322aa0}\label{main_8h_a5aff6ddf7fe557e53b048115ad322aa0}} 
+\index{main.h@{main.h}!LD2\_GPIO\_Port@{LD2\_GPIO\_Port}}
+\index{LD2\_GPIO\_Port@{LD2\_GPIO\_Port}!main.h@{main.h}}
+\doxysubsubsection{\texorpdfstring{LD2\_GPIO\_Port}{LD2\_GPIO\_Port}}
+{\footnotesize\ttfamily \#define LD2\+\_\+\+GPIO\+\_\+\+Port~GPIOA}
+
+\mbox{\Hypertarget{main_8h_af17a94dd613cff35c699b06c7c6a2820}\label{main_8h_af17a94dd613cff35c699b06c7c6a2820}} 
+\index{main.h@{main.h}!LD2\_Pin@{LD2\_Pin}}
+\index{LD2\_Pin@{LD2\_Pin}!main.h@{main.h}}
+\doxysubsubsection{\texorpdfstring{LD2\_Pin}{LD2\_Pin}}
+{\footnotesize\ttfamily \#define LD2\+\_\+\+Pin~GPIO\+\_\+\+PIN\+\_\+5}
+
+\mbox{\Hypertarget{main_8h_aad75d731bf412ae099fca6dc526f38a2}\label{main_8h_aad75d731bf412ae099fca6dc526f38a2}} 
+\index{main.h@{main.h}!MoistureSensor1\_GPIO\_Port@{MoistureSensor1\_GPIO\_Port}}
+\index{MoistureSensor1\_GPIO\_Port@{MoistureSensor1\_GPIO\_Port}!main.h@{main.h}}
+\doxysubsubsection{\texorpdfstring{MoistureSensor1\_GPIO\_Port}{MoistureSensor1\_GPIO\_Port}}
+{\footnotesize\ttfamily \#define Moisture\+Sensor1\+\_\+\+GPIO\+\_\+\+Port~GPIOA}
+
+\mbox{\Hypertarget{main_8h_a7482af9d02db9138ec02a46ae3a87ffe}\label{main_8h_a7482af9d02db9138ec02a46ae3a87ffe}} 
+\index{main.h@{main.h}!MoistureSensor1\_Pin@{MoistureSensor1\_Pin}}
+\index{MoistureSensor1\_Pin@{MoistureSensor1\_Pin}!main.h@{main.h}}
+\doxysubsubsection{\texorpdfstring{MoistureSensor1\_Pin}{MoistureSensor1\_Pin}}
+{\footnotesize\ttfamily \#define Moisture\+Sensor1\+\_\+\+Pin~GPIO\+\_\+\+PIN\+\_\+0}
+
+\mbox{\Hypertarget{main_8h_a4a9fe830d0ee83442212c99b6e6c1e88}\label{main_8h_a4a9fe830d0ee83442212c99b6e6c1e88}} 
+\index{main.h@{main.h}!MoistureSensor2\_GPIO\_Port@{MoistureSensor2\_GPIO\_Port}}
+\index{MoistureSensor2\_GPIO\_Port@{MoistureSensor2\_GPIO\_Port}!main.h@{main.h}}
+\doxysubsubsection{\texorpdfstring{MoistureSensor2\_GPIO\_Port}{MoistureSensor2\_GPIO\_Port}}
+{\footnotesize\ttfamily \#define Moisture\+Sensor2\+\_\+\+GPIO\+\_\+\+Port~GPIOA}
+
+\mbox{\Hypertarget{main_8h_a68c18ec84ed5c9c2a117a476cc41cb3b}\label{main_8h_a68c18ec84ed5c9c2a117a476cc41cb3b}} 
+\index{main.h@{main.h}!MoistureSensor2\_Pin@{MoistureSensor2\_Pin}}
+\index{MoistureSensor2\_Pin@{MoistureSensor2\_Pin}!main.h@{main.h}}
+\doxysubsubsection{\texorpdfstring{MoistureSensor2\_Pin}{MoistureSensor2\_Pin}}
+{\footnotesize\ttfamily \#define Moisture\+Sensor2\+\_\+\+Pin~GPIO\+\_\+\+PIN\+\_\+1}
+
+\mbox{\Hypertarget{main_8h_a23db1612b93806bcb436d30e755f79f7}\label{main_8h_a23db1612b93806bcb436d30e755f79f7}} 
+\index{main.h@{main.h}!PUMP1\_GPIO\_Port@{PUMP1\_GPIO\_Port}}
+\index{PUMP1\_GPIO\_Port@{PUMP1\_GPIO\_Port}!main.h@{main.h}}
+\doxysubsubsection{\texorpdfstring{PUMP1\_GPIO\_Port}{PUMP1\_GPIO\_Port}}
+{\footnotesize\ttfamily \#define PUMP1\+\_\+\+GPIO\+\_\+\+Port~GPIOA}
+
+\mbox{\Hypertarget{main_8h_a4a57f6f9c38baa71f14d5bf6f1bdf7da}\label{main_8h_a4a57f6f9c38baa71f14d5bf6f1bdf7da}} 
+\index{main.h@{main.h}!PUMP1\_Pin@{PUMP1\_Pin}}
+\index{PUMP1\_Pin@{PUMP1\_Pin}!main.h@{main.h}}
+\doxysubsubsection{\texorpdfstring{PUMP1\_Pin}{PUMP1\_Pin}}
+{\footnotesize\ttfamily \#define PUMP1\+\_\+\+Pin~GPIO\+\_\+\+PIN\+\_\+9}
+
+\mbox{\Hypertarget{main_8h_a1120540077d062f0524a8df47faefb46}\label{main_8h_a1120540077d062f0524a8df47faefb46}} 
+\index{main.h@{main.h}!PUMP1DC\_GPIO\_Port@{PUMP1DC\_GPIO\_Port}}
+\index{PUMP1DC\_GPIO\_Port@{PUMP1DC\_GPIO\_Port}!main.h@{main.h}}
+\doxysubsubsection{\texorpdfstring{PUMP1DC\_GPIO\_Port}{PUMP1DC\_GPIO\_Port}}
+{\footnotesize\ttfamily \#define PUMP1\+DC\+\_\+\+GPIO\+\_\+\+Port~GPIOB}
+
+\mbox{\Hypertarget{main_8h_a5640ff1548e70ee39a7e3227b0540bd2}\label{main_8h_a5640ff1548e70ee39a7e3227b0540bd2}} 
+\index{main.h@{main.h}!PUMP1DC\_Pin@{PUMP1DC\_Pin}}
+\index{PUMP1DC\_Pin@{PUMP1DC\_Pin}!main.h@{main.h}}
+\doxysubsubsection{\texorpdfstring{PUMP1DC\_Pin}{PUMP1DC\_Pin}}
+{\footnotesize\ttfamily \#define PUMP1\+DC\+\_\+\+Pin~GPIO\+\_\+\+PIN\+\_\+14}
+
+\mbox{\Hypertarget{main_8h_a72014fc4c188f03d6c76bed273564fd5}\label{main_8h_a72014fc4c188f03d6c76bed273564fd5}} 
+\index{main.h@{main.h}!PUMP2\_GPIO\_Port@{PUMP2\_GPIO\_Port}}
+\index{PUMP2\_GPIO\_Port@{PUMP2\_GPIO\_Port}!main.h@{main.h}}
+\doxysubsubsection{\texorpdfstring{PUMP2\_GPIO\_Port}{PUMP2\_GPIO\_Port}}
+{\footnotesize\ttfamily \#define PUMP2\+\_\+\+GPIO\+\_\+\+Port~GPIOA}
+
+\mbox{\Hypertarget{main_8h_a2565782e4af15add2a8fc80082c0d55a}\label{main_8h_a2565782e4af15add2a8fc80082c0d55a}} 
+\index{main.h@{main.h}!PUMP2\_Pin@{PUMP2\_Pin}}
+\index{PUMP2\_Pin@{PUMP2\_Pin}!main.h@{main.h}}
+\doxysubsubsection{\texorpdfstring{PUMP2\_Pin}{PUMP2\_Pin}}
+{\footnotesize\ttfamily \#define PUMP2\+\_\+\+Pin~GPIO\+\_\+\+PIN\+\_\+8}
+
+\mbox{\Hypertarget{main_8h_a459cf561efb4804b2900def2c1d72692}\label{main_8h_a459cf561efb4804b2900def2c1d72692}} 
+\index{main.h@{main.h}!PUMP2DC\_GPIO\_Port@{PUMP2DC\_GPIO\_Port}}
+\index{PUMP2DC\_GPIO\_Port@{PUMP2DC\_GPIO\_Port}!main.h@{main.h}}
+\doxysubsubsection{\texorpdfstring{PUMP2DC\_GPIO\_Port}{PUMP2DC\_GPIO\_Port}}
+{\footnotesize\ttfamily \#define PUMP2\+DC\+\_\+\+GPIO\+\_\+\+Port~GPIOB}
+
+\mbox{\Hypertarget{main_8h_a292f5dcf1f964087cde437cb33224f13}\label{main_8h_a292f5dcf1f964087cde437cb33224f13}} 
+\index{main.h@{main.h}!PUMP2DC\_Pin@{PUMP2DC\_Pin}}
+\index{PUMP2DC\_Pin@{PUMP2DC\_Pin}!main.h@{main.h}}
+\doxysubsubsection{\texorpdfstring{PUMP2DC\_Pin}{PUMP2DC\_Pin}}
+{\footnotesize\ttfamily \#define PUMP2\+DC\+\_\+\+Pin~GPIO\+\_\+\+PIN\+\_\+13}
+
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{main_8h_a1730ffe1e560465665eb47d9264826f9}\label{main_8h_a1730ffe1e560465665eb47d9264826f9}} 
+\index{main.h@{main.h}!Error\_Handler@{Error\_Handler}}
+\index{Error\_Handler@{Error\_Handler}!main.h@{main.h}}
+\doxysubsubsection{\texorpdfstring{Error\_Handler()}{Error\_Handler()}}
+{\footnotesize\ttfamily void Error\+\_\+\+Handler (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+This function is executed in case of error occurrence. 
+
+
+\begin{DoxyRetVals}{Return values}
+{\em None} & \\
+\hline
+\end{DoxyRetVals}

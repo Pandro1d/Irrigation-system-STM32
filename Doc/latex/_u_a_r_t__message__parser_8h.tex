@@ -1,0 +1,50 @@
+\hypertarget{_u_a_r_t__message__parser_8h}{}\doxysection{Core/\+Inc/\+UART\+\_\+message\+\_\+parser.h File Reference}
+\label{_u_a_r_t__message__parser_8h}\index{Core/Inc/UART\_message\_parser.h@{Core/Inc/UART\_message\_parser.h}}
+
+
+This file contains all the function prototypes for the \mbox{\hyperlink{_u_a_r_t__message__parser_8c}{UART\+\_\+message\+\_\+parser.\+c}} file.  
+
+
+{\ttfamily \#include \char`\"{}flower\+\_\+data.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}LCD\+\_\+\+HD44780.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}usart.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}main.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}rtc.\+h\char`\"{}}\newline
+{\ttfamily \#include $<$string.\+h$>$}\newline
+{\ttfamily \#include $<$stdlib.\+h$>$}\newline
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+uint8\+\_\+t \mbox{\hyperlink{_u_a_r_t__message__parser_8h_acfe71bc14221e6d79aece36fc70d18ab}{parse\+Data}} (struct \mbox{\hyperlink{structuart__struct}{uart\+\_\+struct}} $\ast$)
+\begin{DoxyCompactList}\small\item\em Function parses data from UART instance and calling another function suitable for each command. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+This file contains all the function prototypes for the \mbox{\hyperlink{_u_a_r_t__message__parser_8c}{UART\+\_\+message\+\_\+parser.\+c}} file. 
+
+Copyright (c) 2021 STMicroelectronics. All rights reserved.
+
+This software is licensed under terms that can be found in the LICENSE file in the root directory of this software component. If no LICENSE file comes with this software, it is provided AS-\/\+IS. 
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{_u_a_r_t__message__parser_8h_acfe71bc14221e6d79aece36fc70d18ab}\label{_u_a_r_t__message__parser_8h_acfe71bc14221e6d79aece36fc70d18ab}} 
+\index{UART\_message\_parser.h@{UART\_message\_parser.h}!parseData@{parseData}}
+\index{parseData@{parseData}!UART\_message\_parser.h@{UART\_message\_parser.h}}
+\doxysubsubsection{\texorpdfstring{parseData()}{parseData()}}
+{\footnotesize\ttfamily uint8\+\_\+t parse\+Data (\begin{DoxyParamCaption}\item[{struct \mbox{\hyperlink{structuart__struct}{uart\+\_\+struct}} $\ast$}]{uart\+\_\+str }\end{DoxyParamCaption})}
+
+
+
+Function parses data from UART instance and calling another function suitable for each command. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em struct} & \mbox{\hyperlink{structuart__struct}{uart\+\_\+struct}} $\ast$ Pointer to instance of UART struct \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+1 if parse succeed 0 if there is no suitable command.
+\end{DoxyReturn}
+Available commands\+:
+
+!set\+Curr\+Time 12\+:30\+:05/ $\vert$ !set\+Wat\+Time 1 12\+:24\+:10/ $\vert$ !set\+Dur\+Time 1 4/ $\vert$ !start\+Wat 1/ $\vert$ !info/ $\vert$ 

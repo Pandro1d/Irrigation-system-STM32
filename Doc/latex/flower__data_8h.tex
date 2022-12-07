@@ -1,0 +1,142 @@
+\hypertarget{flower__data_8h}{}\doxysection{Core/\+Inc/flower\+\_\+data.h File Reference}
+\label{flower__data_8h}\index{Core/Inc/flower\_data.h@{Core/Inc/flower\_data.h}}
+
+
+This file contains all the function prototypes for the \mbox{\hyperlink{flower__data_8c}{flower\+\_\+data.\+c}} file.  
+
+
+{\ttfamily \#include \char`\"{}main.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}tim.\+h\char`\"{}}\newline
+{\ttfamily \#include $<$string.\+h$>$}\newline
+\doxysubsection*{Data Structures}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structflower__data}{flower\+\_\+data}}
+\begin{DoxyCompactList}\small\item\em Struct which contains flower data. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{flower__data_8h_ac28012d5045654538e25c8e263ab43f5}{MAX\+\_\+\+WATERING\+\_\+\+TIMES}}~2
+\begin{DoxyCompactList}\small\item\em Defines max watering time for each flower. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{flower__data_8h_a9b08f0cec46c0c7d0ececeadb067798b}{NUMBER\+\_\+\+OF\+\_\+\+FLOWERS}}~2
+\begin{DoxyCompactList}\small\item\em Defines max number of flowers. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{flower__data_8h_a722c84931a4685bade7be5a3f025108b}{recalibrate\+Sensor\+Data}} (struct \mbox{\hyperlink{structflower__data}{flower\+\_\+data}} $\ast$)
+\begin{DoxyCompactList}\small\item\em Function to calibrate the sensor data. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{flower__data_8h_a6b6b4564ab67d89f12aad5d587d920d6}{rescale\+Sensor\+Data}} (struct \mbox{\hyperlink{structflower__data}{flower\+\_\+data}} $\ast$)
+\begin{DoxyCompactList}\small\item\em Function which rescales sensor data from ADC value to percentage of moisture. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{flower__data_8h_ab6863de2cbb24b5b5c0d6a5433aaa37d}{flowers\+Init}} (struct \mbox{\hyperlink{structflower__data}{flower\+\_\+data}}\mbox{[}$\,$\mbox{]})
+\begin{DoxyCompactList}\small\item\em Struct \mbox{\hyperlink{structflower__data}{flower\+\_\+data}} init with default values. \end{DoxyCompactList}\item 
+uint8\+\_\+t \mbox{\hyperlink{flower__data_8h_a40684a9a5d07f405c5669d8fcf77102d}{check\+For\+Watering\+Time}} (struct \mbox{\hyperlink{structflower__data}{flower\+\_\+data}} $\ast$, RTC\+\_\+\+Time\+Type\+Def $\ast$)
+\begin{DoxyCompactList}\small\item\em Function is checking if actual time is equal to watering time and changes watering\+\_\+flag. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structflower__data}{flower\+\_\+data}} \mbox{\hyperlink{flower__data_8h_afa89be2861e5ca8bbe483e3b9388b0f4}{flowers}} \mbox{[}\mbox{\hyperlink{flower__data_8h_a9b08f0cec46c0c7d0ececeadb067798b}{NUMBER\+\_\+\+OF\+\_\+\+FLOWERS}}\mbox{]}
+\begin{DoxyCompactList}\small\item\em Definition of external struct \mbox{\hyperlink{structflower__data}{flower\+\_\+data}}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+This file contains all the function prototypes for the \mbox{\hyperlink{flower__data_8c}{flower\+\_\+data.\+c}} file. 
+
+Copyright (c) 2021 STMicroelectronics. All rights reserved.
+
+This software is licensed under terms that can be found in the LICENSE file in the root directory of this software component. If no LICENSE file comes with this software, it is provided AS-\/\+IS. 
+
+\doxysubsection{Macro Definition Documentation}
+\mbox{\Hypertarget{flower__data_8h_ac28012d5045654538e25c8e263ab43f5}\label{flower__data_8h_ac28012d5045654538e25c8e263ab43f5}} 
+\index{flower\_data.h@{flower\_data.h}!MAX\_WATERING\_TIMES@{MAX\_WATERING\_TIMES}}
+\index{MAX\_WATERING\_TIMES@{MAX\_WATERING\_TIMES}!flower\_data.h@{flower\_data.h}}
+\doxysubsubsection{\texorpdfstring{MAX\_WATERING\_TIMES}{MAX\_WATERING\_TIMES}}
+{\footnotesize\ttfamily \#define MAX\+\_\+\+WATERING\+\_\+\+TIMES~2}
+
+
+
+Defines max watering time for each flower. 
+
+\mbox{\Hypertarget{flower__data_8h_a9b08f0cec46c0c7d0ececeadb067798b}\label{flower__data_8h_a9b08f0cec46c0c7d0ececeadb067798b}} 
+\index{flower\_data.h@{flower\_data.h}!NUMBER\_OF\_FLOWERS@{NUMBER\_OF\_FLOWERS}}
+\index{NUMBER\_OF\_FLOWERS@{NUMBER\_OF\_FLOWERS}!flower\_data.h@{flower\_data.h}}
+\doxysubsubsection{\texorpdfstring{NUMBER\_OF\_FLOWERS}{NUMBER\_OF\_FLOWERS}}
+{\footnotesize\ttfamily \#define NUMBER\+\_\+\+OF\+\_\+\+FLOWERS~2}
+
+
+
+Defines max number of flowers. 
+
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{flower__data_8h_a40684a9a5d07f405c5669d8fcf77102d}\label{flower__data_8h_a40684a9a5d07f405c5669d8fcf77102d}} 
+\index{flower\_data.h@{flower\_data.h}!checkForWateringTime@{checkForWateringTime}}
+\index{checkForWateringTime@{checkForWateringTime}!flower\_data.h@{flower\_data.h}}
+\doxysubsubsection{\texorpdfstring{checkForWateringTime()}{checkForWateringTime()}}
+{\footnotesize\ttfamily uint8\+\_\+t check\+For\+Watering\+Time (\begin{DoxyParamCaption}\item[{struct \mbox{\hyperlink{structflower__data}{flower\+\_\+data}} $\ast$}]{flower,  }\item[{RTC\+\_\+\+Time\+Type\+Def $\ast$}]{curr\+\_\+time }\end{DoxyParamCaption})}
+
+
+
+Function is checking if actual time is equal to watering time and changes watering\+\_\+flag. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em struct} & \mbox{\hyperlink{structflower__data}{flower\+\_\+data}} $\ast$,RTC\+\_\+\+Time\+Type\+Def $\ast$ Pointer to flower data and pointer to actual time \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+watering\+\_\+flag 
+\end{DoxyReturn}
+\mbox{\Hypertarget{flower__data_8h_ab6863de2cbb24b5b5c0d6a5433aaa37d}\label{flower__data_8h_ab6863de2cbb24b5b5c0d6a5433aaa37d}} 
+\index{flower\_data.h@{flower\_data.h}!flowersInit@{flowersInit}}
+\index{flowersInit@{flowersInit}!flower\_data.h@{flower\_data.h}}
+\doxysubsubsection{\texorpdfstring{flowersInit()}{flowersInit()}}
+{\footnotesize\ttfamily void flowers\+Init (\begin{DoxyParamCaption}\item[{struct \mbox{\hyperlink{structflower__data}{flower\+\_\+data}}}]{flowers\mbox{[}$\,$\mbox{]} }\end{DoxyParamCaption})}
+
+
+
+Struct \mbox{\hyperlink{structflower__data}{flower\+\_\+data}} init with default values. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em struct} & \mbox{\hyperlink{structflower__data}{flower\+\_\+data}} \mbox{[}\mbox{]} Tab of flower data struct. \\
+\hline
+\end{DoxyParams}
+Default values\mbox{\Hypertarget{flower__data_8h_a722c84931a4685bade7be5a3f025108b}\label{flower__data_8h_a722c84931a4685bade7be5a3f025108b}} 
+\index{flower\_data.h@{flower\_data.h}!recalibrateSensorData@{recalibrateSensorData}}
+\index{recalibrateSensorData@{recalibrateSensorData}!flower\_data.h@{flower\_data.h}}
+\doxysubsubsection{\texorpdfstring{recalibrateSensorData()}{recalibrateSensorData()}}
+{\footnotesize\ttfamily void recalibrate\+Sensor\+Data (\begin{DoxyParamCaption}\item[{struct \mbox{\hyperlink{structflower__data}{flower\+\_\+data}} $\ast$}]{flower }\end{DoxyParamCaption})}
+
+
+
+Function to calibrate the sensor data. 
+
+\mbox{\Hypertarget{flower__data_8h_a6b6b4564ab67d89f12aad5d587d920d6}\label{flower__data_8h_a6b6b4564ab67d89f12aad5d587d920d6}} 
+\index{flower\_data.h@{flower\_data.h}!rescaleSensorData@{rescaleSensorData}}
+\index{rescaleSensorData@{rescaleSensorData}!flower\_data.h@{flower\_data.h}}
+\doxysubsubsection{\texorpdfstring{rescaleSensorData()}{rescaleSensorData()}}
+{\footnotesize\ttfamily void rescale\+Sensor\+Data (\begin{DoxyParamCaption}\item[{struct \mbox{\hyperlink{structflower__data}{flower\+\_\+data}} $\ast$}]{flower }\end{DoxyParamCaption})}
+
+
+
+Function which rescales sensor data from ADC value to percentage of moisture. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em struct} & \mbox{\hyperlink{structflower__data}{flower\+\_\+data}} $\ast$ Pointer to flower data struct. \\
+\hline
+\end{DoxyParams}
+Aby nie przekroczyc wartosci maks i min
+
+\doxysubsection{Variable Documentation}
+\mbox{\Hypertarget{flower__data_8h_afa89be2861e5ca8bbe483e3b9388b0f4}\label{flower__data_8h_afa89be2861e5ca8bbe483e3b9388b0f4}} 
+\index{flower\_data.h@{flower\_data.h}!flowers@{flowers}}
+\index{flowers@{flowers}!flower\_data.h@{flower\_data.h}}
+\doxysubsubsection{\texorpdfstring{flowers}{flowers}}
+{\footnotesize\ttfamily struct \mbox{\hyperlink{structflower__data}{flower\+\_\+data}} flowers\mbox{[}\mbox{\hyperlink{flower__data_8h_a9b08f0cec46c0c7d0ececeadb067798b}{NUMBER\+\_\+\+OF\+\_\+\+FLOWERS}}\mbox{]}\hspace{0.3cm}{\ttfamily [extern]}}
+
+
+
+Definition of external struct \mbox{\hyperlink{structflower__data}{flower\+\_\+data}}. 
+

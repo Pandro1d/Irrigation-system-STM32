@@ -1,0 +1,116 @@
+\hypertarget{_l_c_d___h_d44780_8h_source}{}\doxysection{LCD\+\_\+\+HD44780.\+h}
+\label{_l_c_d___h_d44780_8h_source}\index{Core/Inc/LCD\_HD44780.h@{Core/Inc/LCD\_HD44780.h}}
+\mbox{\hyperlink{_l_c_d___h_d44780_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{comment}{/*}}
+\DoxyCodeLine{2 \textcolor{comment}{ * LCD\_HD44780.h}}
+\DoxyCodeLine{3 \textcolor{comment}{ *}}
+\DoxyCodeLine{4 \textcolor{comment}{ *  Created on: Jan 3, 2022}}
+\DoxyCodeLine{5 \textcolor{comment}{ *      Author: jozwi}}
+\DoxyCodeLine{6 \textcolor{comment}{ */}}
+\DoxyCodeLine{24 \textcolor{preprocessor}{\#ifndef LCD\_HD44780\_H\_}}
+\DoxyCodeLine{25 \textcolor{preprocessor}{\#define LCD\_HD44780\_H\_}}
+\DoxyCodeLine{26 }
+\DoxyCodeLine{27 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{flower__data_8h}{flower\_data.h}}"{}}}
+\DoxyCodeLine{28 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{main_8h}{main.h}}"{}}}
+\DoxyCodeLine{29 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{tim_8h}{tim.h}}"{}}}
+\DoxyCodeLine{30 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{rtc_8h}{rtc.h}}"{}}}
+\DoxyCodeLine{31 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{gpio_8h}{gpio.h}}"{}}}
+\DoxyCodeLine{32 \textcolor{preprocessor}{\#include "{}stm32l0xx\_hal.h"{}}}
+\DoxyCodeLine{33 \textcolor{preprocessor}{\#include <string.h>}}
+\DoxyCodeLine{34 \textcolor{preprocessor}{\#include <stdio.h>}}
+\DoxyCodeLine{35 }
+\DoxyCodeLine{38 \textcolor{preprocessor}{\#define LCD\_Y 4}}
+\DoxyCodeLine{41 \textcolor{preprocessor}{\#define LCD\_X 20}}
+\DoxyCodeLine{42 }
+\DoxyCodeLine{45 \textcolor{preprocessor}{\#define USE\_RW}}
+\DoxyCodeLine{46 }
+\DoxyCodeLine{49 \textcolor{preprocessor}{\#define LCD\_4BIT}}
+\DoxyCodeLine{50 }
+\DoxyCodeLine{51 \textcolor{preprocessor}{\#ifndef LCD\_4BIT}}
+\DoxyCodeLine{54 \textcolor{preprocessor}{\#define LCD\_8BIT}}
+\DoxyCodeLine{55 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{56 }
+\DoxyCodeLine{59 \textcolor{preprocessor}{\#if ( (LCD\_Y == 4) \&\& (LCD\_X == 16) )}}
+\DoxyCodeLine{60 \textcolor{preprocessor}{\#define LCD\_LINE1 0x00      }\textcolor{comment}{// adres 1 znaku 1 wiersza}}
+\DoxyCodeLine{61 \textcolor{preprocessor}{\#define LCD\_LINE2 0x28      }\textcolor{comment}{// adres 1 znaku 2 wiersza}}
+\DoxyCodeLine{62 \textcolor{preprocessor}{\#define LCD\_LINE3 0x14      }\textcolor{comment}{// adres 1 znaku 3 wiersza}}
+\DoxyCodeLine{63 \textcolor{preprocessor}{\#define LCD\_LINE4 0x54      }\textcolor{comment}{// adres 1 znaku 4 wiersza}}
+\DoxyCodeLine{64 \textcolor{preprocessor}{\#else}}
+\DoxyCodeLine{65 \textcolor{preprocessor}{\#define LCD\_LINE1 0x00      }\textcolor{comment}{// adres 1 znaku 1 wiersza}}
+\DoxyCodeLine{66 \textcolor{preprocessor}{\#define LCD\_LINE2 0x40      }\textcolor{comment}{// adres 1 znaku 2 wiersza}}
+\DoxyCodeLine{67 \textcolor{preprocessor}{\#define LCD\_LINE3 0x14      }\textcolor{comment}{// adres 1 znaku 3 wiersza}}
+\DoxyCodeLine{68 \textcolor{preprocessor}{\#define LCD\_LINE4 0x54      }\textcolor{comment}{// adres 1 znaku 4 wiersza}}
+\DoxyCodeLine{69 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{70 }
+\DoxyCodeLine{71 \textcolor{preprocessor}{\#define LCDC\_CLS                    0x01}}
+\DoxyCodeLine{72 \textcolor{preprocessor}{\#define LCDC\_HOME                   0x02}}
+\DoxyCodeLine{73 \textcolor{preprocessor}{\#define LCDC\_ENTRY                  0x04}}
+\DoxyCodeLine{74 \textcolor{preprocessor}{\#define LCDC\_ENTRYR                 0x02}}
+\DoxyCodeLine{75 \textcolor{preprocessor}{\#define LCDC\_ENTRYL                 0x00}}
+\DoxyCodeLine{76 \textcolor{preprocessor}{\#define LCDC\_MOVE                   0x01}}
+\DoxyCodeLine{77 \textcolor{preprocessor}{\#define LCDC\_ONOFF                  0x08}}
+\DoxyCodeLine{78 \textcolor{preprocessor}{\#define LCDC\_DISPLAYON              0x04}}
+\DoxyCodeLine{79 \textcolor{preprocessor}{\#define LCDC\_CURSORON               0x02}}
+\DoxyCodeLine{80 \textcolor{preprocessor}{\#define LCDC\_CURSOROFF              0x00}}
+\DoxyCodeLine{81 \textcolor{preprocessor}{\#define LCDC\_BLINKON                0x01}}
+\DoxyCodeLine{82 \textcolor{preprocessor}{\#define LCDC\_SHIFT                  0x10}}
+\DoxyCodeLine{83 \textcolor{preprocessor}{\#define LCDC\_SHIFTDISP              0x08}}
+\DoxyCodeLine{84 \textcolor{preprocessor}{\#define LCDC\_SHIFTR                 0x04}}
+\DoxyCodeLine{85 \textcolor{preprocessor}{\#define LCDC\_SHIFTL                 0x00}}
+\DoxyCodeLine{86 \textcolor{preprocessor}{\#define LCDC\_FUNC                   0x20}}
+\DoxyCodeLine{87 \textcolor{preprocessor}{\#define LCDC\_FUNC8B                 0x10}}
+\DoxyCodeLine{88 \textcolor{preprocessor}{\#define LCDC\_FUNC4B                 0x00}}
+\DoxyCodeLine{89 \textcolor{preprocessor}{\#define LCDC\_FUNC2L                 0x08}}
+\DoxyCodeLine{90 \textcolor{preprocessor}{\#define LCDC\_FUNC1L                 0x00}}
+\DoxyCodeLine{91 \textcolor{preprocessor}{\#define LCDC\_FUNC5x10               0x04}}
+\DoxyCodeLine{92 \textcolor{preprocessor}{\#define LCDC\_FUNC5x7                0x00}}
+\DoxyCodeLine{93 \textcolor{preprocessor}{\#define LCDC\_SET\_CGRAM              0x40}}
+\DoxyCodeLine{94 \textcolor{preprocessor}{\#define LCDC\_SET\_DDRAM              0x80}}
+\DoxyCodeLine{95 }
+\DoxyCodeLine{96 \textcolor{comment}{/*}}
+\DoxyCodeLine{97 \textcolor{comment}{ *}}
+\DoxyCodeLine{98 \textcolor{comment}{ *  FUNCTIONS}}
+\DoxyCodeLine{99 \textcolor{comment}{ *}}
+\DoxyCodeLine{100 \textcolor{comment}{ */}}
+\DoxyCodeLine{103 \textcolor{keywordtype}{void} \mbox{\hyperlink{_l_c_d___h_d44780_8h_aa53c9d40f3aa552a9974cd55ac510cb3}{LCD\_Init}}(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{106 \textcolor{keywordtype}{void} \mbox{\hyperlink{_l_c_d___h_d44780_8h_a5d0a453d0ee112fb0dfda14f82fd5448}{LCD\_Cls}}(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{110 \textcolor{keywordtype}{void} \mbox{\hyperlink{_l_c_d___h_d44780_8h_a96560fed67b0edbf4806b1695fcc3c95}{LCD\_Locate}}(uint8\_t x, uint8\_t y);}
+\DoxyCodeLine{111 \textcolor{keywordtype}{void} \mbox{\hyperlink{_l_c_d___h_d44780_8h_a548d8a9d0dcbb9c41f6ccbc53a73216c}{LCD\_Home}}();}
+\DoxyCodeLine{115 \textcolor{keywordtype}{void} \mbox{\hyperlink{_l_c_d___h_d44780_8h_af68df90bb03bf79200fa25eeb57da8f8}{LCD\_Cursor}}(uint8\_t on\_off);}
+\DoxyCodeLine{119 \textcolor{keywordtype}{void} \mbox{\hyperlink{_l_c_d___h_d44780_8h_a073f4b9c069202c97a0d7a6f5b10686e}{LCD\_Blink}}(uint8\_t on\_off);}
+\DoxyCodeLine{123 \textcolor{keywordtype}{void} \mbox{\hyperlink{_l_c_d___h_d44780_8h_ac8ba6ce0b94fd588944c16eb00e72cd8}{LCD\_Char}}(\textcolor{keywordtype}{char} c);}
+\DoxyCodeLine{127 \textcolor{keywordtype}{void} \mbox{\hyperlink{_l_c_d___h_d44780_8h_a2f42b8eb253eafb0111f36b2cfd1399d}{LCD\_String}}(\textcolor{keywordtype}{char}* str);}
+\DoxyCodeLine{128 }
+\DoxyCodeLine{129 \textcolor{keywordtype}{void} \mbox{\hyperlink{_l_c_d___h_d44780_8h_a0c6b1e7321db3d944e16e4e578dfaf88}{LCD\_Int}}(\textcolor{keywordtype}{int} value);}
+\DoxyCodeLine{130 \textcolor{keywordtype}{void} \mbox{\hyperlink{_l_c_d___h_d44780_8h_ab81f59807a2458bdbcfaaebcf5374325}{LCD\_Hex}}(\textcolor{keywordtype}{int} value, uint8\_t upper\_case);}
+\DoxyCodeLine{131 }
+\DoxyCodeLine{132 \textcolor{keywordtype}{void} \mbox{\hyperlink{_l_c_d___h_d44780_8h_a66f217a930af9bc31eda13a5690c1afc}{LCD\_DefChar}}(uint8\_t number, uint8\_t *def\_char);}
+\DoxyCodeLine{133 }
+\DoxyCodeLine{134 }
+\DoxyCodeLine{137 \textcolor{keyword}{struct }\mbox{\hyperlink{structlcd__display}{lcd\_display}}\{}
+\DoxyCodeLine{140     uint8\_t \mbox{\hyperlink{structlcd__display_ab1c3030142b73833b14fb7ead9887658}{flower\_disp\_state}};}
+\DoxyCodeLine{143     uint8\_t \mbox{\hyperlink{structlcd__display_a23ccc9a58eae7a334990b8788d4e646a}{disp\_state}};}
+\DoxyCodeLine{146     uint8\_t \mbox{\hyperlink{structlcd__display_ab9205c9b4b574d4312cd3b3b156ae933}{previous\_disp\_state}};}
+\DoxyCodeLine{149     \textcolor{keywordtype}{char} \mbox{\hyperlink{structlcd__display_a55e692b3c650dfe2bee742c06f4b4eb1}{additionalDisplayData}}[\mbox{\hyperlink{_l_c_d___h_d44780_8h_a808ffb5b80958b23f08910c0f38c53d3}{LCD\_X}}];}
+\DoxyCodeLine{152     \textcolor{keywordtype}{char} \mbox{\hyperlink{structlcd__display_af35b27260303e0a056febf724ab56fc2}{lines}}[\mbox{\hyperlink{_l_c_d___h_d44780_8h_ae5070c3ce78b96d41f8e166abff903ed}{LCD\_Y}}][\mbox{\hyperlink{_l_c_d___h_d44780_8h_a808ffb5b80958b23f08910c0f38c53d3}{LCD\_X}}+1];}
+\DoxyCodeLine{153 }
+\DoxyCodeLine{156     RTC\_TimeTypeDef *\mbox{\hyperlink{structlcd__display_aa66531cc4aaba4b9d5c24cad7aa1a0bc}{currentRTCTime}};}
+\DoxyCodeLine{159     RTC\_DateTypeDef *\mbox{\hyperlink{structlcd__display_a494bc55e403d8603713c81e69be38d42}{currentRTCDate}};}
+\DoxyCodeLine{162     \textcolor{keyword}{struct }\mbox{\hyperlink{structflower__data}{flower\_data}} *\mbox{\hyperlink{structlcd__display_aef086787d7f4bd822cb043f0e3799032}{flowers}}[\mbox{\hyperlink{flower__data_8h_a9b08f0cec46c0c7d0ececeadb067798b}{NUMBER\_OF\_FLOWERS}}];}
+\DoxyCodeLine{165     void(* \mbox{\hyperlink{structlcd__display_a793acae6f53a26ce334b319f6cce2a3d}{formDispData\_ptr}})();}
+\DoxyCodeLine{166 \};}
+\DoxyCodeLine{169 \textcolor{keyword}{extern} \textcolor{keyword}{struct }\mbox{\hyperlink{structlcd__display}{lcd\_display}} \mbox{\hyperlink{_l_c_d___h_d44780_8h_a2217b8d9ea07058d8a64fceb9303a02a}{disp}};}
+\DoxyCodeLine{170 }
+\DoxyCodeLine{174 \textcolor{keywordtype}{void} \mbox{\hyperlink{_l_c_d___h_d44780_8h_a610fdd170a480badb37937a08b1f764b}{updateDispData}}(\textcolor{keyword}{struct} \mbox{\hyperlink{structlcd__display}{lcd\_display}} *);}
+\DoxyCodeLine{178 \textcolor{keywordtype}{void} \mbox{\hyperlink{_l_c_d___h_d44780_8h_a05a468c4135f6e79ae87ca0d8a1cc821}{sendDataToDisp}}(\textcolor{keyword}{struct} \mbox{\hyperlink{structlcd__display}{lcd\_display}} *);}
+\DoxyCodeLine{182 \textcolor{keywordtype}{void} \mbox{\hyperlink{_l_c_d___h_d44780_8h_a4b0ddbdcb8b7d6ec855c961446e2d30c}{changeDispState}}(\textcolor{keyword}{struct} \mbox{\hyperlink{structlcd__display}{lcd\_display}} *, uint8\_t );}
+\DoxyCodeLine{186 \textcolor{keywordtype}{void} \mbox{\hyperlink{_l_c_d___h_d44780_8h_addd77987a6efca7488afffc3e8f8990b}{formDisp\_TimeView}}(\textcolor{keyword}{struct} \mbox{\hyperlink{structlcd__display}{lcd\_display}} *);}
+\DoxyCodeLine{190 \textcolor{keywordtype}{void} \mbox{\hyperlink{_l_c_d___h_d44780_8h_aeeffcea92f9e838cf9953ac1412f79b4}{formDisp\_MoistureView}}(\textcolor{keyword}{struct} \mbox{\hyperlink{structlcd__display}{lcd\_display}} *);}
+\DoxyCodeLine{194 \textcolor{keywordtype}{void} \mbox{\hyperlink{_l_c_d___h_d44780_8h_a0c58f5a15a399ff5f36de249070b6b26}{formDisp\_WateringProcess}}(\textcolor{keyword}{struct} \mbox{\hyperlink{structlcd__display}{lcd\_display}} *);}
+\DoxyCodeLine{198 \textcolor{keywordtype}{void} \mbox{\hyperlink{_l_c_d___h_d44780_8h_aaffe9a65599f3eb6988798d3ca764e02}{formDisp\_USART\_RecieveDataView}}(\textcolor{keyword}{struct} \mbox{\hyperlink{structlcd__display}{lcd\_display}} *);}
+\DoxyCodeLine{202 \textcolor{keywordtype}{void} \mbox{\hyperlink{_l_c_d___h_d44780_8h_acab2547f3fac2ee22c96860483eb394d}{cleanLines}}(\textcolor{keyword}{struct} \mbox{\hyperlink{structlcd__display}{lcd\_display}} *);}
+\DoxyCodeLine{206 \textcolor{keywordtype}{void} \mbox{\hyperlink{_l_c_d___h_d44780_8h_a8e15f0406d9f2a424d23022f350d4fcd}{dispInit}}(\textcolor{keyword}{struct} \mbox{\hyperlink{structlcd__display}{lcd\_display}} *);}
+\DoxyCodeLine{207 \textcolor{preprocessor}{\#endif }\textcolor{comment}{/* INC\_LCD\_HD44780\_H\_ */}\textcolor{preprocessor}{}}
+
+\end{DoxyCode}

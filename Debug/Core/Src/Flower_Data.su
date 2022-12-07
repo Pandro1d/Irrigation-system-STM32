@@ -1,0 +1,4 @@
+flower_data.c:25:6:flowersInit	16	static
+flower_data.c:60:6:recalibrateSensorData	16	static
+flower_data.c:64:6:rescaleSensorData	16	static
+flower_data.c:73:9:checkForWateringTime	16	static

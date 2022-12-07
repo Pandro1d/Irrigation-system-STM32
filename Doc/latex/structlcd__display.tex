@@ -1,0 +1,128 @@
+\hypertarget{structlcd__display}{}\doxysection{lcd\+\_\+display Struct Reference}
+\label{structlcd__display}\index{lcd\_display@{lcd\_display}}
+
+
+LCD struct which contains display data.  
+
+
+
+
+{\ttfamily \#include $<$LCD\+\_\+\+HD44780.\+h$>$}
+
+\doxysubsection*{Data Fields}
+\begin{DoxyCompactItemize}
+\item 
+uint8\+\_\+t \mbox{\hyperlink{structlcd__display_ab1c3030142b73833b14fb7ead9887658}{flower\+\_\+disp\+\_\+state}}
+\begin{DoxyCompactList}\small\item\em Indicates which flower data has to be displayed. \end{DoxyCompactList}\item 
+uint8\+\_\+t \mbox{\hyperlink{structlcd__display_a23ccc9a58eae7a334990b8788d4e646a}{disp\+\_\+state}}
+\begin{DoxyCompactList}\small\item\em Indicates which display state has to be displayed. \end{DoxyCompactList}\item 
+uint8\+\_\+t \mbox{\hyperlink{structlcd__display_ab9205c9b4b574d4312cd3b3b156ae933}{previous\+\_\+disp\+\_\+state}}
+\begin{DoxyCompactList}\small\item\em Saves the previous display state. \end{DoxyCompactList}\item 
+char \mbox{\hyperlink{structlcd__display_a55e692b3c650dfe2bee742c06f4b4eb1}{additional\+Display\+Data}} \mbox{[}\mbox{\hyperlink{_l_c_d___h_d44780_8h_a808ffb5b80958b23f08910c0f38c53d3}{LCD\+\_\+X}}\mbox{]}
+\begin{DoxyCompactList}\small\item\em Additional string to which we can upload data to be sent on display. \end{DoxyCompactList}\item 
+char \mbox{\hyperlink{structlcd__display_af35b27260303e0a056febf724ab56fc2}{lines}} \mbox{[}\mbox{\hyperlink{_l_c_d___h_d44780_8h_ae5070c3ce78b96d41f8e166abff903ed}{LCD\+\_\+Y}}\mbox{]}\mbox{[}\mbox{\hyperlink{_l_c_d___h_d44780_8h_a808ffb5b80958b23f08910c0f38c53d3}{LCD\+\_\+X}}+1\mbox{]}
+\begin{DoxyCompactList}\small\item\em Matrix of strings where each row contains particular display line data. \end{DoxyCompactList}\item 
+RTC\+\_\+\+Time\+Type\+Def $\ast$ \mbox{\hyperlink{structlcd__display_aa66531cc4aaba4b9d5c24cad7aa1a0bc}{current\+RTCTime}}
+\begin{DoxyCompactList}\small\item\em Pointer to value of current RTC time. \end{DoxyCompactList}\item 
+RTC\+\_\+\+Date\+Type\+Def $\ast$ \mbox{\hyperlink{structlcd__display_a494bc55e403d8603713c81e69be38d42}{current\+RTCDate}}
+\begin{DoxyCompactList}\small\item\em Pointer to value of current RTC date. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{structflower__data}{flower\+\_\+data}} $\ast$ \mbox{\hyperlink{structlcd__display_aef086787d7f4bd822cb043f0e3799032}{flowers}} \mbox{[}\mbox{\hyperlink{flower__data_8h_a9b08f0cec46c0c7d0ececeadb067798b}{NUMBER\+\_\+\+OF\+\_\+\+FLOWERS}}\mbox{]}
+\begin{DoxyCompactList}\small\item\em Tab of pointers to struct \mbox{\hyperlink{structflower__data}{flower\+\_\+data}}. \end{DoxyCompactList}\item 
+void($\ast$ \mbox{\hyperlink{structlcd__display_a793acae6f53a26ce334b319f6cce2a3d}{form\+Disp\+Data\+\_\+ptr}} )()
+\begin{DoxyCompactList}\small\item\em Pointer to function which forms relevant data to char lines\mbox{[}LCD\+\_\+Y\mbox{]}\mbox{[}LCD\+\_\+\+X+1\mbox{]}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+LCD struct which contains display data. 
+
+\doxysubsection{Field Documentation}
+\mbox{\Hypertarget{structlcd__display_a55e692b3c650dfe2bee742c06f4b4eb1}\label{structlcd__display_a55e692b3c650dfe2bee742c06f4b4eb1}} 
+\index{lcd\_display@{lcd\_display}!additionalDisplayData@{additionalDisplayData}}
+\index{additionalDisplayData@{additionalDisplayData}!lcd\_display@{lcd\_display}}
+\doxysubsubsection{\texorpdfstring{additionalDisplayData}{additionalDisplayData}}
+{\footnotesize\ttfamily char additional\+Display\+Data\mbox{[}\mbox{\hyperlink{_l_c_d___h_d44780_8h_a808ffb5b80958b23f08910c0f38c53d3}{LCD\+\_\+X}}\mbox{]}}
+
+
+
+Additional string to which we can upload data to be sent on display. 
+
+\mbox{\Hypertarget{structlcd__display_a494bc55e403d8603713c81e69be38d42}\label{structlcd__display_a494bc55e403d8603713c81e69be38d42}} 
+\index{lcd\_display@{lcd\_display}!currentRTCDate@{currentRTCDate}}
+\index{currentRTCDate@{currentRTCDate}!lcd\_display@{lcd\_display}}
+\doxysubsubsection{\texorpdfstring{currentRTCDate}{currentRTCDate}}
+{\footnotesize\ttfamily RTC\+\_\+\+Date\+Type\+Def$\ast$ current\+RTCDate}
+
+
+
+Pointer to value of current RTC date. 
+
+\mbox{\Hypertarget{structlcd__display_aa66531cc4aaba4b9d5c24cad7aa1a0bc}\label{structlcd__display_aa66531cc4aaba4b9d5c24cad7aa1a0bc}} 
+\index{lcd\_display@{lcd\_display}!currentRTCTime@{currentRTCTime}}
+\index{currentRTCTime@{currentRTCTime}!lcd\_display@{lcd\_display}}
+\doxysubsubsection{\texorpdfstring{currentRTCTime}{currentRTCTime}}
+{\footnotesize\ttfamily RTC\+\_\+\+Time\+Type\+Def$\ast$ current\+RTCTime}
+
+
+
+Pointer to value of current RTC time. 
+
+\mbox{\Hypertarget{structlcd__display_a23ccc9a58eae7a334990b8788d4e646a}\label{structlcd__display_a23ccc9a58eae7a334990b8788d4e646a}} 
+\index{lcd\_display@{lcd\_display}!disp\_state@{disp\_state}}
+\index{disp\_state@{disp\_state}!lcd\_display@{lcd\_display}}
+\doxysubsubsection{\texorpdfstring{disp\_state}{disp\_state}}
+{\footnotesize\ttfamily uint8\+\_\+t disp\+\_\+state}
+
+
+
+Indicates which display state has to be displayed. 
+
+\mbox{\Hypertarget{structlcd__display_ab1c3030142b73833b14fb7ead9887658}\label{structlcd__display_ab1c3030142b73833b14fb7ead9887658}} 
+\index{lcd\_display@{lcd\_display}!flower\_disp\_state@{flower\_disp\_state}}
+\index{flower\_disp\_state@{flower\_disp\_state}!lcd\_display@{lcd\_display}}
+\doxysubsubsection{\texorpdfstring{flower\_disp\_state}{flower\_disp\_state}}
+{\footnotesize\ttfamily uint8\+\_\+t flower\+\_\+disp\+\_\+state}
+
+
+
+Indicates which flower data has to be displayed. 
+
+\mbox{\Hypertarget{structlcd__display_aef086787d7f4bd822cb043f0e3799032}\label{structlcd__display_aef086787d7f4bd822cb043f0e3799032}} 
+\index{lcd\_display@{lcd\_display}!flowers@{flowers}}
+\index{flowers@{flowers}!lcd\_display@{lcd\_display}}
+\doxysubsubsection{\texorpdfstring{flowers}{flowers}}
+{\footnotesize\ttfamily struct \mbox{\hyperlink{structflower__data}{flower\+\_\+data}}$\ast$ flowers\mbox{[}\mbox{\hyperlink{flower__data_8h_a9b08f0cec46c0c7d0ececeadb067798b}{NUMBER\+\_\+\+OF\+\_\+\+FLOWERS}}\mbox{]}}
+
+
+
+Tab of pointers to struct \mbox{\hyperlink{structflower__data}{flower\+\_\+data}}. 
+
+\mbox{\Hypertarget{structlcd__display_a793acae6f53a26ce334b319f6cce2a3d}\label{structlcd__display_a793acae6f53a26ce334b319f6cce2a3d}} 
+\index{lcd\_display@{lcd\_display}!formDispData\_ptr@{formDispData\_ptr}}
+\index{formDispData\_ptr@{formDispData\_ptr}!lcd\_display@{lcd\_display}}
+\doxysubsubsection{\texorpdfstring{formDispData\_ptr}{formDispData\_ptr}}
+{\footnotesize\ttfamily void($\ast$ form\+Disp\+Data\+\_\+ptr) ()}
+
+
+
+Pointer to function which forms relevant data to char lines\mbox{[}LCD\+\_\+Y\mbox{]}\mbox{[}LCD\+\_\+\+X+1\mbox{]}. 
+
+\mbox{\Hypertarget{structlcd__display_af35b27260303e0a056febf724ab56fc2}\label{structlcd__display_af35b27260303e0a056febf724ab56fc2}} 
+\index{lcd\_display@{lcd\_display}!lines@{lines}}
+\index{lines@{lines}!lcd\_display@{lcd\_display}}
+\doxysubsubsection{\texorpdfstring{lines}{lines}}
+{\footnotesize\ttfamily char lines\mbox{[}\mbox{\hyperlink{_l_c_d___h_d44780_8h_ae5070c3ce78b96d41f8e166abff903ed}{LCD\+\_\+Y}}\mbox{]}\mbox{[}\mbox{\hyperlink{_l_c_d___h_d44780_8h_a808ffb5b80958b23f08910c0f38c53d3}{LCD\+\_\+X}}+1\mbox{]}}
+
+
+
+Matrix of strings where each row contains particular display line data. 
+
+There is LCD+1 to take into account NULL sign at the end. \mbox{\Hypertarget{structlcd__display_ab9205c9b4b574d4312cd3b3b156ae933}\label{structlcd__display_ab9205c9b4b574d4312cd3b3b156ae933}} 
+\index{lcd\_display@{lcd\_display}!previous\_disp\_state@{previous\_disp\_state}}
+\index{previous\_disp\_state@{previous\_disp\_state}!lcd\_display@{lcd\_display}}
+\doxysubsubsection{\texorpdfstring{previous\_disp\_state}{previous\_disp\_state}}
+{\footnotesize\ttfamily uint8\+\_\+t previous\+\_\+disp\+\_\+state}
+
+
+
+Saves the previous display state. 
+

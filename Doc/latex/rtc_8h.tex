@@ -1,0 +1,74 @@
+\hypertarget{rtc_8h}{}\doxysection{Core/\+Inc/rtc.h File Reference}
+\label{rtc_8h}\index{Core/Inc/rtc.h@{Core/Inc/rtc.h}}
+
+
+This file contains all the function prototypes for the \mbox{\hyperlink{rtc_8c}{rtc.\+c}} file.  
+
+
+{\ttfamily \#include \char`\"{}main.\+h\char`\"{}}\newline
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{rtc_8h_abf4accd1ce479030808e546f3d4642c9}{MX\+\_\+\+RTC\+\_\+\+Init}} (void)
+\item 
+void \mbox{\hyperlink{rtc_8h_ac5e4983900ae58708c4f17def640b925}{Reset\+\_\+\+Time}} (RTC\+\_\+\+Handle\+Type\+Def $\ast$\mbox{\hyperlink{stm32l0xx__it_8c_aa0c7fca836406ade332e1e3f1039d8ab}{hrtc}}, RTC\+\_\+\+Time\+Type\+Def $\ast$Rtc\+Time)
+\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+RTC\+\_\+\+Handle\+Type\+Def \mbox{\hyperlink{rtc_8h_aa0c7fca836406ade332e1e3f1039d8ab}{hrtc}}
+\item 
+RTC\+\_\+\+Date\+Type\+Def \mbox{\hyperlink{rtc_8h_aed127960dd64393ad96497c82669e163}{Rtc\+\_\+\+Date}}
+\item 
+RTC\+\_\+\+Time\+Type\+Def \mbox{\hyperlink{rtc_8h_aabceeae3dd8ff9c73e3f3afaba772e89}{Rtc\+\_\+\+Time}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+This file contains all the function prototypes for the \mbox{\hyperlink{rtc_8c}{rtc.\+c}} file. 
+
+\begin{DoxyAttention}{Attention}
+
+\end{DoxyAttention}
+Copyright (c) 2021 STMicroelectronics. All rights reserved.
+
+This software is licensed under terms that can be found in the LICENSE file in the root directory of this software component. If no LICENSE file comes with this software, it is provided AS-\/\+IS. 
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{rtc_8h_abf4accd1ce479030808e546f3d4642c9}\label{rtc_8h_abf4accd1ce479030808e546f3d4642c9}} 
+\index{rtc.h@{rtc.h}!MX\_RTC\_Init@{MX\_RTC\_Init}}
+\index{MX\_RTC\_Init@{MX\_RTC\_Init}!rtc.h@{rtc.h}}
+\doxysubsubsection{\texorpdfstring{MX\_RTC\_Init()}{MX\_RTC\_Init()}}
+{\footnotesize\ttfamily void MX\+\_\+\+RTC\+\_\+\+Init (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+Initialize RTC Only
+
+Initialize RTC and set the Time and Date
+
+Enable the Alarm A\mbox{\Hypertarget{rtc_8h_ac5e4983900ae58708c4f17def640b925}\label{rtc_8h_ac5e4983900ae58708c4f17def640b925}} 
+\index{rtc.h@{rtc.h}!Reset\_Time@{Reset\_Time}}
+\index{Reset\_Time@{Reset\_Time}!rtc.h@{rtc.h}}
+\doxysubsubsection{\texorpdfstring{Reset\_Time()}{Reset\_Time()}}
+{\footnotesize\ttfamily void Reset\+\_\+\+Time (\begin{DoxyParamCaption}\item[{RTC\+\_\+\+Handle\+Type\+Def $\ast$}]{hrtc,  }\item[{RTC\+\_\+\+Time\+Type\+Def $\ast$}]{Rtc\+Time }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Variable Documentation}
+\mbox{\Hypertarget{rtc_8h_aa0c7fca836406ade332e1e3f1039d8ab}\label{rtc_8h_aa0c7fca836406ade332e1e3f1039d8ab}} 
+\index{rtc.h@{rtc.h}!hrtc@{hrtc}}
+\index{hrtc@{hrtc}!rtc.h@{rtc.h}}
+\doxysubsubsection{\texorpdfstring{hrtc}{hrtc}}
+{\footnotesize\ttfamily RTC\+\_\+\+Handle\+Type\+Def hrtc\hspace{0.3cm}{\ttfamily [extern]}}
+
+\mbox{\Hypertarget{rtc_8h_aed127960dd64393ad96497c82669e163}\label{rtc_8h_aed127960dd64393ad96497c82669e163}} 
+\index{rtc.h@{rtc.h}!Rtc\_Date@{Rtc\_Date}}
+\index{Rtc\_Date@{Rtc\_Date}!rtc.h@{rtc.h}}
+\doxysubsubsection{\texorpdfstring{Rtc\_Date}{Rtc\_Date}}
+{\footnotesize\ttfamily RTC\+\_\+\+Date\+Type\+Def Rtc\+\_\+\+Date\hspace{0.3cm}{\ttfamily [extern]}}
+
+\mbox{\Hypertarget{rtc_8h_aabceeae3dd8ff9c73e3f3afaba772e89}\label{rtc_8h_aabceeae3dd8ff9c73e3f3afaba772e89}} 
+\index{rtc.h@{rtc.h}!Rtc\_Time@{Rtc\_Time}}
+\index{Rtc\_Time@{Rtc\_Time}!rtc.h@{rtc.h}}
+\doxysubsubsection{\texorpdfstring{Rtc\_Time}{Rtc\_Time}}
+{\footnotesize\ttfamily RTC\+\_\+\+Time\+Type\+Def Rtc\+\_\+\+Time\hspace{0.3cm}{\ttfamily [extern]}}
+

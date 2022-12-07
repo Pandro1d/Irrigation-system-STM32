@@ -1,0 +1,249 @@
+\hypertarget{main_8c}{}\doxysection{Core/\+Src/main.c File Reference}
+\label{main_8c}\index{Core/Src/main.c@{Core/Src/main.c}}
+
+
+\+: Main program body  
+
+
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{main_8c_a70af21c671abfcc773614a9a4f63d920}{System\+Clock\+\_\+\+Config}} (void)
+\begin{DoxyCompactList}\small\item\em System Clock Configuration. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{main_8c_a840291bc02cba5474a4cb46a9b9566fe}{main}} (void)
+\begin{DoxyCompactList}\small\item\em Main function. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{main_8c_a11aeff83fd498cddbed3bcddcf017e0a}{HAL\+\_\+\+RTC\+\_\+\+Alarm\+AEvent\+Callback}} (RTC\+\_\+\+Handle\+Type\+Def $\ast$\mbox{\hyperlink{stm32l0xx__it_8c_aa0c7fca836406ade332e1e3f1039d8ab}{hrtc}})
+\begin{DoxyCompactList}\small\item\em RTC Alarm Callback (updating time and date with watering time checking every 1 s) \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{main_8c_a8a3b0ad512a6e6c6157440b68d395eac}{HAL\+\_\+\+TIM\+\_\+\+Period\+Elapsed\+Callback}} (TIM\+\_\+\+Handle\+Type\+Def $\ast$htim)
+\begin{DoxyCompactList}\small\item\em Timers callback. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{main_8c_a0cd91fd3a9608559c2a87a8ba6cba55f}{HAL\+\_\+\+GPIO\+\_\+\+EXTI\+\_\+\+Callback}} (uint16\+\_\+t GPIO\+\_\+\+Pin)
+\begin{DoxyCompactList}\small\item\em GPIO Callbacks. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{main_8c_a1730ffe1e560465665eb47d9264826f9}{Error\+\_\+\+Handler}} (void)
+\begin{DoxyCompactList}\small\item\em This function is executed in case of error occurrence. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{main_8c_a2532ff72b1a2ff82f65e8c2a5a4dde00}{assert\+\_\+failed}} (uint8\+\_\+t $\ast$file, uint32\+\_\+t line)
+\begin{DoxyCompactList}\small\item\em Reports the name of the source file and the source line number where the assert\+\_\+param error has occurred. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structlcd__display}{lcd\+\_\+display}} \mbox{\hyperlink{main_8c_a2217b8d9ea07058d8a64fceb9303a02a}{disp}}
+\begin{DoxyCompactList}\small\item\em External definition of struct \mbox{\hyperlink{structlcd__display}{lcd\+\_\+display}}. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{structflower__data}{flower\+\_\+data}} \mbox{\hyperlink{main_8c_afa89be2861e5ca8bbe483e3b9388b0f4}{flowers}} \mbox{[}\mbox{\hyperlink{flower__data_8h_a9b08f0cec46c0c7d0ececeadb067798b}{NUMBER\+\_\+\+OF\+\_\+\+FLOWERS}}\mbox{]}
+\begin{DoxyCompactList}\small\item\em Definition of external struct \mbox{\hyperlink{structflower__data}{flower\+\_\+data}}. \end{DoxyCompactList}\item 
+RTC\+\_\+\+Time\+Type\+Def \mbox{\hyperlink{main_8c_aabceeae3dd8ff9c73e3f3afaba772e89}{Rtc\+\_\+\+Time}}
+\item 
+RTC\+\_\+\+Date\+Type\+Def \mbox{\hyperlink{main_8c_aed127960dd64393ad96497c82669e163}{Rtc\+\_\+\+Date}}
+\item 
+void($\ast$ \mbox{\hyperlink{main_8c_a8edff3aab11f6a3f79fff93b8d7abb6f}{button\+Fun\+\_\+ptr}} )(struct \mbox{\hyperlink{structlcd__display}{lcd\+\_\+display}} $\ast$)
+\item 
+uint16\+\_\+t \mbox{\hyperlink{main_8c_a4e91de8ea971ae6e062fe7da27218339}{sensor\+\_\+data}} \mbox{[}2\mbox{]}
+\item 
+uint8\+\_\+t \mbox{\hyperlink{main_8c_a8518859a5386aaee70d801f5769c8ebc}{watering\+\_\+state}} = 0
+\item 
+uint8\+\_\+t \mbox{\hyperlink{main_8c_a42dd7d35c4203c67eafb746b25d96935}{Received}} \mbox{[}10\mbox{]}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\+: Main program body 
+
+\begin{DoxyAuthor}{Author}
+Przemysław Jóźwik 300324 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+30 January 2022
+\end{DoxyDate}
+\begin{DoxyAttention}{Attention}
+
+\end{DoxyAttention}
+\doxysubsubsection*{\begin{center}\copyright{} Copyright (c) 2021 STMicroelectronics. All rights reserved.\end{center} }
+
+This software component is licensed by ST under BSD 3-\/Clause license, the \char`\"{}\+License\char`\"{}; You may not use this file except in compliance with the License. You may obtain a copy of the License at\+: opensource.\+org/licenses/\+BSD-\/3-\/\+Clause
+
+/$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$ W projekcie będziemy realizować system automatycznego nawadniania roślin $\ast$ doniczkowych. Do pobierania wody użyjemy pompki sterowanej przez $\ast$ mikrokontroler, którą umieścimy w pojemniku na wodę. $\ast$ Proces podlewania będzie cykliczny, załączany o pewnej porze, $\ast$ ustawianej przez użytkownika. Możliwość zmiany ustawień będzie $\ast$ zrealizowana za pomocą połączenia Bluetooth z urządzeniem $\ast$ mobilnym lub też za pomocą wbudowanych w system przycisków. $\ast$ Do obustronnego przesyłu informacji $\ast$ użyjemy również interfejsu szeregowego UART. Urządzenie $\ast$ ponadto będzie mierzyć wilgotność gleby oraz alarmować, $\ast$ gdy braknie wody w pojemniku. $\ast$
+\begin{DoxyItemize}
+\item Autorzy\+: $\ast$ Przemysław Jóźwik 300324 $\ast$ Tomasz Petrzak 300344 $\ast$ 
+\end{DoxyItemize}
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{main_8c_a2532ff72b1a2ff82f65e8c2a5a4dde00}\label{main_8c_a2532ff72b1a2ff82f65e8c2a5a4dde00}} 
+\index{main.c@{main.c}!assert\_failed@{assert\_failed}}
+\index{assert\_failed@{assert\_failed}!main.c@{main.c}}
+\doxysubsubsection{\texorpdfstring{assert\_failed()}{assert\_failed()}}
+{\footnotesize\ttfamily void assert\+\_\+failed (\begin{DoxyParamCaption}\item[{uint8\+\_\+t $\ast$}]{file,  }\item[{uint32\+\_\+t}]{line }\end{DoxyParamCaption})}
+
+
+
+Reports the name of the source file and the source line number where the assert\+\_\+param error has occurred. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em file} & pointer to the source file name \\
+\hline
+{\em line} & assert\+\_\+param error line source number \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em None} & \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{main_8c_a1730ffe1e560465665eb47d9264826f9}\label{main_8c_a1730ffe1e560465665eb47d9264826f9}} 
+\index{main.c@{main.c}!Error\_Handler@{Error\_Handler}}
+\index{Error\_Handler@{Error\_Handler}!main.c@{main.c}}
+\doxysubsubsection{\texorpdfstring{Error\_Handler()}{Error\_Handler()}}
+{\footnotesize\ttfamily void Error\+\_\+\+Handler (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+This function is executed in case of error occurrence. 
+
+
+\begin{DoxyRetVals}{Return values}
+{\em None} & \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{main_8c_a0cd91fd3a9608559c2a87a8ba6cba55f}\label{main_8c_a0cd91fd3a9608559c2a87a8ba6cba55f}} 
+\index{main.c@{main.c}!HAL\_GPIO\_EXTI\_Callback@{HAL\_GPIO\_EXTI\_Callback}}
+\index{HAL\_GPIO\_EXTI\_Callback@{HAL\_GPIO\_EXTI\_Callback}!main.c@{main.c}}
+\doxysubsubsection{\texorpdfstring{HAL\_GPIO\_EXTI\_Callback()}{HAL\_GPIO\_EXTI\_Callback()}}
+{\footnotesize\ttfamily void HAL\+\_\+\+GPIO\+\_\+\+EXTI\+\_\+\+Callback (\begin{DoxyParamCaption}\item[{uint16\+\_\+t}]{GPIO\+\_\+\+Pin }\end{DoxyParamCaption})}
+
+
+
+GPIO Callbacks. 
+
+
+\begin{DoxyRetVals}{Return values}
+{\em None} & \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{main_8c_a11aeff83fd498cddbed3bcddcf017e0a}\label{main_8c_a11aeff83fd498cddbed3bcddcf017e0a}} 
+\index{main.c@{main.c}!HAL\_RTC\_AlarmAEventCallback@{HAL\_RTC\_AlarmAEventCallback}}
+\index{HAL\_RTC\_AlarmAEventCallback@{HAL\_RTC\_AlarmAEventCallback}!main.c@{main.c}}
+\doxysubsubsection{\texorpdfstring{HAL\_RTC\_AlarmAEventCallback()}{HAL\_RTC\_AlarmAEventCallback()}}
+{\footnotesize\ttfamily void HAL\+\_\+\+RTC\+\_\+\+Alarm\+AEvent\+Callback (\begin{DoxyParamCaption}\item[{RTC\+\_\+\+Handle\+Type\+Def $\ast$}]{hrtc }\end{DoxyParamCaption})}
+
+
+
+RTC Alarm Callback (updating time and date with watering time checking every 1 s) 
+
+
+\begin{DoxyRetVals}{Return values}
+{\em None} & \\
+\hline
+\end{DoxyRetVals}
+Date and time info stored in Rtc\+\_\+\+Time and Rtc\+\_\+\+Date global var
+
+Checking if any of flowers watering time occured
+
+Changing the display state during watering time.\mbox{\Hypertarget{main_8c_a8a3b0ad512a6e6c6157440b68d395eac}\label{main_8c_a8a3b0ad512a6e6c6157440b68d395eac}} 
+\index{main.c@{main.c}!HAL\_TIM\_PeriodElapsedCallback@{HAL\_TIM\_PeriodElapsedCallback}}
+\index{HAL\_TIM\_PeriodElapsedCallback@{HAL\_TIM\_PeriodElapsedCallback}!main.c@{main.c}}
+\doxysubsubsection{\texorpdfstring{HAL\_TIM\_PeriodElapsedCallback()}{HAL\_TIM\_PeriodElapsedCallback()}}
+{\footnotesize\ttfamily void HAL\+\_\+\+TIM\+\_\+\+Period\+Elapsed\+Callback (\begin{DoxyParamCaption}\item[{TIM\+\_\+\+Handle\+Type\+Def $\ast$}]{htim }\end{DoxyParamCaption})}
+
+
+
+Timers callback. 
+
+
+\begin{DoxyRetVals}{Return values}
+{\em None} & \\
+\hline
+\end{DoxyRetVals}
+Timer for updating data
+
+Timer for sending data to display
+
+Timer for additional buttons functions (actually not in use)\mbox{\Hypertarget{main_8c_a840291bc02cba5474a4cb46a9b9566fe}\label{main_8c_a840291bc02cba5474a4cb46a9b9566fe}} 
+\index{main.c@{main.c}!main@{main}}
+\index{main@{main}!main.c@{main.c}}
+\doxysubsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily int main (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Main function. 
+
+\mbox{\Hypertarget{main_8c_a70af21c671abfcc773614a9a4f63d920}\label{main_8c_a70af21c671abfcc773614a9a4f63d920}} 
+\index{main.c@{main.c}!SystemClock\_Config@{SystemClock\_Config}}
+\index{SystemClock\_Config@{SystemClock\_Config}!main.c@{main.c}}
+\doxysubsubsection{\texorpdfstring{SystemClock\_Config()}{SystemClock\_Config()}}
+{\footnotesize\ttfamily void System\+Clock\+\_\+\+Config (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+System Clock Configuration. 
+
+
+\begin{DoxyRetVals}{Return values}
+{\em None} & \\
+\hline
+\end{DoxyRetVals}
+Configure the main internal regulator output voltage
+
+Configure LSE Drive Capability
+
+Initializes the RCC Oscillators according to the specified parameters in the RCC\+\_\+\+Osc\+Init\+Type\+Def structure.
+
+Initializes the CPU, AHB and APB buses clocks
+
+Enables the Clock Security System
+
+\doxysubsection{Variable Documentation}
+\mbox{\Hypertarget{main_8c_a8edff3aab11f6a3f79fff93b8d7abb6f}\label{main_8c_a8edff3aab11f6a3f79fff93b8d7abb6f}} 
+\index{main.c@{main.c}!buttonFun\_ptr@{buttonFun\_ptr}}
+\index{buttonFun\_ptr@{buttonFun\_ptr}!main.c@{main.c}}
+\doxysubsubsection{\texorpdfstring{buttonFun\_ptr}{buttonFun\_ptr}}
+{\footnotesize\ttfamily void($\ast$ button\+Fun\+\_\+ptr) (struct \mbox{\hyperlink{structlcd__display}{lcd\+\_\+display}} $\ast$) (\begin{DoxyParamCaption}\item[{struct \mbox{\hyperlink{structlcd__display}{lcd\+\_\+display}} $\ast$}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{main_8c_a2217b8d9ea07058d8a64fceb9303a02a}\label{main_8c_a2217b8d9ea07058d8a64fceb9303a02a}} 
+\index{main.c@{main.c}!disp@{disp}}
+\index{disp@{disp}!main.c@{main.c}}
+\doxysubsubsection{\texorpdfstring{disp}{disp}}
+{\footnotesize\ttfamily struct \mbox{\hyperlink{structlcd__display}{lcd\+\_\+display}} disp}
+
+
+
+External definition of struct \mbox{\hyperlink{structlcd__display}{lcd\+\_\+display}}. 
+
+\mbox{\Hypertarget{main_8c_afa89be2861e5ca8bbe483e3b9388b0f4}\label{main_8c_afa89be2861e5ca8bbe483e3b9388b0f4}} 
+\index{main.c@{main.c}!flowers@{flowers}}
+\index{flowers@{flowers}!main.c@{main.c}}
+\doxysubsubsection{\texorpdfstring{flowers}{flowers}}
+{\footnotesize\ttfamily struct \mbox{\hyperlink{structflower__data}{flower\+\_\+data}} flowers\mbox{[}\mbox{\hyperlink{flower__data_8h_a9b08f0cec46c0c7d0ececeadb067798b}{NUMBER\+\_\+\+OF\+\_\+\+FLOWERS}}\mbox{]}}
+
+
+
+Definition of external struct \mbox{\hyperlink{structflower__data}{flower\+\_\+data}}. 
+
+\mbox{\Hypertarget{main_8c_a42dd7d35c4203c67eafb746b25d96935}\label{main_8c_a42dd7d35c4203c67eafb746b25d96935}} 
+\index{main.c@{main.c}!Received@{Received}}
+\index{Received@{Received}!main.c@{main.c}}
+\doxysubsubsection{\texorpdfstring{Received}{Received}}
+{\footnotesize\ttfamily uint8\+\_\+t Received\mbox{[}10\mbox{]}}
+
+\mbox{\Hypertarget{main_8c_aed127960dd64393ad96497c82669e163}\label{main_8c_aed127960dd64393ad96497c82669e163}} 
+\index{main.c@{main.c}!Rtc\_Date@{Rtc\_Date}}
+\index{Rtc\_Date@{Rtc\_Date}!main.c@{main.c}}
+\doxysubsubsection{\texorpdfstring{Rtc\_Date}{Rtc\_Date}}
+{\footnotesize\ttfamily RTC\+\_\+\+Date\+Type\+Def Rtc\+\_\+\+Date}
+
+\mbox{\Hypertarget{main_8c_aabceeae3dd8ff9c73e3f3afaba772e89}\label{main_8c_aabceeae3dd8ff9c73e3f3afaba772e89}} 
+\index{main.c@{main.c}!Rtc\_Time@{Rtc\_Time}}
+\index{Rtc\_Time@{Rtc\_Time}!main.c@{main.c}}
+\doxysubsubsection{\texorpdfstring{Rtc\_Time}{Rtc\_Time}}
+{\footnotesize\ttfamily RTC\+\_\+\+Time\+Type\+Def Rtc\+\_\+\+Time}
+
+\mbox{\Hypertarget{main_8c_a4e91de8ea971ae6e062fe7da27218339}\label{main_8c_a4e91de8ea971ae6e062fe7da27218339}} 
+\index{main.c@{main.c}!sensor\_data@{sensor\_data}}
+\index{sensor\_data@{sensor\_data}!main.c@{main.c}}
+\doxysubsubsection{\texorpdfstring{sensor\_data}{sensor\_data}}
+{\footnotesize\ttfamily uint16\+\_\+t sensor\+\_\+data\mbox{[}2\mbox{]}}
+
+\mbox{\Hypertarget{main_8c_a8518859a5386aaee70d801f5769c8ebc}\label{main_8c_a8518859a5386aaee70d801f5769c8ebc}} 
+\index{main.c@{main.c}!watering\_state@{watering\_state}}
+\index{watering\_state@{watering\_state}!main.c@{main.c}}
+\doxysubsubsection{\texorpdfstring{watering\_state}{watering\_state}}
+{\footnotesize\ttfamily uint8\+\_\+t watering\+\_\+state = 0}
+

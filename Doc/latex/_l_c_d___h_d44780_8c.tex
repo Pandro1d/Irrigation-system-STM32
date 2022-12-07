@@ -1,0 +1,372 @@
+\hypertarget{_l_c_d___h_d44780_8c}{}\doxysection{Core/\+Src/\+LCD\+\_\+\+HD44780.c File Reference}
+\label{_l_c_d___h_d44780_8c}\index{Core/Src/LCD\_HD44780.c@{Core/Src/LCD\_HD44780.c}}
+
+
+This file provides code for the configuration of the LCD HD44780 display.  
+
+
+{\ttfamily \#include \char`\"{}LCD\+\_\+\+HD44780.\+h\char`\"{}}\newline
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{_l_c_d___h_d44780_8c_af3686b35653c24ca75bb87d39ee14734}{SET\+\_\+\+LCD\+\_\+E}}~HAL\+\_\+\+GPIO\+\_\+\+Write\+Pin(\mbox{\hyperlink{main_8h_aafd4440032d23f5d8df5b2c906c8db40}{LCD\+\_\+\+E\+\_\+\+GPIO\+\_\+\+Port}}, \mbox{\hyperlink{main_8h_a8a4056daf7b9ead00ef1320ab049bfa7}{LCD\+\_\+\+E\+\_\+\+Pin}}, GPIO\+\_\+\+PIN\+\_\+\+SET)
+\item 
+\#define \mbox{\hyperlink{_l_c_d___h_d44780_8c_a713be3db4ff490a31f0a5cac6827a4a5}{RESET\+\_\+\+LCD\+\_\+E}}~HAL\+\_\+\+GPIO\+\_\+\+Write\+Pin(\mbox{\hyperlink{main_8h_aafd4440032d23f5d8df5b2c906c8db40}{LCD\+\_\+\+E\+\_\+\+GPIO\+\_\+\+Port}}, \mbox{\hyperlink{main_8h_a8a4056daf7b9ead00ef1320ab049bfa7}{LCD\+\_\+\+E\+\_\+\+Pin}}, GPIO\+\_\+\+PIN\+\_\+\+RESET)
+\item 
+\#define \mbox{\hyperlink{_l_c_d___h_d44780_8c_ab078390dfbfe88eb89696b332b0739f9}{SET\+\_\+\+LCD\+\_\+\+RS}}~HAL\+\_\+\+GPIO\+\_\+\+Write\+Pin(\mbox{\hyperlink{main_8h_a7a7bf8fda04f0139622a654cc9ca5530}{LCD\+\_\+\+RS\+\_\+\+GPIO\+\_\+\+Port}}, \mbox{\hyperlink{main_8h_a84cf65c2b017bc8fe002c811705bc846}{LCD\+\_\+\+RS\+\_\+\+Pin}}, GPIO\+\_\+\+PIN\+\_\+\+SET)
+\item 
+\#define \mbox{\hyperlink{_l_c_d___h_d44780_8c_a3cb7dd9df33e2c756112d73348b738c2}{RESET\+\_\+\+LCD\+\_\+\+RS}}~HAL\+\_\+\+GPIO\+\_\+\+Write\+Pin(\mbox{\hyperlink{main_8h_a7a7bf8fda04f0139622a654cc9ca5530}{LCD\+\_\+\+RS\+\_\+\+GPIO\+\_\+\+Port}}, \mbox{\hyperlink{main_8h_a84cf65c2b017bc8fe002c811705bc846}{LCD\+\_\+\+RS\+\_\+\+Pin}}, GPIO\+\_\+\+PIN\+\_\+\+RESET)
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{_l_c_d___h_d44780_8c_a3e016bc2a08b7d05db0aa172eaa1f23e}{LCD\+\_\+\+Write\+Byte}} (uint8\+\_\+t data)
+\item 
+void \mbox{\hyperlink{_l_c_d___h_d44780_8c_a30d66e00b5bdcf7d1cf2616104e77a5c}{LCD\+\_\+\+Write\+Cmd}} (uint8\+\_\+t cmd)
+\item 
+void \mbox{\hyperlink{_l_c_d___h_d44780_8c_a90a2f0bfb1806be9b2acfb68693554ec}{LCD\+\_\+\+Write\+Data}} (uint8\+\_\+t data)
+\item 
+void \mbox{\hyperlink{_l_c_d___h_d44780_8c_ac8ba6ce0b94fd588944c16eb00e72cd8}{LCD\+\_\+\+Char}} (char c)
+\begin{DoxyCompactList}\small\item\em Function to send char to LCD display. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{_l_c_d___h_d44780_8c_a2f42b8eb253eafb0111f36b2cfd1399d}{LCD\+\_\+\+String}} (char $\ast$str)
+\begin{DoxyCompactList}\small\item\em Function to send string to LCD display. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{_l_c_d___h_d44780_8c_a0c6b1e7321db3d944e16e4e578dfaf88}{LCD\+\_\+\+Int}} (int value)
+\item 
+void \mbox{\hyperlink{_l_c_d___h_d44780_8c_ab81f59807a2458bdbcfaaebcf5374325}{LCD\+\_\+\+Hex}} (int value, uint8\+\_\+t upper\+\_\+case)
+\item 
+void \mbox{\hyperlink{_l_c_d___h_d44780_8c_a66f217a930af9bc31eda13a5690c1afc}{LCD\+\_\+\+Def\+Char}} (uint8\+\_\+t number, uint8\+\_\+t $\ast$def\+\_\+char)
+\item 
+void \mbox{\hyperlink{_l_c_d___h_d44780_8c_a548d8a9d0dcbb9c41f6ccbc53a73216c}{LCD\+\_\+\+Home}} ()
+\item 
+void \mbox{\hyperlink{_l_c_d___h_d44780_8c_af68df90bb03bf79200fa25eeb57da8f8}{LCD\+\_\+\+Cursor}} (uint8\+\_\+t on\+\_\+off)
+\begin{DoxyCompactList}\small\item\em LCD turning cursor off/on. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{_l_c_d___h_d44780_8c_a073f4b9c069202c97a0d7a6f5b10686e}{LCD\+\_\+\+Blink}} (uint8\+\_\+t on\+\_\+off)
+\begin{DoxyCompactList}\small\item\em LCD turning blink off/on. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{_l_c_d___h_d44780_8c_a96560fed67b0edbf4806b1695fcc3c95}{LCD\+\_\+\+Locate}} (uint8\+\_\+t x, uint8\+\_\+t y)
+\begin{DoxyCompactList}\small\item\em LCD setting cursor. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{_l_c_d___h_d44780_8c_a5d0a453d0ee112fb0dfda14f82fd5448}{LCD\+\_\+\+Cls}} (void)
+\begin{DoxyCompactList}\small\item\em LCD clearance. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{_l_c_d___h_d44780_8c_aa53c9d40f3aa552a9974cd55ac510cb3}{LCD\+\_\+\+Init}} (void)
+\begin{DoxyCompactList}\small\item\em LCD initialization. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{_l_c_d___h_d44780_8c_a93b3e4eebf72f7c29232ade6df7a2ab1}{send\+Data\+To\+Disp}} (struct \mbox{\hyperlink{structlcd__display}{lcd\+\_\+display}} $\ast$displ)
+\begin{DoxyCompactList}\small\item\em Funkcje do sterowania wyswietlaczem. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{_l_c_d___h_d44780_8c_a2b9dfc9be4f8b2be9b92928207fb10d7}{form\+Disp\+\_\+\+Time\+View}} (struct \mbox{\hyperlink{structlcd__display}{lcd\+\_\+display}} $\ast$displ)
+\begin{DoxyCompactList}\small\item\em Function forms display lines. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{_l_c_d___h_d44780_8c_a3dbc5ffcab0b20bc83c410b9d5c5f26f}{form\+Disp\+\_\+\+Moisture\+View}} (struct \mbox{\hyperlink{structlcd__display}{lcd\+\_\+display}} $\ast$displ)
+\begin{DoxyCompactList}\small\item\em Function forms display lines. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{_l_c_d___h_d44780_8c_a9e8b14eefd67baeb24732f0c5be411bc}{form\+Disp\+\_\+\+USART\+\_\+\+Recieve\+Data\+View}} (struct \mbox{\hyperlink{structlcd__display}{lcd\+\_\+display}} $\ast$displ)
+\begin{DoxyCompactList}\small\item\em Function forms display lines. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{_l_c_d___h_d44780_8c_ad133cf8fd173a8b27b6238ef59db8622}{form\+Disp\+\_\+\+Watering\+Process}} (struct \mbox{\hyperlink{structlcd__display}{lcd\+\_\+display}} $\ast$displ)
+\begin{DoxyCompactList}\small\item\em Function forms display lines. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{_l_c_d___h_d44780_8c_afecc98f19cc1eb7ff5fe566f372b3b0d}{update\+Disp\+Data}} (struct \mbox{\hyperlink{structlcd__display}{lcd\+\_\+display}} $\ast$displ)
+\begin{DoxyCompactList}\small\item\em Function updates data to display. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{_l_c_d___h_d44780_8c_a60fbe1d9a68ca159e1a78f3f341274cd}{clean\+Lines}} (struct \mbox{\hyperlink{structlcd__display}{lcd\+\_\+display}} $\ast$displ)
+\begin{DoxyCompactList}\small\item\em Function cleans lines\mbox{[}LCD\+\_\+Y\mbox{]}\mbox{[}LCD\+\_\+\+X+1\mbox{]}. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{_l_c_d___h_d44780_8c_a50575a82c677f64ab49e16ee30f7b987}{change\+Disp\+State}} (struct \mbox{\hyperlink{structlcd__display}{lcd\+\_\+display}} $\ast$displ, uint8\+\_\+t state)
+\begin{DoxyCompactList}\small\item\em Function changes display state. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{_l_c_d___h_d44780_8c_a331529c4c2f9349abe2943778d556abe}{disp\+Init}} (struct \mbox{\hyperlink{structlcd__display}{lcd\+\_\+display}} $\ast$displ)
+\begin{DoxyCompactList}\small\item\em Initialization of display struct. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+This file provides code for the configuration of the LCD HD44780 display. 
+
+Copyright (c) 2021 STMicroelectronics. All rights reserved.
+
+This software is licensed under terms that can be found in the LICENSE file in the root directory of this software component. If no LICENSE file comes with this software, it is provided AS-\/\+IS. 
+
+\doxysubsection{Macro Definition Documentation}
+\mbox{\Hypertarget{_l_c_d___h_d44780_8c_a713be3db4ff490a31f0a5cac6827a4a5}\label{_l_c_d___h_d44780_8c_a713be3db4ff490a31f0a5cac6827a4a5}} 
+\index{LCD\_HD44780.c@{LCD\_HD44780.c}!RESET\_LCD\_E@{RESET\_LCD\_E}}
+\index{RESET\_LCD\_E@{RESET\_LCD\_E}!LCD\_HD44780.c@{LCD\_HD44780.c}}
+\doxysubsubsection{\texorpdfstring{RESET\_LCD\_E}{RESET\_LCD\_E}}
+{\footnotesize\ttfamily \#define RESET\+\_\+\+LCD\+\_\+E~HAL\+\_\+\+GPIO\+\_\+\+Write\+Pin(\mbox{\hyperlink{main_8h_aafd4440032d23f5d8df5b2c906c8db40}{LCD\+\_\+\+E\+\_\+\+GPIO\+\_\+\+Port}}, \mbox{\hyperlink{main_8h_a8a4056daf7b9ead00ef1320ab049bfa7}{LCD\+\_\+\+E\+\_\+\+Pin}}, GPIO\+\_\+\+PIN\+\_\+\+RESET)}
+
+\mbox{\Hypertarget{_l_c_d___h_d44780_8c_a3cb7dd9df33e2c756112d73348b738c2}\label{_l_c_d___h_d44780_8c_a3cb7dd9df33e2c756112d73348b738c2}} 
+\index{LCD\_HD44780.c@{LCD\_HD44780.c}!RESET\_LCD\_RS@{RESET\_LCD\_RS}}
+\index{RESET\_LCD\_RS@{RESET\_LCD\_RS}!LCD\_HD44780.c@{LCD\_HD44780.c}}
+\doxysubsubsection{\texorpdfstring{RESET\_LCD\_RS}{RESET\_LCD\_RS}}
+{\footnotesize\ttfamily \#define RESET\+\_\+\+LCD\+\_\+\+RS~HAL\+\_\+\+GPIO\+\_\+\+Write\+Pin(\mbox{\hyperlink{main_8h_a7a7bf8fda04f0139622a654cc9ca5530}{LCD\+\_\+\+RS\+\_\+\+GPIO\+\_\+\+Port}}, \mbox{\hyperlink{main_8h_a84cf65c2b017bc8fe002c811705bc846}{LCD\+\_\+\+RS\+\_\+\+Pin}}, GPIO\+\_\+\+PIN\+\_\+\+RESET)}
+
+\mbox{\Hypertarget{_l_c_d___h_d44780_8c_af3686b35653c24ca75bb87d39ee14734}\label{_l_c_d___h_d44780_8c_af3686b35653c24ca75bb87d39ee14734}} 
+\index{LCD\_HD44780.c@{LCD\_HD44780.c}!SET\_LCD\_E@{SET\_LCD\_E}}
+\index{SET\_LCD\_E@{SET\_LCD\_E}!LCD\_HD44780.c@{LCD\_HD44780.c}}
+\doxysubsubsection{\texorpdfstring{SET\_LCD\_E}{SET\_LCD\_E}}
+{\footnotesize\ttfamily \#define SET\+\_\+\+LCD\+\_\+E~HAL\+\_\+\+GPIO\+\_\+\+Write\+Pin(\mbox{\hyperlink{main_8h_aafd4440032d23f5d8df5b2c906c8db40}{LCD\+\_\+\+E\+\_\+\+GPIO\+\_\+\+Port}}, \mbox{\hyperlink{main_8h_a8a4056daf7b9ead00ef1320ab049bfa7}{LCD\+\_\+\+E\+\_\+\+Pin}}, GPIO\+\_\+\+PIN\+\_\+\+SET)}
+
+\mbox{\Hypertarget{_l_c_d___h_d44780_8c_ab078390dfbfe88eb89696b332b0739f9}\label{_l_c_d___h_d44780_8c_ab078390dfbfe88eb89696b332b0739f9}} 
+\index{LCD\_HD44780.c@{LCD\_HD44780.c}!SET\_LCD\_RS@{SET\_LCD\_RS}}
+\index{SET\_LCD\_RS@{SET\_LCD\_RS}!LCD\_HD44780.c@{LCD\_HD44780.c}}
+\doxysubsubsection{\texorpdfstring{SET\_LCD\_RS}{SET\_LCD\_RS}}
+{\footnotesize\ttfamily \#define SET\+\_\+\+LCD\+\_\+\+RS~HAL\+\_\+\+GPIO\+\_\+\+Write\+Pin(\mbox{\hyperlink{main_8h_a7a7bf8fda04f0139622a654cc9ca5530}{LCD\+\_\+\+RS\+\_\+\+GPIO\+\_\+\+Port}}, \mbox{\hyperlink{main_8h_a84cf65c2b017bc8fe002c811705bc846}{LCD\+\_\+\+RS\+\_\+\+Pin}}, GPIO\+\_\+\+PIN\+\_\+\+SET)}
+
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{_l_c_d___h_d44780_8c_a50575a82c677f64ab49e16ee30f7b987}\label{_l_c_d___h_d44780_8c_a50575a82c677f64ab49e16ee30f7b987}} 
+\index{LCD\_HD44780.c@{LCD\_HD44780.c}!changeDispState@{changeDispState}}
+\index{changeDispState@{changeDispState}!LCD\_HD44780.c@{LCD\_HD44780.c}}
+\doxysubsubsection{\texorpdfstring{changeDispState()}{changeDispState()}}
+{\footnotesize\ttfamily void change\+Disp\+State (\begin{DoxyParamCaption}\item[{struct \mbox{\hyperlink{structlcd__display}{lcd\+\_\+display}} $\ast$}]{displ,  }\item[{uint8\+\_\+t}]{state }\end{DoxyParamCaption})}
+
+
+
+Function changes display state. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em struct} & \mbox{\hyperlink{structlcd__display}{lcd\+\_\+display}} $\ast$, uint8\+\_\+t state Pointer to display data struct, . \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{_l_c_d___h_d44780_8c_a60fbe1d9a68ca159e1a78f3f341274cd}\label{_l_c_d___h_d44780_8c_a60fbe1d9a68ca159e1a78f3f341274cd}} 
+\index{LCD\_HD44780.c@{LCD\_HD44780.c}!cleanLines@{cleanLines}}
+\index{cleanLines@{cleanLines}!LCD\_HD44780.c@{LCD\_HD44780.c}}
+\doxysubsubsection{\texorpdfstring{cleanLines()}{cleanLines()}}
+{\footnotesize\ttfamily void clean\+Lines (\begin{DoxyParamCaption}\item[{struct \mbox{\hyperlink{structlcd__display}{lcd\+\_\+display}} $\ast$}]{displ }\end{DoxyParamCaption})}
+
+
+
+Function cleans lines\mbox{[}LCD\+\_\+Y\mbox{]}\mbox{[}LCD\+\_\+\+X+1\mbox{]}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em struct} & \mbox{\hyperlink{structlcd__display}{lcd\+\_\+display}} $\ast$ Pointer to display data struct. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{_l_c_d___h_d44780_8c_a331529c4c2f9349abe2943778d556abe}\label{_l_c_d___h_d44780_8c_a331529c4c2f9349abe2943778d556abe}} 
+\index{LCD\_HD44780.c@{LCD\_HD44780.c}!dispInit@{dispInit}}
+\index{dispInit@{dispInit}!LCD\_HD44780.c@{LCD\_HD44780.c}}
+\doxysubsubsection{\texorpdfstring{dispInit()}{dispInit()}}
+{\footnotesize\ttfamily void disp\+Init (\begin{DoxyParamCaption}\item[{struct \mbox{\hyperlink{structlcd__display}{lcd\+\_\+display}} $\ast$}]{displ }\end{DoxyParamCaption})}
+
+
+
+Initialization of display struct. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em struct} & \mbox{\hyperlink{structlcd__display}{lcd\+\_\+display}} $\ast$ Pointer to display data struct. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{_l_c_d___h_d44780_8c_a3dbc5ffcab0b20bc83c410b9d5c5f26f}\label{_l_c_d___h_d44780_8c_a3dbc5ffcab0b20bc83c410b9d5c5f26f}} 
+\index{LCD\_HD44780.c@{LCD\_HD44780.c}!formDisp\_MoistureView@{formDisp\_MoistureView}}
+\index{formDisp\_MoistureView@{formDisp\_MoistureView}!LCD\_HD44780.c@{LCD\_HD44780.c}}
+\doxysubsubsection{\texorpdfstring{formDisp\_MoistureView()}{formDisp\_MoistureView()}}
+{\footnotesize\ttfamily void form\+Disp\+\_\+\+Moisture\+View (\begin{DoxyParamCaption}\item[{struct \mbox{\hyperlink{structlcd__display}{lcd\+\_\+display}} $\ast$}]{displ }\end{DoxyParamCaption})}
+
+
+
+Function forms display lines. 
+
+Makes LCD to display moisture of flower. 
+\begin{DoxyParams}{Parameters}
+{\em struct} & \mbox{\hyperlink{structlcd__display}{lcd\+\_\+display}} $\ast$ Pointer to display data struct. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{_l_c_d___h_d44780_8c_a2b9dfc9be4f8b2be9b92928207fb10d7}\label{_l_c_d___h_d44780_8c_a2b9dfc9be4f8b2be9b92928207fb10d7}} 
+\index{LCD\_HD44780.c@{LCD\_HD44780.c}!formDisp\_TimeView@{formDisp\_TimeView}}
+\index{formDisp\_TimeView@{formDisp\_TimeView}!LCD\_HD44780.c@{LCD\_HD44780.c}}
+\doxysubsubsection{\texorpdfstring{formDisp\_TimeView()}{formDisp\_TimeView()}}
+{\footnotesize\ttfamily void form\+Disp\+\_\+\+Time\+View (\begin{DoxyParamCaption}\item[{struct \mbox{\hyperlink{structlcd__display}{lcd\+\_\+display}} $\ast$}]{displ }\end{DoxyParamCaption})}
+
+
+
+Function forms display lines. 
+
+Makes LCD to display actual time and watering times. 
+\begin{DoxyParams}{Parameters}
+{\em struct} & \mbox{\hyperlink{structlcd__display}{lcd\+\_\+display}} $\ast$ Pointer to display data struct. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{_l_c_d___h_d44780_8c_a9e8b14eefd67baeb24732f0c5be411bc}\label{_l_c_d___h_d44780_8c_a9e8b14eefd67baeb24732f0c5be411bc}} 
+\index{LCD\_HD44780.c@{LCD\_HD44780.c}!formDisp\_USART\_RecieveDataView@{formDisp\_USART\_RecieveDataView}}
+\index{formDisp\_USART\_RecieveDataView@{formDisp\_USART\_RecieveDataView}!LCD\_HD44780.c@{LCD\_HD44780.c}}
+\doxysubsubsection{\texorpdfstring{formDisp\_USART\_RecieveDataView()}{formDisp\_USART\_RecieveDataView()}}
+{\footnotesize\ttfamily void form\+Disp\+\_\+\+USART\+\_\+\+Recieve\+Data\+View (\begin{DoxyParamCaption}\item[{struct \mbox{\hyperlink{structlcd__display}{lcd\+\_\+display}} $\ast$}]{displ }\end{DoxyParamCaption})}
+
+
+
+Function forms display lines. 
+
+Makes LCD to display received data from UART. 
+\begin{DoxyParams}{Parameters}
+{\em struct} & \mbox{\hyperlink{structlcd__display}{lcd\+\_\+display}} $\ast$ Pointer to display data struct. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{_l_c_d___h_d44780_8c_ad133cf8fd173a8b27b6238ef59db8622}\label{_l_c_d___h_d44780_8c_ad133cf8fd173a8b27b6238ef59db8622}} 
+\index{LCD\_HD44780.c@{LCD\_HD44780.c}!formDisp\_WateringProcess@{formDisp\_WateringProcess}}
+\index{formDisp\_WateringProcess@{formDisp\_WateringProcess}!LCD\_HD44780.c@{LCD\_HD44780.c}}
+\doxysubsubsection{\texorpdfstring{formDisp\_WateringProcess()}{formDisp\_WateringProcess()}}
+{\footnotesize\ttfamily void form\+Disp\+\_\+\+Watering\+Process (\begin{DoxyParamCaption}\item[{struct \mbox{\hyperlink{structlcd__display}{lcd\+\_\+display}} $\ast$}]{displ }\end{DoxyParamCaption})}
+
+
+
+Function forms display lines. 
+
+Makes LCD to display the process of watering. 
+\begin{DoxyParams}{Parameters}
+{\em struct} & \mbox{\hyperlink{structlcd__display}{lcd\+\_\+display}} $\ast$ Pointer to display data struct. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{_l_c_d___h_d44780_8c_a073f4b9c069202c97a0d7a6f5b10686e}\label{_l_c_d___h_d44780_8c_a073f4b9c069202c97a0d7a6f5b10686e}} 
+\index{LCD\_HD44780.c@{LCD\_HD44780.c}!LCD\_Blink@{LCD\_Blink}}
+\index{LCD\_Blink@{LCD\_Blink}!LCD\_HD44780.c@{LCD\_HD44780.c}}
+\doxysubsubsection{\texorpdfstring{LCD\_Blink()}{LCD\_Blink()}}
+{\footnotesize\ttfamily void LCD\+\_\+\+Blink (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{on\+\_\+off }\end{DoxyParamCaption})}
+
+
+
+LCD turning blink off/on. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em uint8\+\_\+t} & on\+\_\+off 1 -\/ blink on, 0 -\/ blink off. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{_l_c_d___h_d44780_8c_ac8ba6ce0b94fd588944c16eb00e72cd8}\label{_l_c_d___h_d44780_8c_ac8ba6ce0b94fd588944c16eb00e72cd8}} 
+\index{LCD\_HD44780.c@{LCD\_HD44780.c}!LCD\_Char@{LCD\_Char}}
+\index{LCD\_Char@{LCD\_Char}!LCD\_HD44780.c@{LCD\_HD44780.c}}
+\doxysubsubsection{\texorpdfstring{LCD\_Char()}{LCD\_Char()}}
+{\footnotesize\ttfamily void LCD\+\_\+\+Char (\begin{DoxyParamCaption}\item[{char}]{c }\end{DoxyParamCaption})}
+
+
+
+Function to send char to LCD display. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em char} & c Char which will be sent \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{_l_c_d___h_d44780_8c_a5d0a453d0ee112fb0dfda14f82fd5448}\label{_l_c_d___h_d44780_8c_a5d0a453d0ee112fb0dfda14f82fd5448}} 
+\index{LCD\_HD44780.c@{LCD\_HD44780.c}!LCD\_Cls@{LCD\_Cls}}
+\index{LCD\_Cls@{LCD\_Cls}!LCD\_HD44780.c@{LCD\_HD44780.c}}
+\doxysubsubsection{\texorpdfstring{LCD\_Cls()}{LCD\_Cls()}}
+{\footnotesize\ttfamily void LCD\+\_\+\+Cls (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+LCD clearance. 
+
+\mbox{\Hypertarget{_l_c_d___h_d44780_8c_af68df90bb03bf79200fa25eeb57da8f8}\label{_l_c_d___h_d44780_8c_af68df90bb03bf79200fa25eeb57da8f8}} 
+\index{LCD\_HD44780.c@{LCD\_HD44780.c}!LCD\_Cursor@{LCD\_Cursor}}
+\index{LCD\_Cursor@{LCD\_Cursor}!LCD\_HD44780.c@{LCD\_HD44780.c}}
+\doxysubsubsection{\texorpdfstring{LCD\_Cursor()}{LCD\_Cursor()}}
+{\footnotesize\ttfamily void LCD\+\_\+\+Cursor (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{on\+\_\+off }\end{DoxyParamCaption})}
+
+
+
+LCD turning cursor off/on. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em uint8\+\_\+t} & on\+\_\+off 1 -\/ cursor on, 0 -\/ cursor off. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{_l_c_d___h_d44780_8c_a66f217a930af9bc31eda13a5690c1afc}\label{_l_c_d___h_d44780_8c_a66f217a930af9bc31eda13a5690c1afc}} 
+\index{LCD\_HD44780.c@{LCD\_HD44780.c}!LCD\_DefChar@{LCD\_DefChar}}
+\index{LCD\_DefChar@{LCD\_DefChar}!LCD\_HD44780.c@{LCD\_HD44780.c}}
+\doxysubsubsection{\texorpdfstring{LCD\_DefChar()}{LCD\_DefChar()}}
+{\footnotesize\ttfamily void LCD\+\_\+\+Def\+Char (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{number,  }\item[{uint8\+\_\+t $\ast$}]{def\+\_\+char }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{_l_c_d___h_d44780_8c_ab81f59807a2458bdbcfaaebcf5374325}\label{_l_c_d___h_d44780_8c_ab81f59807a2458bdbcfaaebcf5374325}} 
+\index{LCD\_HD44780.c@{LCD\_HD44780.c}!LCD\_Hex@{LCD\_Hex}}
+\index{LCD\_Hex@{LCD\_Hex}!LCD\_HD44780.c@{LCD\_HD44780.c}}
+\doxysubsubsection{\texorpdfstring{LCD\_Hex()}{LCD\_Hex()}}
+{\footnotesize\ttfamily void LCD\+\_\+\+Hex (\begin{DoxyParamCaption}\item[{int}]{value,  }\item[{uint8\+\_\+t}]{upper\+\_\+case }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{_l_c_d___h_d44780_8c_a548d8a9d0dcbb9c41f6ccbc53a73216c}\label{_l_c_d___h_d44780_8c_a548d8a9d0dcbb9c41f6ccbc53a73216c}} 
+\index{LCD\_HD44780.c@{LCD\_HD44780.c}!LCD\_Home@{LCD\_Home}}
+\index{LCD\_Home@{LCD\_Home}!LCD\_HD44780.c@{LCD\_HD44780.c}}
+\doxysubsubsection{\texorpdfstring{LCD\_Home()}{LCD\_Home()}}
+{\footnotesize\ttfamily void LCD\+\_\+\+Home (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{_l_c_d___h_d44780_8c_aa53c9d40f3aa552a9974cd55ac510cb3}\label{_l_c_d___h_d44780_8c_aa53c9d40f3aa552a9974cd55ac510cb3}} 
+\index{LCD\_HD44780.c@{LCD\_HD44780.c}!LCD\_Init@{LCD\_Init}}
+\index{LCD\_Init@{LCD\_Init}!LCD\_HD44780.c@{LCD\_HD44780.c}}
+\doxysubsubsection{\texorpdfstring{LCD\_Init()}{LCD\_Init()}}
+{\footnotesize\ttfamily void LCD\+\_\+\+Init (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+LCD initialization. 
+
+\mbox{\Hypertarget{_l_c_d___h_d44780_8c_a0c6b1e7321db3d944e16e4e578dfaf88}\label{_l_c_d___h_d44780_8c_a0c6b1e7321db3d944e16e4e578dfaf88}} 
+\index{LCD\_HD44780.c@{LCD\_HD44780.c}!LCD\_Int@{LCD\_Int}}
+\index{LCD\_Int@{LCD\_Int}!LCD\_HD44780.c@{LCD\_HD44780.c}}
+\doxysubsubsection{\texorpdfstring{LCD\_Int()}{LCD\_Int()}}
+{\footnotesize\ttfamily void LCD\+\_\+\+Int (\begin{DoxyParamCaption}\item[{int}]{value }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{_l_c_d___h_d44780_8c_a96560fed67b0edbf4806b1695fcc3c95}\label{_l_c_d___h_d44780_8c_a96560fed67b0edbf4806b1695fcc3c95}} 
+\index{LCD\_HD44780.c@{LCD\_HD44780.c}!LCD\_Locate@{LCD\_Locate}}
+\index{LCD\_Locate@{LCD\_Locate}!LCD\_HD44780.c@{LCD\_HD44780.c}}
+\doxysubsubsection{\texorpdfstring{LCD\_Locate()}{LCD\_Locate()}}
+{\footnotesize\ttfamily void LCD\+\_\+\+Locate (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{x,  }\item[{uint8\+\_\+t}]{y }\end{DoxyParamCaption})}
+
+
+
+LCD setting cursor. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em uint8\+\_\+t} & x, uint8\+\_\+t y Co-\/ordinates of the cursor to be set. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{_l_c_d___h_d44780_8c_a2f42b8eb253eafb0111f36b2cfd1399d}\label{_l_c_d___h_d44780_8c_a2f42b8eb253eafb0111f36b2cfd1399d}} 
+\index{LCD\_HD44780.c@{LCD\_HD44780.c}!LCD\_String@{LCD\_String}}
+\index{LCD\_String@{LCD\_String}!LCD\_HD44780.c@{LCD\_HD44780.c}}
+\doxysubsubsection{\texorpdfstring{LCD\_String()}{LCD\_String()}}
+{\footnotesize\ttfamily void LCD\+\_\+\+String (\begin{DoxyParamCaption}\item[{char $\ast$}]{str }\end{DoxyParamCaption})}
+
+
+
+Function to send string to LCD display. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em char$\ast$} & str -\/ String which will be sent \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{_l_c_d___h_d44780_8c_a3e016bc2a08b7d05db0aa172eaa1f23e}\label{_l_c_d___h_d44780_8c_a3e016bc2a08b7d05db0aa172eaa1f23e}} 
+\index{LCD\_HD44780.c@{LCD\_HD44780.c}!LCD\_WriteByte@{LCD\_WriteByte}}
+\index{LCD\_WriteByte@{LCD\_WriteByte}!LCD\_HD44780.c@{LCD\_HD44780.c}}
+\doxysubsubsection{\texorpdfstring{LCD\_WriteByte()}{LCD\_WriteByte()}}
+{\footnotesize\ttfamily void LCD\+\_\+\+Write\+Byte (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{data }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{_l_c_d___h_d44780_8c_a30d66e00b5bdcf7d1cf2616104e77a5c}\label{_l_c_d___h_d44780_8c_a30d66e00b5bdcf7d1cf2616104e77a5c}} 
+\index{LCD\_HD44780.c@{LCD\_HD44780.c}!LCD\_WriteCmd@{LCD\_WriteCmd}}
+\index{LCD\_WriteCmd@{LCD\_WriteCmd}!LCD\_HD44780.c@{LCD\_HD44780.c}}
+\doxysubsubsection{\texorpdfstring{LCD\_WriteCmd()}{LCD\_WriteCmd()}}
+{\footnotesize\ttfamily void LCD\+\_\+\+Write\+Cmd (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{cmd }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{_l_c_d___h_d44780_8c_a90a2f0bfb1806be9b2acfb68693554ec}\label{_l_c_d___h_d44780_8c_a90a2f0bfb1806be9b2acfb68693554ec}} 
+\index{LCD\_HD44780.c@{LCD\_HD44780.c}!LCD\_WriteData@{LCD\_WriteData}}
+\index{LCD\_WriteData@{LCD\_WriteData}!LCD\_HD44780.c@{LCD\_HD44780.c}}
+\doxysubsubsection{\texorpdfstring{LCD\_WriteData()}{LCD\_WriteData()}}
+{\footnotesize\ttfamily void LCD\+\_\+\+Write\+Data (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{data }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{_l_c_d___h_d44780_8c_a93b3e4eebf72f7c29232ade6df7a2ab1}\label{_l_c_d___h_d44780_8c_a93b3e4eebf72f7c29232ade6df7a2ab1}} 
+\index{LCD\_HD44780.c@{LCD\_HD44780.c}!sendDataToDisp@{sendDataToDisp}}
+\index{sendDataToDisp@{sendDataToDisp}!LCD\_HD44780.c@{LCD\_HD44780.c}}
+\doxysubsubsection{\texorpdfstring{sendDataToDisp()}{sendDataToDisp()}}
+{\footnotesize\ttfamily void send\+Data\+To\+Disp (\begin{DoxyParamCaption}\item[{struct \mbox{\hyperlink{structlcd__display}{lcd\+\_\+display}} $\ast$}]{displ }\end{DoxyParamCaption})}
+
+
+
+Funkcje do sterowania wyswietlaczem. 
+
+Function sends data directly to display. \mbox{\Hypertarget{_l_c_d___h_d44780_8c_afecc98f19cc1eb7ff5fe566f372b3b0d}\label{_l_c_d___h_d44780_8c_afecc98f19cc1eb7ff5fe566f372b3b0d}} 
+\index{LCD\_HD44780.c@{LCD\_HD44780.c}!updateDispData@{updateDispData}}
+\index{updateDispData@{updateDispData}!LCD\_HD44780.c@{LCD\_HD44780.c}}
+\doxysubsubsection{\texorpdfstring{updateDispData()}{updateDispData()}}
+{\footnotesize\ttfamily void update\+Disp\+Data (\begin{DoxyParamCaption}\item[{struct \mbox{\hyperlink{structlcd__display}{lcd\+\_\+display}} $\ast$}]{displ }\end{DoxyParamCaption})}
+
+
+
+Function updates data to display. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em struct} & \mbox{\hyperlink{structlcd__display}{lcd\+\_\+display}} $\ast$ Pointer to display data struct. \\
+\hline
+\end{DoxyParams}

@@ -1,0 +1,88 @@
+\hypertarget{flower__data_8c}{}\doxysection{Core/\+Src/flower\+\_\+data.c File Reference}
+\label{flower__data_8c}\index{Core/Src/flower\_data.c@{Core/Src/flower\_data.c}}
+
+
+This file provides code for the configuration of the flower data struct instances.  
+
+
+{\ttfamily \#include \char`\"{}flower\+\_\+data.\+h\char`\"{}}\newline
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{flower__data_8c_a67ba936e33075d694aac663108668fc0}{flowers\+Init}} (struct \mbox{\hyperlink{structflower__data}{flower\+\_\+data}} \mbox{\hyperlink{main_8c_afa89be2861e5ca8bbe483e3b9388b0f4}{flowers}}\mbox{[}$\,$\mbox{]})
+\begin{DoxyCompactList}\small\item\em Struct \mbox{\hyperlink{structflower__data}{flower\+\_\+data}} init with default values. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{flower__data_8c_a7feec3399d1914b5f0bb7ee7a40933a2}{recalibrate\+Sensor\+Data}} (struct \mbox{\hyperlink{structflower__data}{flower\+\_\+data}} $\ast$flower)
+\begin{DoxyCompactList}\small\item\em Function to calibrate the sensor data. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{flower__data_8c_a285e86d34f54ae65e3eeecacfc9342bc}{rescale\+Sensor\+Data}} (struct \mbox{\hyperlink{structflower__data}{flower\+\_\+data}} $\ast$flower)
+\begin{DoxyCompactList}\small\item\em Function which rescales sensor data from ADC value to percentage of moisture. \end{DoxyCompactList}\item 
+uint8\+\_\+t \mbox{\hyperlink{flower__data_8c_a892c56a8a2a438900886c03c450c04aa}{check\+For\+Watering\+Time}} (struct \mbox{\hyperlink{structflower__data}{flower\+\_\+data}} $\ast$flower, RTC\+\_\+\+Time\+Type\+Def $\ast$curr\+\_\+time)
+\begin{DoxyCompactList}\small\item\em Function is checking if actual time is equal to watering time and changes watering\+\_\+flag. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+This file provides code for the configuration of the flower data struct instances. 
+
+Copyright (c) 2021 STMicroelectronics. All rights reserved.
+
+This software is licensed under terms that can be found in the LICENSE file in the root directory of this software component. If no LICENSE file comes with this software, it is provided AS-\/\+IS. 
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{flower__data_8c_a892c56a8a2a438900886c03c450c04aa}\label{flower__data_8c_a892c56a8a2a438900886c03c450c04aa}} 
+\index{flower\_data.c@{flower\_data.c}!checkForWateringTime@{checkForWateringTime}}
+\index{checkForWateringTime@{checkForWateringTime}!flower\_data.c@{flower\_data.c}}
+\doxysubsubsection{\texorpdfstring{checkForWateringTime()}{checkForWateringTime()}}
+{\footnotesize\ttfamily uint8\+\_\+t check\+For\+Watering\+Time (\begin{DoxyParamCaption}\item[{struct \mbox{\hyperlink{structflower__data}{flower\+\_\+data}} $\ast$}]{flower,  }\item[{RTC\+\_\+\+Time\+Type\+Def $\ast$}]{curr\+\_\+time }\end{DoxyParamCaption})}
+
+
+
+Function is checking if actual time is equal to watering time and changes watering\+\_\+flag. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em struct} & \mbox{\hyperlink{structflower__data}{flower\+\_\+data}} $\ast$,RTC\+\_\+\+Time\+Type\+Def $\ast$ Pointer to flower data and pointer to actual time \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+watering\+\_\+flag 
+\end{DoxyReturn}
+\mbox{\Hypertarget{flower__data_8c_a67ba936e33075d694aac663108668fc0}\label{flower__data_8c_a67ba936e33075d694aac663108668fc0}} 
+\index{flower\_data.c@{flower\_data.c}!flowersInit@{flowersInit}}
+\index{flowersInit@{flowersInit}!flower\_data.c@{flower\_data.c}}
+\doxysubsubsection{\texorpdfstring{flowersInit()}{flowersInit()}}
+{\footnotesize\ttfamily void flowers\+Init (\begin{DoxyParamCaption}\item[{struct \mbox{\hyperlink{structflower__data}{flower\+\_\+data}}}]{flowers\mbox{[}$\,$\mbox{]} }\end{DoxyParamCaption})}
+
+
+
+Struct \mbox{\hyperlink{structflower__data}{flower\+\_\+data}} init with default values. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em struct} & \mbox{\hyperlink{structflower__data}{flower\+\_\+data}} \mbox{[}\mbox{]} Tab of flower data struct. \\
+\hline
+\end{DoxyParams}
+Default values\mbox{\Hypertarget{flower__data_8c_a7feec3399d1914b5f0bb7ee7a40933a2}\label{flower__data_8c_a7feec3399d1914b5f0bb7ee7a40933a2}} 
+\index{flower\_data.c@{flower\_data.c}!recalibrateSensorData@{recalibrateSensorData}}
+\index{recalibrateSensorData@{recalibrateSensorData}!flower\_data.c@{flower\_data.c}}
+\doxysubsubsection{\texorpdfstring{recalibrateSensorData()}{recalibrateSensorData()}}
+{\footnotesize\ttfamily void recalibrate\+Sensor\+Data (\begin{DoxyParamCaption}\item[{struct \mbox{\hyperlink{structflower__data}{flower\+\_\+data}} $\ast$}]{flower }\end{DoxyParamCaption})}
+
+
+
+Function to calibrate the sensor data. 
+
+\mbox{\Hypertarget{flower__data_8c_a285e86d34f54ae65e3eeecacfc9342bc}\label{flower__data_8c_a285e86d34f54ae65e3eeecacfc9342bc}} 
+\index{flower\_data.c@{flower\_data.c}!rescaleSensorData@{rescaleSensorData}}
+\index{rescaleSensorData@{rescaleSensorData}!flower\_data.c@{flower\_data.c}}
+\doxysubsubsection{\texorpdfstring{rescaleSensorData()}{rescaleSensorData()}}
+{\footnotesize\ttfamily void rescale\+Sensor\+Data (\begin{DoxyParamCaption}\item[{struct \mbox{\hyperlink{structflower__data}{flower\+\_\+data}} $\ast$}]{flower }\end{DoxyParamCaption})}
+
+
+
+Function which rescales sensor data from ADC value to percentage of moisture. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em struct} & \mbox{\hyperlink{structflower__data}{flower\+\_\+data}} $\ast$ Pointer to flower data struct. \\
+\hline
+\end{DoxyParams}
+Aby nie przekroczyc wartosci maks i min

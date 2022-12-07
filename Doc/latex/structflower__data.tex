@@ -1,0 +1,200 @@
+\hypertarget{structflower__data}{}\doxysection{flower\+\_\+data Struct Reference}
+\label{structflower__data}\index{flower\_data@{flower\_data}}
+
+
+Struct which contains flower data.  
+
+
+
+
+{\ttfamily \#include $<$flower\+\_\+data.\+h$>$}
+
+\doxysubsection*{Data Fields}
+\begin{DoxyCompactItemize}
+\item 
+uint8\+\_\+t \mbox{\hyperlink{structflower__data_adcbd81ae40ea28bd61434f4bc5e145e3}{flower\+\_\+id}}
+\begin{DoxyCompactList}\small\item\em Flower Id. \end{DoxyCompactList}\item 
+uint8\+\_\+t \mbox{\hyperlink{structflower__data_a66b28b63ce3c66addcffbb692b106fcd}{was\+\_\+watered\+\_\+flag}}
+\begin{DoxyCompactList}\small\item\em Flag which indicates if flower was watered. \end{DoxyCompactList}\item 
+uint8\+\_\+t \mbox{\hyperlink{structflower__data_a73a8e374cba47dc981ed8db63ce67e3e}{watering\+\_\+itter}}
+\begin{DoxyCompactList}\small\item\em Value is current watering duration. \end{DoxyCompactList}\item 
+uint8\+\_\+t \mbox{\hyperlink{structflower__data_a7a5326edf9294dbd5659d166293fd4ec}{watering\+\_\+flag}}
+\begin{DoxyCompactList}\small\item\em Flag which indicates if flower is being actually watering. \end{DoxyCompactList}\item 
+uint16\+\_\+t $\ast$ \mbox{\hyperlink{structflower__data_acbf331243cd664da65f9f6d9a1e3b320}{sensor\+\_\+data}}
+\begin{DoxyCompactList}\small\item\em Pointer which contains address of sensor data. \end{DoxyCompactList}\item 
+uint16\+\_\+t \mbox{\hyperlink{structflower__data_a594f3db7590fb1d0856885ffbb324c1a}{max\+\_\+sensor\+\_\+data}}
+\begin{DoxyCompactList}\small\item\em Max value which sensor can reach (used for calibration). \end{DoxyCompactList}\item 
+uint16\+\_\+t \mbox{\hyperlink{structflower__data_a5339085da48765f5d01a22a8cdea5152}{min\+\_\+sensor\+\_\+data}}
+\begin{DoxyCompactList}\small\item\em Min value which sensor can reach (used for calibration). \end{DoxyCompactList}\item 
+uint8\+\_\+t \mbox{\hyperlink{structflower__data_aebf882942b05d71eb0fb89a62c896f7c}{moisture}}
+\begin{DoxyCompactList}\small\item\em Moisture of flower expressed as a percentage. \end{DoxyCompactList}\item 
+TIM\+\_\+\+Handle\+Type\+Def $\ast$ \mbox{\hyperlink{structflower__data_a1dce143b63ef24972230de022c95c3c1}{PWMtimer}}
+\begin{DoxyCompactList}\small\item\em PWM timer handler used for controlling the pumps. \end{DoxyCompactList}\item 
+uint32\+\_\+t \mbox{\hyperlink{structflower__data_a1272fa40314188986cba95038d8f43b3}{PWMchannel}}
+\begin{DoxyCompactList}\small\item\em PWM timer channel. \end{DoxyCompactList}\item 
+uint16\+\_\+t \mbox{\hyperlink{structflower__data_ac6644703c73d58de463f3b09424391f7}{Pump\+\_\+\+GPIO\+\_\+\+Pin}}
+\begin{DoxyCompactList}\small\item\em GPIO pin number used for controlling the pumps. \end{DoxyCompactList}\item 
+GPIO\+\_\+\+Type\+Def $\ast$ \mbox{\hyperlink{structflower__data_a3fc3f48e8f74e7255a17fbddb99aa512}{Pump\+\_\+\+GPIO\+\_\+\+PORT}}
+\begin{DoxyCompactList}\small\item\em GPIO port number. \end{DoxyCompactList}\item 
+uint16\+\_\+t \mbox{\hyperlink{structflower__data_ae8265fd9860a71cf4ba8a47f463ec88e}{watering\+\_\+duration}}
+\begin{DoxyCompactList}\small\item\em Duration of watering (in seconds) \end{DoxyCompactList}\item 
+RTC\+\_\+\+Time\+Type\+Def \mbox{\hyperlink{structflower__data_a7e7ba23a0fc369f34e2648d42c7afcb8}{watering\+\_\+time}} \mbox{[}\mbox{\hyperlink{flower__data_8h_ac28012d5045654538e25c8e263ab43f5}{MAX\+\_\+\+WATERING\+\_\+\+TIMES}}\mbox{]}
+\begin{DoxyCompactList}\small\item\em RTC table of structures which contains watering times. \end{DoxyCompactList}\item 
+RTC\+\_\+\+Time\+Type\+Def \mbox{\hyperlink{structflower__data_aa87746fb058d2524a8e6d653d14c4de2}{last\+\_\+watering\+\_\+time}}
+\begin{DoxyCompactList}\small\item\em RTC structure which contains last watering time. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Struct which contains flower data. 
+
+\doxysubsection{Field Documentation}
+\mbox{\Hypertarget{structflower__data_adcbd81ae40ea28bd61434f4bc5e145e3}\label{structflower__data_adcbd81ae40ea28bd61434f4bc5e145e3}} 
+\index{flower\_data@{flower\_data}!flower\_id@{flower\_id}}
+\index{flower\_id@{flower\_id}!flower\_data@{flower\_data}}
+\doxysubsubsection{\texorpdfstring{flower\_id}{flower\_id}}
+{\footnotesize\ttfamily uint8\+\_\+t flower\+\_\+id}
+
+
+
+Flower Id. 
+
+\mbox{\Hypertarget{structflower__data_aa87746fb058d2524a8e6d653d14c4de2}\label{structflower__data_aa87746fb058d2524a8e6d653d14c4de2}} 
+\index{flower\_data@{flower\_data}!last\_watering\_time@{last\_watering\_time}}
+\index{last\_watering\_time@{last\_watering\_time}!flower\_data@{flower\_data}}
+\doxysubsubsection{\texorpdfstring{last\_watering\_time}{last\_watering\_time}}
+{\footnotesize\ttfamily RTC\+\_\+\+Time\+Type\+Def last\+\_\+watering\+\_\+time}
+
+
+
+RTC structure which contains last watering time. 
+
+\mbox{\Hypertarget{structflower__data_a594f3db7590fb1d0856885ffbb324c1a}\label{structflower__data_a594f3db7590fb1d0856885ffbb324c1a}} 
+\index{flower\_data@{flower\_data}!max\_sensor\_data@{max\_sensor\_data}}
+\index{max\_sensor\_data@{max\_sensor\_data}!flower\_data@{flower\_data}}
+\doxysubsubsection{\texorpdfstring{max\_sensor\_data}{max\_sensor\_data}}
+{\footnotesize\ttfamily uint16\+\_\+t max\+\_\+sensor\+\_\+data}
+
+
+
+Max value which sensor can reach (used for calibration). 
+
+\mbox{\Hypertarget{structflower__data_a5339085da48765f5d01a22a8cdea5152}\label{structflower__data_a5339085da48765f5d01a22a8cdea5152}} 
+\index{flower\_data@{flower\_data}!min\_sensor\_data@{min\_sensor\_data}}
+\index{min\_sensor\_data@{min\_sensor\_data}!flower\_data@{flower\_data}}
+\doxysubsubsection{\texorpdfstring{min\_sensor\_data}{min\_sensor\_data}}
+{\footnotesize\ttfamily uint16\+\_\+t min\+\_\+sensor\+\_\+data}
+
+
+
+Min value which sensor can reach (used for calibration). 
+
+\mbox{\Hypertarget{structflower__data_aebf882942b05d71eb0fb89a62c896f7c}\label{structflower__data_aebf882942b05d71eb0fb89a62c896f7c}} 
+\index{flower\_data@{flower\_data}!moisture@{moisture}}
+\index{moisture@{moisture}!flower\_data@{flower\_data}}
+\doxysubsubsection{\texorpdfstring{moisture}{moisture}}
+{\footnotesize\ttfamily uint8\+\_\+t moisture}
+
+
+
+Moisture of flower expressed as a percentage. 
+
+\mbox{\Hypertarget{structflower__data_ac6644703c73d58de463f3b09424391f7}\label{structflower__data_ac6644703c73d58de463f3b09424391f7}} 
+\index{flower\_data@{flower\_data}!Pump\_GPIO\_Pin@{Pump\_GPIO\_Pin}}
+\index{Pump\_GPIO\_Pin@{Pump\_GPIO\_Pin}!flower\_data@{flower\_data}}
+\doxysubsubsection{\texorpdfstring{Pump\_GPIO\_Pin}{Pump\_GPIO\_Pin}}
+{\footnotesize\ttfamily uint16\+\_\+t Pump\+\_\+\+GPIO\+\_\+\+Pin}
+
+
+
+GPIO pin number used for controlling the pumps. 
+
+\mbox{\Hypertarget{structflower__data_a3fc3f48e8f74e7255a17fbddb99aa512}\label{structflower__data_a3fc3f48e8f74e7255a17fbddb99aa512}} 
+\index{flower\_data@{flower\_data}!Pump\_GPIO\_PORT@{Pump\_GPIO\_PORT}}
+\index{Pump\_GPIO\_PORT@{Pump\_GPIO\_PORT}!flower\_data@{flower\_data}}
+\doxysubsubsection{\texorpdfstring{Pump\_GPIO\_PORT}{Pump\_GPIO\_PORT}}
+{\footnotesize\ttfamily GPIO\+\_\+\+Type\+Def$\ast$ Pump\+\_\+\+GPIO\+\_\+\+PORT}
+
+
+
+GPIO port number. 
+
+\mbox{\Hypertarget{structflower__data_a1272fa40314188986cba95038d8f43b3}\label{structflower__data_a1272fa40314188986cba95038d8f43b3}} 
+\index{flower\_data@{flower\_data}!PWMchannel@{PWMchannel}}
+\index{PWMchannel@{PWMchannel}!flower\_data@{flower\_data}}
+\doxysubsubsection{\texorpdfstring{PWMchannel}{PWMchannel}}
+{\footnotesize\ttfamily uint32\+\_\+t PWMchannel}
+
+
+
+PWM timer channel. 
+
+\mbox{\Hypertarget{structflower__data_a1dce143b63ef24972230de022c95c3c1}\label{structflower__data_a1dce143b63ef24972230de022c95c3c1}} 
+\index{flower\_data@{flower\_data}!PWMtimer@{PWMtimer}}
+\index{PWMtimer@{PWMtimer}!flower\_data@{flower\_data}}
+\doxysubsubsection{\texorpdfstring{PWMtimer}{PWMtimer}}
+{\footnotesize\ttfamily TIM\+\_\+\+Handle\+Type\+Def$\ast$ PWMtimer}
+
+
+
+PWM timer handler used for controlling the pumps. 
+
+\mbox{\Hypertarget{structflower__data_acbf331243cd664da65f9f6d9a1e3b320}\label{structflower__data_acbf331243cd664da65f9f6d9a1e3b320}} 
+\index{flower\_data@{flower\_data}!sensor\_data@{sensor\_data}}
+\index{sensor\_data@{sensor\_data}!flower\_data@{flower\_data}}
+\doxysubsubsection{\texorpdfstring{sensor\_data}{sensor\_data}}
+{\footnotesize\ttfamily uint16\+\_\+t$\ast$ sensor\+\_\+data}
+
+
+
+Pointer which contains address of sensor data. 
+
+\mbox{\Hypertarget{structflower__data_a66b28b63ce3c66addcffbb692b106fcd}\label{structflower__data_a66b28b63ce3c66addcffbb692b106fcd}} 
+\index{flower\_data@{flower\_data}!was\_watered\_flag@{was\_watered\_flag}}
+\index{was\_watered\_flag@{was\_watered\_flag}!flower\_data@{flower\_data}}
+\doxysubsubsection{\texorpdfstring{was\_watered\_flag}{was\_watered\_flag}}
+{\footnotesize\ttfamily uint8\+\_\+t was\+\_\+watered\+\_\+flag}
+
+
+
+Flag which indicates if flower was watered. 
+
+\mbox{\Hypertarget{structflower__data_ae8265fd9860a71cf4ba8a47f463ec88e}\label{structflower__data_ae8265fd9860a71cf4ba8a47f463ec88e}} 
+\index{flower\_data@{flower\_data}!watering\_duration@{watering\_duration}}
+\index{watering\_duration@{watering\_duration}!flower\_data@{flower\_data}}
+\doxysubsubsection{\texorpdfstring{watering\_duration}{watering\_duration}}
+{\footnotesize\ttfamily uint16\+\_\+t watering\+\_\+duration}
+
+
+
+Duration of watering (in seconds) 
+
+\mbox{\Hypertarget{structflower__data_a7a5326edf9294dbd5659d166293fd4ec}\label{structflower__data_a7a5326edf9294dbd5659d166293fd4ec}} 
+\index{flower\_data@{flower\_data}!watering\_flag@{watering\_flag}}
+\index{watering\_flag@{watering\_flag}!flower\_data@{flower\_data}}
+\doxysubsubsection{\texorpdfstring{watering\_flag}{watering\_flag}}
+{\footnotesize\ttfamily uint8\+\_\+t watering\+\_\+flag}
+
+
+
+Flag which indicates if flower is being actually watering. 
+
+\mbox{\Hypertarget{structflower__data_a73a8e374cba47dc981ed8db63ce67e3e}\label{structflower__data_a73a8e374cba47dc981ed8db63ce67e3e}} 
+\index{flower\_data@{flower\_data}!watering\_itter@{watering\_itter}}
+\index{watering\_itter@{watering\_itter}!flower\_data@{flower\_data}}
+\doxysubsubsection{\texorpdfstring{watering\_itter}{watering\_itter}}
+{\footnotesize\ttfamily uint8\+\_\+t watering\+\_\+itter}
+
+
+
+Value is current watering duration. 
+
+\mbox{\Hypertarget{structflower__data_a7e7ba23a0fc369f34e2648d42c7afcb8}\label{structflower__data_a7e7ba23a0fc369f34e2648d42c7afcb8}} 
+\index{flower\_data@{flower\_data}!watering\_time@{watering\_time}}
+\index{watering\_time@{watering\_time}!flower\_data@{flower\_data}}
+\doxysubsubsection{\texorpdfstring{watering\_time}{watering\_time}}
+{\footnotesize\ttfamily RTC\+\_\+\+Time\+Type\+Def watering\+\_\+time\mbox{[}\mbox{\hyperlink{flower__data_8h_ac28012d5045654538e25c8e263ab43f5}{MAX\+\_\+\+WATERING\+\_\+\+TIMES}}\mbox{]}}
+
+
+
+RTC table of structures which contains watering times. 
+
